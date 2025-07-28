@@ -6,6 +6,19 @@ theme:
   name: material
   favicon: assets/favicon.png
   logo: assets/logo.png
+  palette:
+    - scheme: default
+      primary: "blue"
+      accent: "grey"
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: "blue"
+      accent: "grey"
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js
