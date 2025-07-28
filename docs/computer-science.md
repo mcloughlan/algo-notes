@@ -6,7 +6,7 @@
 
 ### Programming levels
 
-![[Pasted image 20220207171734.png|300]]
+<img src="images/Pasted image 20220207171734.png" alt="Pasted image 20220207171734" width="300">
 
 #### Low level programming languages
 
@@ -32,31 +32,31 @@ Operator symbols:
 
 | Operator |      Symbol       | Working                     |
 | -------- |:-----------------:| --------------------------- |
-| [[#AND]] |      $\land$      | Needs both inputs to be `1` |
-| [[#OR]]  |      $\lor$       | Needs one input to be `1`   |
-| [[#NOT]] | $\lnot$ or $\sim$ | Swaps `0`,`1`               |
+| [AND](#and) |      $\land$      | Needs both inputs to be `1` |
+| [OR](#or)  |      $\lor$       | Needs one input to be `1`   |
+| [NOT](#not) | $\lnot$ or $\sim$ | Swaps `0`,`1`               |
 
 #### OR
 
 One input must be true, to return true.
 
-![[Pasted image 20220210114543.png|#invert|300]]
+<img src="images/Pasted image 20220210114543.png" alt="Pasted image 20220210114543">
 
 #### AND
 
 Both inputs must be true, to return true.
 
-![[Pasted image 20220210114712.png|#invert|300]]
+<img src="images/Pasted image 20220210114712.png" alt="Pasted image 20220210114712">
 
 #### NOT
 
 Input is swapped. True goes to false, and false to true.
 
-![[Pasted image 20220210114813.png|#invert|300]]
+<img src="images/Pasted image 20220210114813.png" alt="Pasted image 20220210114813">
 
 ### Variables
 
-See [[#Variables]], [[Programming#Data types]] and [[Programming#Data structures]] for variable information.
+See [Variables](#variables), [Data types](programming.md#data-types) and [Data structures](programming.md#data-structures) for variable information.
 
 ### Operations
 
@@ -79,7 +79,7 @@ Examples:
 ## Turing machine
 
 
-![[Pasted image 20220831095941.png|300]]
+<img src="images/Pasted image 20220831095941.png" alt="Pasted image 20220831095941" width="300">
 
 - The Turing machine can either: edit erase or read the **infinite tape**
 - Each cell can contain one symbol from the finite *alphabet* of machine symbols
@@ -90,7 +90,7 @@ Examples:
 | `1`       | `0`               | right once       |
 | `0`       | `1`               | right once       |
 
-![[Pasted image 20220831104332.png|300]]
+<img src="images/Pasted image 20220831104332.png" alt="Pasted image 20220831104332" width="300">
 
 !!! info
 
@@ -100,17 +100,17 @@ Examples:
 
 ### Deterministic Turing machine
 
-A [[#Turing machine]] that follows fixed rules. **A natural or realistic Turing machine**
+A [Turing machine](#turing-machine) that follows fixed rules. **A natural or realistic Turing machine**
 
 ### Nondeterministic Turing machine
 
 Can solve NP problems?
 
-A theoretical [[#Turing machine]] whose governing rules specify more than one possible action when in some given situations. That is, an NTM's next state is _not_ completely determined by its action and the current symbol it sees, unlike a [[#Deterministic Turing machine]]
+A theoretical [Turing machine](#turing-machine) whose governing rules specify more than one possible action when in some given situations. That is, an NTM's next state is _not_ completely determined by its action and the current symbol it sees, unlike a [Deterministic Turing machine](#deterministic-turing-machine)
 
 ### Universal Turing Machine
 
-A [[#Turing machine]] that can simulate any other Turing machine with any finite input. Usually where the program code and input is stored on the tape.
+A [Turing machine](#turing-machine) that can simulate any other Turing machine with any finite input. Usually where the program code and input is stored on the tape.
 
 ### State table
 
@@ -141,7 +141,7 @@ You can set functions (states) that contain different sets of instructions
 
 ### State diagram
 
-![[Pasted image 20220831102711.png]]
+<img src="images/Pasted image 20220831102711.png" alt="Pasted image 20220831102711">
 
 ### Formal definition
 

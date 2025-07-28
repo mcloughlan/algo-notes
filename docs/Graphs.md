@@ -8,23 +8,23 @@
 
 Also known as  _Vertices_
 
-Nodes are the points in a network graph that [[#Edges|edges]] connect to.
+Nodes are the points in a network graph that [edges](#edges) connect to.
 They can display or represent people, places or any object
 
 - We denote the vertex set of a graph $G$ by $V(G)$
-- A pair of vertices $V_i$ and $V_j$ in $V$ are adjacent if they are connected by an [[#Edges|edge]] .
+- A pair of vertices $V_i$ and $V_j$ in $V$ are adjacent if they are connected by an [edge](#edges) .
 	- **Adjacency requires a edge between two nodes**
-	- The number of adjacent nodes *\[of a vertex\]* is called the [[#Degree|degree]]
+	- The number of adjacent nodes *\[of a vertex\]* is called the [degree](#degree)
 
 #### Isolated node
 
 A node with no edges
 
-- Has a [[#Degree]] of 0
+- Has a [Degree](#degree) of 0
 
 #### Root node
 
-The starting [[#Nodes|node]]. Semantically ambiguous, as the *root node* can imply the starting node of a decision tree, (or any graph) which is correct. But it can also be associated or interchanged with [[#Source node|source nodes]], which is not preferred. 
+The starting [node](#nodes). Semantically ambiguous, as the *root node* can imply the starting node of a decision tree, (or any graph) which is correct. But it can also be associated or interchanged with [source nodes](#source-node), which is not preferred. 
 
 #### Source node
 
@@ -38,7 +38,7 @@ The starting [[#Nodes|node]]. Semantically ambiguous, as the *root node* can imp
 
 #### Leaf node
 
-A node of [[#Degree|degree]] 1. Only used when referring to trees.
+A node of [degree](#degree) 1. Only used when referring to trees.
 
 #### Neighbourhood
 
@@ -46,18 +46,18 @@ The neighbourhood of a vertex $v$ is the set of vertices adjacent to $v$.
 
 #### Order
 
-Number of [[#Nodes|vertices]] a graph has
+Number of [vertices](#nodes) a graph has
 
 ### Edges
 
-Edges are the lines in-between [[#Nodes]] that display a connection between nodes.
+Edges are the lines in-between [Nodes](#nodes) that display a connection between nodes.
 Edges represent connections, relations or any logical path.
 
 - We denote the edge set of a graph $G$ by $E(G)$
 
 ### Incidence
 
-An **incidence** is a pair $(u,e)$ where $u$ is a [[#Nodes|vertex]], and $e$ is an [[#Edges|edge]] incident to $u$
+An **incidence** is a pair $(u,e)$ where $u$ is a [vertex](#nodes), and $e$ is an [edge](#edges) incident to $u$
 
 If the vertex $u$ is connected to $e$; $e$ is an edge incident to $u$
 
@@ -69,13 +69,13 @@ If the vertex $u$ is connected to $e$; $e$ is an edge incident to $u$
 
 ### Loops
 
-A loop is an edge that has the same starting and ending [[#Nodes|node]]. See node 1 below:
+A loop is an edge that has the same starting and ending [node](#nodes). See node 1 below:
 
-![[Pasted image 20220222181219.png|#invert|150]]
+<img src="images/Pasted image 20220222181219.png" alt="Pasted image 20220222181219">
 
 ### Paths
 
-A path is the route from one [[#Nodes|vertex]] to another.
+A path is the route from one [vertex](#nodes) to another.
 A path can contain many edges, or a single. it depends on what nodes are being selected.
 
 - Vertices cannot repeat
@@ -83,27 +83,27 @@ A path can contain many edges, or a single. it depends on what nodes are being s
 
 !!! note
 
-	- [[#Euler Path|Euler paths]] and [[#Euler circuit|Euler circuits]]:
-		- Can pass through [[#Nodes|nodes]] more than once.
+	- [Euler paths](#euler-path) and [Euler circuits](#euler-circuit):
+		- Can pass through [nodes](#nodes) more than once.
 		- Don't exist if a graph has more than two vertices of odd degree.
 		- Exists if all vertices of a graph have even degree.
 		- Exists if a connected graph has exactly two odd vertices. The starting point must be one of the odd vertices and the ending point will be the other of the odd vertices.
 		- See [here](https://lms.vsvonline.vic.edu.au/pluginfile.php/22968/mod_resource/content/10/3.4%20%20Graph%20Theory%20Intro.pdf#page=11)
 
-	- [[#Hamiltonian Path|Hamiltonian Paths]]
-		- Don't have to traverse every [[#Edges|edge]]
+	- [Hamiltonian Paths](#hamiltonian-path)
+		- Don't have to traverse every [edge](#edges)
 
 
 #### Euler Path
 
-A [[#Paths|path]] that uses each [[#Edges|edge]] once only without returning to starting [[#Nodes|vertex]] is an Euler path.
+A [path](#paths) that uses each [edge](#edges) once only without returning to starting [vertex](#nodes) is an Euler path.
 
 - Uses each **edge** once
 - Doesn't return to starting vertex
 
 #### Euler circuit
 
-A [[#Paths|path]] that uses each [[#Edges|edge]] once only and returns to starting [[#Nodes|vertex]] is an Euler circuit.
+A [path](#paths) that uses each [edge](#edges) once only and returns to starting [vertex](#nodes) is an Euler circuit.
 
 If an undirected graph $G$ is connected and every vertex  (not isolated) in $G$ has an even degree, then $G$ has an Euler circuit.
 
@@ -112,7 +112,7 @@ If an undirected graph $G$ is connected and every vertex  (not isolated) in $
 
 #### Hamiltonian Path
 
-A [[#Paths|path]] that passes every [[#Nodes|vertex]] exactly once without returning to starting [[#Nodes|vertex]] is an Hamiltonian path.
+A [path](#paths) that passes every [vertex](#nodes) exactly once without returning to starting [vertex](#nodes) is an Hamiltonian path.
 
 - Uses every **node** once
 - Doesn't return to starting node
@@ -121,9 +121,9 @@ A [[#Paths|path]] that passes every [[#Nodes|vertex]] exactly once without retur
 
 !!! note
 
-	This is used very often in this course. See [[Algorithms#Travelling salesmen problem]]
+	This is used very often in this course. See [Travelling salesmen problem](algorithms.md#travelling-salesmen-problem)
 
-A [[#Paths|path]] that passes every [[#Nodes|vertex]] exactly once and returns to the starting [[#Nodes|vertex]] is an Hamiltonian path.
+A [path](#paths) that passes every [vertex](#nodes) exactly once and returns to the starting [vertex](#nodes) is an Hamiltonian path.
 
 - Uses every **node** once
 - Does return to starting node
@@ -132,7 +132,7 @@ A [[#Paths|path]] that passes every [[#Nodes|vertex]] exactly once and returns t
 
 A graph that is a path across the diameter
 
-![[Pasted image 20220614172259.png|#invert]]
+<img src="images/Pasted image 20220614172259.png" alt="Pasted image 20220614172259">
 
 ### Transitive closure
 
@@ -140,14 +140,14 @@ Is there a path from $A$ to $B$ ?
 
 The transitive closure of a graph is a graph which contains an edge between $A$ and $B$ whenever there is a directed path from $A$ to $B$. In other words, to generate the transitive closure every path in the graph is directly added as an additional edge.
 
-![[Pasted image 20220321094104.png|#invert|400]]
+<img src="images/Pasted image 20220321094104.png" alt="Pasted image 20220321094104">
 
 A graph $G^*$ which is the transitive closure of $G$ will have a directed edge to every node it can traverse to.
 
 ### Directed Graph
 
 Also known as a digraph.
-A digraph is an ordered pair [[#G V E|G = (V, E)]] of [[#Edges|edges]] $(x,y)$ of arrows "from $x$ to $y$".
+A digraph is an ordered pair [G = (V, E)](#g-v-e) of [edges](#edges) $(x,y)$ of arrows "from $x$ to $y$".
 
 Where:
 - $x$:
@@ -157,33 +157,33 @@ Where:
 	- Is the head
 	- Is the direct successor of $x$
 
-If a [[#Paths|path]] leads from $x$ to $y$, then $y$ is said to be a successor of $x$ and reachable from $x$, and $x$ is said to be a predecessor of $y$.
+If a [path](#paths) leads from $x$ to $y$, then $y$ is said to be a successor of $x$ and reachable from $x$, and $x$ is said to be a predecessor of $y$.
 
 #### Strongly Connected Digraph
 
 A directed graph $G$ is strongly connected if there is a directed path from every vertex to every other vertex in $G$.
 
-![[Pasted image 20220222220031.png|#invert]]
+<img src="images/Pasted image 20220222220031.png" alt="Pasted image 20220222220031">
 
 ### Undirected Graphs
 
-Undirected graphs have [[#Edges|edges]] that can be travelled along in any direction.
+Undirected graphs have [edges](#edges) that can be travelled along in any direction.
 
 ### Dag / DAGS
 
-A [[#Directed Graph]] with no directed [[#Cycle|cycles]]
+A [Directed Graph](#directed-graph) with no directed [cycles](#cycle)
 
-- I.e. An [[#Acyclic]] [[#Directed Graph]]
+- I.e. An [Acyclic](#acyclic) [Directed Graph](#directed-graph)
 
 ### Degree
 
-The degree of a [[#Nodes|node]] is the number of [[#Edges|edges]] that come off it.
+The degree of a [node](#nodes) is the number of [edges](#edges) that come off it.
 
-- Note that a [[#Nodes|node]] of degree zero is called an [[#Isolated node]]
+- Note that a [node](#nodes) of degree zero is called an [Isolated node](#isolated-node)
 
 ### Cycle
 
-A cycle in a graph is a path that returns to the starting [[#Nodes|node]].
+A cycle in a graph is a path that returns to the starting [node](#nodes).
 
 - Vertices cannot repeat
 - Edges cannot repeat
@@ -191,11 +191,11 @@ A cycle in a graph is a path that returns to the starting [[#Nodes|node]].
 
 #### Acyclic
 
-Does not contain any [[#Cycle|cycles]].
+Does not contain any [cycles](#cycle).
 
 ### Circuit
 
-A circuit in a graph is a path that returns to the starting [[#Nodes|node]].
+A circuit in a graph is a path that returns to the starting [node](#nodes).
 
 - Vertices may repeat
 - Edges cannot repeat
@@ -214,7 +214,7 @@ A circuit in a graph is a path that returns to the starting [[#Nodes|node]].
 
 ### Graph definition
 
-A graph $G$ is a finite non-empty set of objects called vertices or [[#Nodes|nodes]] which are connected by [[#Edges|edges]].
+A graph $G$ is a finite non-empty set of objects called vertices or [nodes](#nodes) which are connected by [edges](#edges).
 
 ### Measures of Similarity
 
@@ -231,7 +231,7 @@ Similarity = 0 if $X \neq Y$
 
 Best example in the world:
 
-![[Pasted image 20220317191124.png|love this example lol]]
+<img src="images/Pasted image 20220317191124.png" alt="Pasted image 20220317191124">
 
 !!! note
 
@@ -258,7 +258,7 @@ Manhattan Distance is the distance restricted to traversal via a street grid bet
 
 In a simple way of saying it is the total sum of the difference between the x-coordinates and y-coordinates.
 
-The [[#Heuristic functions|heuristic function]] for distance calculation
+The [heuristic function](#heuristic-functions) for distance calculation
 
 $$f(n) = |\text{cell}_{row} – \text{goal}_{row}| + |\text{cell}_{col} – \text{goal}_{col}|$$
 
@@ -275,11 +275,11 @@ Finds the normalised dot product of the two attributes. By determining the cosin
 
 Also known as a topological ordering
 
-In computer science a **topological sort** or **topological ordering** of a [[#Directed Graph]] is a linear ordering of its [[#Nodes|vertices]] such that for every directed edge _uv_ from vertex _u_ to vertex _v_, _u_ comes before _v_ in the ordering.
+In computer science a **topological sort** or **topological ordering** of a [Directed Graph](#directed-graph) is a linear ordering of its [vertices](#nodes) such that for every directed edge _uv_ from vertex _u_ to vertex _v_, _u_ comes before _v_ in the ordering.
 
-A topological ordering is possible iff the graph has no directed cycles, that is, if it is a directed acyclic graph ([[#Dag DAGS]]).
+A topological ordering is possible iff the graph has no directed cycles, that is, if it is a directed acyclic graph ([Dag DAGS](#dag-dags)).
 
-![[Pasted image 20220310113016.png|#invert|300]]
+<img src="images/Pasted image 20220310113016.png" alt="Pasted image 20220310113016">
 
 The graph shown above has many valid topological sorts, including:
 
@@ -290,9 +290,9 @@ The graph shown above has many valid topological sorts, including:
 -   5, 7, 11, 2, 3, 8, 9, 10 (attempting top-to-bottom, left-to-right)
 -   3, 7, 8, 5, 11, 10, 2, 9 (arbitrary)
 
-This can be calculated through [[#Kahn's Algorithm]]
+This can be calculated through [Kahn's Algorithm](#kahns-algorithm)
 
-Also see, [[3.6C Decrease and conquer]] for my own implementation
+Also see, [3.6C Decrease and conquer](36c-decrease-and-conquer.md) for my own implementation
 
 !!! note
 
@@ -300,7 +300,7 @@ Also see, [[3.6C Decrease and conquer]] for my own implementation
 
 #### Kahn's Algorithm
 
-A [[#Topological sort]] algorithm, first described by **Kahn** (1962), works by choosing vertices in the same order as the eventual topological sort. First, find a list of "start nodes" which have no incoming edges and insert them into a set $S$; at least one such node must exist in a non-empty acyclic graph. Then:
+A [Topological sort](#topological-sort) algorithm, first described by **Kahn** (1962), works by choosing vertices in the same order as the eventual topological sort. First, find a list of "start nodes" which have no incoming edges and insert them into a set $S$; at least one such node must exist in a non-empty acyclic graph. Then:
 
 ```js
 L ← Empty list that will contain the sorted elements
@@ -329,15 +329,15 @@ The longest shortest path between any two nodes counted by edge and weights.
 
 Also defined as the largest distance between any pair of vertices.
 
-- A [[#Disconnected Graph|disconnected graph ]] has a diameter of $\infty$
+- A [disconnected graph ](#disconnected-graph) has a diameter of $\infty$
 
 The examples below have a diameter of 2 (2 edges to traverse to get from a to b):
 
 - A graph of one vertex has diameter 0
 
-![[Pasted image 20220303114136.png|#invert]]
+<img src="images/Pasted image 20220303114136.png" alt="Pasted image 20220303114136">
 
-![[Pasted image 20220919214414.png]]
+<img src="images/Pasted image 20220919214414.png" alt="Pasted image 20220919214414">
 
 *Note that the radius and diameter is counted by the number of edges
 
@@ -347,7 +347,7 @@ The examples below have a diameter of 2 (2 edges to traverse to get from a to b)
 
 ### $G=(V,E)$
 
-A graph $G=(V,E)$ is made up of a set of [[#Nodes|vertices/nodes]] ($V$) and a set of lines called [[#Edges|edges]] ($E$) that connect the vertices or nodes.
+A graph $G=(V,E)$ is made up of a set of [vertices/nodes](#nodes) ($V$) and a set of lines called [edges](#edges) ($E$) that connect the vertices or nodes.
 
 - $|V|$ is the number of vertices in the graph
 - $|E|$ is the number of edges in the graph.
@@ -364,7 +364,7 @@ A graph $G=(V,E)$ is made up of a set of [[#Nodes|vertices/nodes]] ($V$) and a s
 	- $|E|$ returns 10
 		- there are 10 edges in this graph
 
-![[Pasted image 20220221093040.png|#invert|300 ]]
+<img src="images/Pasted image 20220221093040.png" alt="Pasted image 20220221093040">
 
 #### Sub graph
 
@@ -378,7 +378,7 @@ A simple graph, also called a strict graph is **an unweighted, undirected graph 
 
 A simple graph may be either connected or disconnected. Unless stated otherwise, the unqualified term "graph" usually refers to a simple graph.
 
-![[Pasted image 20220222144711.png|#invert]]
+<img src="images/Pasted image 20220222144711.png" alt="Pasted image 20220222144711">
 
 #### Multigraph
 
@@ -386,7 +386,7 @@ A graph that can have multiple edges between the same pair of nodes. In a road n
 
 #### Connected Graph
 
-A graph where all [[#Nodes|nodes]] are connected
+A graph where all [nodes](#nodes) are connected
 
 ##### Ring Graph
 
@@ -395,36 +395,36 @@ A graph that forms a ring
 
 - All nodes have a degree of 2
 
-![[Pasted image 20220222220633.png|#invert|200]]
+<img src="images/Pasted image 20220222220633.png" alt="Pasted image 20220222220633">
 
 #### Disconnected Graph
 
-A graph where not all [[#Nodes|nodes]] are connected.
+A graph where not all [nodes](#nodes) are connected.
 
 ##### Bridge
 
-A bridge is an [[#Edges|edge]] that if deleted would cause the graph to become [[#Disconnected Graph|disconnected]].
+A bridge is an [edge](#edges) that if deleted would cause the graph to become [disconnected](#disconnected-graph).
 
 ##### Cut Node
 
-A Cut Node is an [[#Nodes|node]] that if deleted would cause the graph to become [[#Disconnected Graph|disconnected]].
+A Cut Node is an [node](#nodes) that if deleted would cause the graph to become [disconnected](#disconnected-graph).
 
 #### Cyclic Graph
 
-A graph where a [[#Cycle|cycle]] can be formed.
+A graph where a [cycle](#cycle) can be formed.
 
 ### Complete Graphs
 
-- A complete graph has every pair of [[#Nodes|vertices]] joined by one [[#Edges|edge]].
+- A complete graph has every pair of [vertices](#nodes) joined by one [edge](#edges).
 	- i.e. Every node is connected together by an edge
 
-A complete graph with $n$ [[#Nodes|vertices]] will have a [[#Degree|degree]] of $(n-1)$ for all [[#Nodes|nodes]], and a total of $\frac{n(n-1)}{2}$ edges
+A complete graph with $n$ [vertices](#nodes) will have a [degree](#degree) of $(n-1)$ for all [nodes](#nodes), and a total of $\frac{n(n-1)}{2}$ edges
 
 For $n$ nodes we usually abbreviate it as $Kn$. For example, $K4$ is the complete graph with four nodes:
 
-The [[#Graph Diameter|diameter]] of a complete graph is 1
+The [diameter](#graph-diameter) of a complete graph is 1
 
-![[Pasted image 20220919215308.png]]
+<img src="images/Pasted image 20220919215308.png" alt="Pasted image 20220919215308">
 
 ### Isomorphic Graphs
 
@@ -432,25 +432,25 @@ Also known as topologically equivalent graphs.
 
 Graphs or networks that look different but represent the same information are said to be **topologically equivalent** or **isomorphic**.
 
-Isomorphic Graphs have the same number of vertices, [[#Edges|edges]] and [[#Edges|connections]] between vertices, but may look completely different.
+Isomorphic Graphs have the same number of vertices, [edges](#edges) and [connections](#edges) between vertices, but may look completely different.
 
-![[Pasted image 20220308182739.png|#invert]]
+<img src="images/Pasted image 20220308182739.png" alt="Pasted image 20220308182739">
 
 ### Bipartite Graphs
 
 A graph $G$ is bipartite if its vertices can be partitioned into two sets $X$ and $Y$ , called partite sets, such that every edge in $E(G)$ is between a vertex in $X$ and a vertex in $Y$ .
 
-![[Pasted image 20220222214749.png|#invert|300]]
+<img src="images/Pasted image 20220222214749.png" alt="Pasted image 20220222214749">
 
-As shown above, bipartite graphs have a [[#Chromatic Number|chromatic number]] of 2
+As shown above, bipartite graphs have a [chromatic number](#chromatic-number) of 2
 
 ### Trees
 
-- There a no [[#Cycle|cycles]] in a tree
-- Trees are [[#Simple graph|simple]]
-- Trees contain no [[#Circuit|circuits]]
+- There a no [cycles](#cycle) in a tree
+- Trees are [simple](#simple-graph)
+- Trees contain no [circuits](#circuit)
 
-![[Pasted image 20220222183107.png|#invert|150]]
+<img src="images/Pasted image 20220222183107.png" alt="Pasted image 20220222183107">
 
 For any tree $T = (V, E)$ with $|V|$ = $n$, $|E| = n − 1$.
 
@@ -458,23 +458,23 @@ For any tree $T = (V, E)$ with $|V|$ = $n$, $|E| = n − 1$.
 
 Or the "*Inductive*"
 
-![[Pasted image 20220222184016.png|#invert]]
+<img src="images/Pasted image 20220222184016.png" alt="Pasted image 20220222184016">
 
 #### Spanning Tree
 
-A spanning tree is a connected graph that has no [[#Circuit|circuits]] or [[#Cycle|cycles]] ([[#Acyclic]]).
+A spanning tree is a connected graph that has no [circuits](#circuit) or [cycles](#cycle) ([Acyclic](#acyclic)).
 
 If a graph has $n$ vertices its spanning tree it will have $(n-1)$ edges.
 
 > Minimum amount of edges to connect all nodes
 
-![[Pasted image 20220919215436.png|300]]
+<img src="images/Pasted image 20220919215436.png" alt="Pasted image 20220919215436" width="300">
 
 ##### Minimum Spanning Tree
 
-A minimum spanning tree is a [[#Spanning Tree|spanning tree]] for a weighted graph whose edges add up to the smallest possible value.
+A minimum spanning tree is a [spanning tree](#spanning-tree) for a weighted graph whose edges add up to the smallest possible value.
 
-- Found via [[Algorithms#Prim's Algorithm|Prim's algorithm]]
+- Found via [Prim's algorithm](algorithms.md#prims-algorithm)
 
 A graph can have several minimum spanning trees. For example if we replace all the weights with $1$ in a graph with $n$ vertices. The resulting graph will have $n$ minimum spanning trees.
 
@@ -482,7 +482,7 @@ A graph can have several minimum spanning trees. For example if we replace all t
 
 ##### Spanning Subgraph
 
-A Spanning [[#Sub graph]] $H$ of a graph $G$ is a [[#Sub graph|sub graph]] of $G$ such that $V (H) = V (G)$.
+A Spanning [Sub graph](#sub-graph) $H$ of a graph $G$ is a [sub graph](#sub-graph) of $G$ such that $V (H) = V (G)$.
 
 #### Decision tree
 
@@ -494,9 +494,9 @@ Or decision forests, have $n - s$ edges. For $n$ vertices and $s$ source nodes. 
 
 #### Binary tree
 
-A type of [[#Decision tree]], but with the absence of the decision abstraction, and it's literally just 0,1 or 2 children per parent for the entire graph
+A type of [Decision tree](#decision-tree), but with the absence of the decision abstraction, and it's literally just 0,1 or 2 children per parent for the entire graph
 
-![[Pasted image 20220516123124.png|#invert|200]]
+<img src="images/Pasted image 20220516123124.png" alt="Pasted image 20220516123124">
 
 !!! note
 
@@ -506,13 +506,13 @@ A type of [[#Decision tree]], but with the absence of the decision abstraction, 
 
 A rooted tree is **a tree in which a special ("labeled") node is singled out**. This node is called the "root" or (less commonly) "eve" of the tree. Rooted trees are equivalent to oriented trees
 
-![[Pasted image 20220316124154.png|#invert]]
+<img src="images/Pasted image 20220316124154.png" alt="Pasted image 20220316124154">
 
 #### Forest
 
-A graph with no [[#Cycle|cycles]]. More specifically, a disconnected graph, where each connected component is a tree.
+A graph with no [cycles](#cycle). More specifically, a disconnected graph, where each connected component is a tree.
 
-![[Pasted image 20220313115311.png|#invert|300]]
+<img src="images/Pasted image 20220313115311.png" alt="Pasted image 20220313115311">
 
 For any tree $T = (V, E)$ with $|V|$ = $n$, $|E| = n − 1$.
 
@@ -520,9 +520,9 @@ For any tree $T = (V, E)$ with $|V|$ = $n$, $|E| = n − 1$.
 
 ### State Diagrams
 
-A [[#Directed Graph]] showing connections between states of objects or abstract instances
+A [Directed Graph](#directed-graph) showing connections between states of objects or abstract instances
 
-![[Pasted image 20220317182422.png|#invert|300]]
+<img src="images/Pasted image 20220317182422.png" alt="Pasted image 20220317182422">
 
 ## Colouring
 
@@ -533,17 +533,17 @@ Also known as Chromatic Colouring
 - Adjacent nodes cannot be the same colour
 - Usually used to represent nodes of conflict
 
-![[Pasted image 20220302121245.png|200]]
+<img src="images/Pasted image 20220302121245.png" alt="Pasted image 20220302121245" width="200">
 
-The [[#Chromatic Number|chromatic number]] of this graph is 3. As there are 3 colours.
+The [chromatic number](#chromatic-number) of this graph is 3. As there are 3 colours.
 
 #### Chromatic Number
 
 The chromatic number of a graph $G$ is the minimum value $k$ for which a $k$-colouring of $G$ exists.
 
-![[Pasted image 20220825150221.png|https://mathworld.wolfram.com/ChromaticNumber.html|#invert]]
+<img src="images/Pasted image 20220825150221.png" alt="Pasted image 20220825150221">
 
-See example [[#Vertex Colouring]]
+See example [Vertex Colouring](#vertex-colouring)
 
 ## Math
 
@@ -578,16 +578,16 @@ The direction can be read from **the left of the matrix** (left side of rows) **
 	- Undirected graphs are diagonaly symetrical, where directed are not 
 	- All adjacency matricies are empty on the diagonal
 
-![[Pasted image 20220222165941.png]]
+<img src="images/Pasted image 20220222165941.png" alt="Pasted image 20220222165941">
 
-![[Pasted image 20220222170110.png]]
+<img src="images/Pasted image 20220222170110.png" alt="Pasted image 20220222170110">
 
 
 ### Transitive closure matrix
 
 A matrix $(i,j)$ where $1$ represents a valid path from $i$ to $j$, and $0$ otherwise. Where $i$ to $i$ is considered connected $1$. 
 
-![[Pasted image 20220321172352.png|#invert|400]]
+<img src="images/Pasted image 20220321172352.png" alt="Pasted image 20220321172352">
 
 ### Incidence Matrix
 
@@ -602,9 +602,9 @@ $$
 
 ### Distance Matrix
 
-The shortest distances from $A$ to $B$ for each pair of nodes in a graph. Used in the [[#Floyd-Warshall algorithm]]
+The shortest distances from $A$ to $B$ for each pair of nodes in a graph. Used in the [Floyd-Warshall algorithm](#floyd-warshall-algorithm)
 
-![[Pasted image 20220321100921.png|#invert|400]]
+<img src="images/Pasted image 20220321100921.png" alt="Pasted image 20220321100921">
 
 ### Adjacency List
 
@@ -630,7 +630,7 @@ $$
 
 
 - **To see if a node is connected to another**
-- Uses a [[Programming#Queue|queue]] to keep track of nodes to visit soon
+- Uses a [queue](programming.md#queue) to keep track of nodes to visit soon
 - Uses an array/set `seen` to mark visited vertices
 - If the graph is connected, BFS will will visit all the nodes
 - A BFS tree will show the shortest path from `A` to `B` for any unweighted graph
@@ -645,29 +645,29 @@ $$
 
 Gif example of BFS:
 
-![[BFSg.gif|300]]
+<img src="images/BFSg.gif" alt="BFSg" width="300">
 
 SAC example:
 
-![[Pasted image 20220427180233.png]]
+<img src="images/Pasted image 20220427180233.png" alt="Pasted image 20220427180233">
 
 **Uses of BFS**
 
 - Check connectivity
 - Bucket fill tool in 
 - Finding shortest path (when modified. pure BFS will not do this)
-- [[#Graph Diameter|Diameter]] of a graph
+- [Diameter](#graph-diameter) of a graph
 	- The diameter of a graph is the longest shortest path between any two nodes in a graph. Using BFS in a loop and finding the shortest path starting from every node in the graph, keep record of the longest shortest path found so far.
 - Cycle detection
-- [[#Bipartite Graphs|Bipartite graph]] detection using BFS
+- [Bipartite graph](#bipartite-graphs) detection using BFS
 - [Web crawler](https://lms.vsvonline.vic.edu.au/pluginfile.php/141031/mod_resource/content/1/Applications%20of%20DFS%20and%20BFS.pdf#page=4)
 - [More](https://lms.vsvonline.vic.edu.au/pluginfile.php/141031/mod_resource/content/1/Applications%20of%20DFS%20and%20BFS.pdf#page=4)
 
 #### Waveform
 
-[[#BFS Breadth First Search]] can be considered a waveform due to its nature
+[BFS Breadth First Search](#bfs-breadth-first-search) can be considered a waveform due to its nature
 
-![[WAVEg.gif|200]]
+<img src="images/WAVEg.gif" alt="WAVEg" width="200">
 
 !!! note
 
@@ -684,7 +684,7 @@ SAC example:
 - **To see if a node is connected to another**
 - Uses a `stack` for storing vertices
 - We do not check whether node was seen when storing neighbours in the `stack` - instead we perform this checking when retrieving the node from it.
-- Builds a [[#Spanning Tree|spanning tree]] if the graph is [[#Connected Graph|connected]]
+- Builds a [spanning tree](#spanning-tree) if the graph is [connected](#connected-graph)
 	- Creates longer branches than BFS
 - Unsuitable for searching shortest paths for unweighted graphs.
 
@@ -699,11 +699,11 @@ SAC example:
 
 Gif example of DFS:
 
-![[DFS.gif|300]]
+<img src="images/DFS.gif" alt="DFS" width="300">
 
 Practice example:
 
-![[Pasted image 20220427180201.png]]
+<img src="images/Pasted image 20220427180201.png" alt="Pasted image 20220427180201">
 
 **Uses for DFS**
 
@@ -711,13 +711,13 @@ Practice example:
 - Topological sorting
 - Path Finding between initial state and target state in a graph
 - Finding strongly connected components
-- Checking if a graph is [[#Bipartite Graphs|bipartite]]
+- Checking if a graph is [bipartite](#bipartite-graphs)
 
 ### Exhaustive search
 
- Also known as a [[Algorithms#Brute Force|brute force]] algorithm
+ Also known as a [brute force](algorithms.md#brute-force) algorithm
 
-[[#Hamiltonian Circuit]] example
+[Hamiltonian Circuit](#hamiltonian-circuit) example
  1. Find all Hamiltonian circuits
  2. Find length of of each circuit
  3. Select the circuit with minimal total weight
@@ -725,9 +725,9 @@ Practice example:
 ### Tree traversal
 
 How to search trees:
-- Any tree, but normally a [[#Binary tree]]
+- Any tree, but normally a [Binary tree](#binary-tree)
 - You can use
-	- [[#DFS Depth First Search]]
+	- [DFS Depth First Search](#dfs-depth-first-search)
 	- Pre-order
 		- Hug the left most nodes (recursively the first (left) child in each node)
 	- Post-order
@@ -746,7 +746,7 @@ How to search trees:
 
 In computer science, tree traversal (also known as tree search and walking the tree) is a form of graph traversal and refers to the process of visiting (e.g. retrieving, updating, or deleting) each node in a tree data structure, exactly once.
 
-![[Pasted image 20220516122803.png]]
+<img src="images/Pasted image 20220516122803.png" alt="Pasted image 20220516122803">
 
 For each of these, consider how you would recursively visit each node, and that 'visiting' a node is a discrete operation and does not happen automatically when you traverse to a node.
 
@@ -791,7 +791,7 @@ postorder(node):
 
 ### Prim's Algorithm
 
-A [[#Greedy|greedy]] algorithm used to find the [[Graphs#Minimum Spanning Tree|minimum spanning tree]]
+A [greedy](#greedy) algorithm used to find the [minimum spanning tree](graphs.md#minimum-spanning-tree)
 
 
 !!! NOTE "Online tool"
@@ -808,7 +808,7 @@ Algorithm
 
 Example:
 
-![[PrimAlgDemo.gif|#invert|300]]
+<img src="images/PrimAlgDemo.gif" alt="PrimAlgDemo">
 
 Pseudocode:
 
@@ -827,9 +827,9 @@ EndLoop
 
 Or
 
-![[Pasted image 20220308183646.png|#invert|300]]
+<img src="images/Pasted image 20220308183646.png" alt="Pasted image 20220308183646">
 
-Prim's algorithm for finding an [[Graphs#Minimum Spanning Tree|MST]] is **guaranteed** to produce a correct result
+Prim's algorithm for finding an [MST](graphs.md#minimum-spanning-tree) is **guaranteed** to produce a correct result
 
 ### Kruskal's algorithm
 
@@ -843,17 +843,17 @@ Quickest way to get from $A$ to $B$. Usually by shortest weight.
 
 Scenarios:
 - Worst case graph:
-	- A [[#Complete Graphs|complete graph]]. As it has the most edges.
+	- A [complete graph](#complete-graphs). As it has the most edges.
 - Worst case brute force
-	- A [[#Complete Graphs|complete graph]] will have the most permutations of paths. It will have: $\sum_{k=0}^{(n-2)} {n\choose k} \cdot k!$
+	- A [complete graph](#complete-graphs) will have the most permutations of paths. It will have: $\sum_{k=0}^{(n-2)} {n\choose k} \cdot k!$
 
 ### Dijkstra's algorithm
 
 Pronounced *Dikestra*.
-Finds the shortest **greedy** path via a **[[Programming#Priority Queue|priority queue]]**.
-- Not [[Algorithms#Dynamic Programming]]
+Finds the shortest **greedy** path via a **[priority queue](programming.md#priority-queue)**.
+- Not [Dynamic Programming](algorithms.md#dynamic-programming)
 
-![[Dijkstra_Animation.gif|#invert]]
+<img src="images/Dijkstra_Animation.gif" alt="Dijkstra_Animation">
 
 Worst case performance **Fibonacci heap**:
 $$\displaystyle O(|E|+|V|\log |V|)$$
@@ -911,7 +911,7 @@ See [wiki example](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm#:~:text=
 ### Belman-Ford algorithm
 
 Step 1: initialise graph
-Step 2: [[#Relaxation|relax]] edges repeatedly
+Step 2: [relax](#relaxation) edges repeatedly
 Step 3: check for negative-weight cycles
 Output shortest path as a distance and predecessor list (depending on setup)
 
@@ -923,9 +923,9 @@ Output shortest path as a distance and predecessor list (depending on setup)
 	[Online runner](https://algorithms.discrete.ma.tum.de/graph-algorithms/spp-bellman-ford/index_en.html)
 
 
-Unlike Dijkstra's Algorithm the Bellman-Ford Algorithm does not use a [[Programming#Priority Queue|priority queue]] to process the edges.
+Unlike Dijkstra's Algorithm the Bellman-Ford Algorithm does not use a [priority queue](programming.md#priority-queue) to process the edges.
 
-In Step 2 ([[#Relaxation]]) the nested for loop process all edges in the graph for each vertex $(V-1)$. Bellman-Ford is not a Greedy Algorithm, it uses Brute Force to build the solution incrementally, possibly going over each vertex several times. If a vertex has a lot of incoming edges it is updating the vertex's distance and predecessor many times.
+In Step 2 ([Relaxation](#relaxation)) the nested for loop process all edges in the graph for each vertex $(V-1)$. Bellman-Ford is not a Greedy Algorithm, it uses Brute Force to build the solution incrementally, possibly going over each vertex several times. If a vertex has a lot of incoming edges it is updating the vertex's distance and predecessor many times.
 
 Pseudocode
 
@@ -975,13 +975,13 @@ Relaxation is where estimates are gradually replaced by accurate values, eventua
 ### Floyd-Warshall algorithm
 
 Shortest path between all nodes in a graph. By calculating the transitive closure for all paths, and keeping track of the shortest in a $V*V$ matrix.
-- Example of [[Computer Science#Dynamic Programming|dynamic programmign]]
+- Example of [dynamic programmign](computer-science.md#dynamic-programming)
 
 Time complexity of:
 $$O (|V|^3)$$
 
 - Assumes there are no negative cycles, so this needs to be checked after
-- Returns a [[#Distance Matrix]] of shortest path weights.
+- Returns a [Distance Matrix](#distance-matrix) of shortest path weights.
 - Dynamic program
 - Generates the transitive closure of a graph, if a graph is constructed from the distance matrix output.
 
@@ -1014,16 +1014,16 @@ return D
 
 #### Floyd-Warshall  transitive closure algorithm
 
-An altered version of the [[#Floyd-Warshall algorithm]] to represent a [[#Transitive closure matrix]].
+An altered version of the [Floyd-Warshall algorithm](#floyd-warshall-algorithm) to represent a [Transitive closure matrix](#transitive-closure-matrix).
 
 ### Best First Search
 
-**Best-First Search** traverses graphs in a similar way to [[#DFS Depth First Search]] and [[#BFS Breadth First Search]], with the main difference being that **instead of choosing the first matching successor, we choose the best-matching successor** that we think will take us to the goal vertex.
+**Best-First Search** traverses graphs in a similar way to [DFS Depth First Search](#dfs-depth-first-search) and [BFS Breadth First Search](#bfs-breadth-first-search), with the main difference being that **instead of choosing the first matching successor, we choose the best-matching successor** that we think will take us to the goal vertex.
 
-- Uses a [[Programming#Priority Queue|priority queue]] to keep track and order the best options
-	- Each option's suitability is defined through a custom [[#Heuristic]] function $f(n)$
+- Uses a [priority queue](programming.md#priority-queue) to keep track and order the best options
+	- Each option's suitability is defined through a custom [Heuristic](#heuristic) function $f(n)$
 - Can backtrack on older decisions
-	- Which means this algorithm is **not** [[Algorithms#Greedy|greedy]].
+	- Which means this algorithm is **not** [greedy](algorithms.md#greedy).
 		- IFF the search does not discard old paths. i.e. can backtrack.
 
 #### Heuristic functions
@@ -1034,4 +1034,4 @@ $f(n)$ as a heuristic function could be as simple as a *rule of thumb*. Like a p
 
 - Basic *Guess* or *Rule of thumb* towards a better / greedy path
 - An educated guess on the cost(s) we may encounter down a particular path
-- See [[Algorithms#Heuristics evaluation functions]]
+- See [Heuristics evaluation functions](algorithms.md#heuristics-evaluation-functions)

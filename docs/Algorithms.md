@@ -25,7 +25,7 @@ Note that this does not contain everything on the exam. Read over the current st
 
 This means that there is a finite sequence of steps that can be followed mechanically to process specified inputs and correctly produce the expected output. 
 
-Must be (see [[#Properties of an algorithm]]):
+Must be (see [Properties of an algorithm](#properties-of-an-algorithm)):
 
 - Well defined
 - Finite number of steps
@@ -60,7 +60,7 @@ Actions are performed from top to bottom.
 
 ### Computability
 
-A problem is computable if it is able to be [[#Models of computation|modelled]] on a Turing machine (or equivalent), and solved with unlimited resources in finite time.
+A problem is computable if it is able to be [modelled](#models-of-computation) on a Turing machine (or equivalent), and solved with unlimited resources in finite time.
 
 #### Models of computation
 
@@ -69,11 +69,11 @@ A model describes how units of computations, memories, and communications are or
 Models include:
 
 **Sequential models**:
-- [[Computer Science#Turing machine]]
-- [[Computer Science#Finite state machines]]
+- [Turing machine](computer-science.md#turing-machine)
+- [Finite state machines](computer-science.md#finite-state-machines)
 
 **Functional models**
-- [[#Lambda Calculus]]
+- [Lambda Calculus](#lambda-calculus)
 - Combinatory Logic
 
 #### Uncomputability and undecidability
@@ -88,11 +88,11 @@ If $A$ is reducible to $B$ then $A \le m B$
 
 #### Soft limits of computation
 
-The computability that effects the duration and resource usage of computation. Such as the [[#Time complexity]], [[#Space complexity]]. However, soft limits do not restrict the completion or [[#Computability]] of an algorithm.
+The computability that effects the duration and resource usage of computation. Such as the [Time complexity](#time-complexity), [Space complexity](#space-complexity). However, soft limits do not restrict the completion or [Computability](#computability) of an algorithm.
 
 #### Hard limits of computation
 
-The limits that make an algorithm uncomputable. Such as the [[#Uncomputability and undecidability]] and [[#Infinitary systems]] of a system?
+The limits that make an algorithm uncomputable. Such as the [Uncomputability and undecidability](#uncomputability-and-undecidability) and [Infinitary systems](#infinitary-systems) of a system?
 
 ## Communication of design
 
@@ -133,7 +133,7 @@ y = sum(X)
 
 An examples of a function `pay_emplyee`
 
-![[Pasted image 20220426141508.png]]
+<img src="images/Pasted image 20220426141508.png" alt="Pasted image 20220426141508">
 
 ### Modularisation
 
@@ -166,7 +166,7 @@ If you don't pre-compute:
 A selection step must have these 2 components:
 
 - A block of steps that may or may not be followed (such as make your lunch, and
-- A [[#Conditions|condition]], i.e. a **statement that can either be true or false** (such as you have an Algorithms class today), which determines whether the block of steps should be followed. The block should be followed if the statement is true.
+- A [condition](#conditions), i.e. a **statement that can either be true or false** (such as you have an Algorithms class today), which determines whether the block of steps should be followed. The block should be followed if the statement is true.
 
 The syntax we will use looks like this: 
 
@@ -291,7 +291,7 @@ put the bag on the shelf
     
 ### Conditional iteration
 
-Loop while ([[#Conditions|condition]]). The loop runs while a condition is met
+Loop while ([condition](#conditions)). The loop runs while a condition is met
 
 ```js
 WHILE (condition)
@@ -332,7 +332,7 @@ Assigned via:
 - $x = y$ (Unconventional and discouraged)
 - $x \leftarrow y$
 
-See [[Programming#Variables]]
+See [Variables](programming.md#variables)
 
 ---
 
@@ -343,7 +343,7 @@ There are problems documented everywhere in this page. I just needed a spot to p
 
 ### Travelling salesmen problem
 
-[There are $\frac{!(n-1)}{2}$ possible routes](https://youtu.be/GiDsjIBOVoA?t=194) for a [[Graphs#Complete Graphs|complete graph]] input. The division of two is to eliminate the other half of paths that go in the reverse order 
+[There are $\frac{!(n-1)}{2}$ possible routes](https://youtu.be/GiDsjIBOVoA?t=194) for a [complete graph](graphs.md#complete-graphs) input. The division of two is to eliminate the other half of paths that go in the reverse order 
 
 > The number of different Hamiltonian cycles in a complete undirected graph on n vertices is $\frac{(n-1)!}{2}$ and in a complete directed graph on n vertices is $(n– 1)!$. These counts assume that cycles that are the same apart from their starting point are not counted separately. ([source](https://en.wikipedia.org/wiki/Hamiltonian_path#Properties))
 
@@ -361,7 +361,7 @@ Also, I'm putting this here as well:
 
 	[Traveling Salesman Problem Visualization](https://youtu.be/SC5CX8drAtU)
 
-which is already in [[#Heuristics evaluation functions]]
+which is already in [Heuristics evaluation functions](#heuristics-evaluation-functions)
 
 ## Sorting
 
@@ -375,9 +375,9 @@ Big $O$ notation:
 
 | Algorithm                                      | Best Time         | Average Time      | Worst Time   | Worst Space |
 | ---------------------------------------------- | ----------------- | ----------------- | ------------ | ----------- |
-| [[#Quick Sort]]                                | $\Omega(n\log n)$ | $\Theta(n\log n)$ | $O(n^2)$[^1] | $O(\log n)$ |
-| [[#Selection sort]] (Not in 2021 study design) | $\Omega(n^2)$     | $\Theta(n^2)$     | $O(n^2)$     | $O(1)$      |
-| [[#Merge-sort]]                                |                   |                   |              |             |
+| [Quick Sort](#quick-sort)                                | $\Omega(n\log n)$ | $\Theta(n\log n)$ | $O(n^2)$[^1] | $O(\log n)$ |
+| [Selection sort](#selection-sort) (Not in 2021 study design) | $\Omega(n^2)$     | $\Theta(n^2)$     | $O(n^2)$     | $O(1)$      |
+| [Merge-sort](#merge-sort)                                |                   |                   |              |             |
 
 [^1]: When the pivot is the lowest item in the input each time. When sorting by ascending https://youtu.be/auclbmnm4iA?t=69
 
@@ -410,7 +410,7 @@ $$O(n)$$
 
 Quick Sort uses a recursive divide and conquer method.
 
-![[Sorting_quicksort_anim.gif]]
+<img src="images/Sorting_quicksort_anim.gif" alt="Sorting_quicksort_anim">
 ![Quicksort stationary pivot](https://upload.wikimedia.org/wikipedia/commons/f/fe/Quicksort.gif)
 
 Order:
@@ -436,7 +436,7 @@ $$O(n)$$
 
 ### Merge-sort
 
-![[Merge-sort-example-300px.gif]]
+<img src="images/Merge-sort-example-300px.gif" alt="Merge-sort-example-300px">
 <sup>Gif of mergesort</sup>
 
 ## Searching
@@ -473,9 +473,9 @@ $$O(\log_2 n) \implies O(\log n)$$
 
 !!! info
 
-	- Use [[#Divide and Conquer]] when you **==don't== have overlapping sub problems**
-	- Use [[#Dynamic Programming]] when you **==do== have overlapping sub problems**
-	- Use [[#Backtracking]] when you need to backtrack 😎
+	- Use [Divide and Conquer](#divide-and-conquer) when you **==don't== have overlapping sub problems**
+	- Use [Dynamic Programming](#dynamic-programming) when you **==do== have overlapping sub problems**
+	- Use [Backtracking](#backtracking) when you need to backtrack 😎
 
 #### Brute Force
 
@@ -491,9 +491,9 @@ Checking every possible combination to see if it is valid as you go along. But i
 
 	$$T(n) = T(n-b)$$ Not $$T(n) = T\left(\frac{n}{b}\right)$$
 
-	[[#Master theorem]]
+	[Master theorem](#master-theorem)
 
-Decrease and Conquer algorithms make the problem smaller by reducing problem at each [[Programming#Iteration|iteration]]. They can reduce the problem by
+Decrease and Conquer algorithms make the problem smaller by reducing problem at each [iteration](programming.md#iteration). They can reduce the problem by
 - Constant amount
 - Variable amount
 
@@ -507,14 +507,14 @@ Efficient when the problem can be systematically decreased to a solution
 - Extend the solution of the smaller instance to get the solution to the overall problem
 
 **Examples**:
-- [[Graphs#BFS Breadth First Search]]
-- [[Graphs#DFS Depth First Search]]
+- [BFS Breadth First Search](graphs.md#bfs-breadth-first-search)
+- [DFS Depth First Search](graphs.md#dfs-depth-first-search)
 
 
 
 #### Divide and Conquer
 
-![[Pasted image 20220728144049.png]]
+<img src="images/Pasted image 20220728144049.png" alt="Pasted image 20220728144049">
 
 !!! warning
 
@@ -522,25 +522,25 @@ Efficient when the problem can be systematically decreased to a solution
 
 	$$T(n) = T\left(\frac{n}{b}\right)$$ Not $$T(n) = T(n-b)$$
 
-	[[#Master theorem]]
+	[Master theorem](#master-theorem)
 
 When the input size is divided into smaller parts
 
 #### Dynamic Programming
 
-![[Pasted image 20220728144029.png]]
+<img src="images/Pasted image 20220728144029.png" alt="Pasted image 20220728144029">
 
 - Bottom up computation
 	- Start at base case and build up 
 - Useful where we have a straight forward recursive solution to a problem, but the direct recursive implementation is inefficient because it leads to redundant computations.
-- Useful where the problem **can only be split into [[#overlapping sub-problems]]**
-	- [[Algorithms#Decrease and Conquer]] is only useful when the problem can be split into **non-overlapping** (independent) sub-problems
+- Useful where the problem **can only be split into [overlapping sub-problems](#overlapping-sub-problems)**
+	- [Decrease and Conquer](algorithms.md#decrease-and-conquer) is only useful when the problem can be split into **non-overlapping** (independent) sub-problems
 - Usually has polynomial runtime complexity
 
 
 Examples:
-- [[Graphs#Floyd-Warshall algorithm]]
-- [[Graphs#Belman-Ford algorithm]]
+- [Floyd-Warshall algorithm](graphs.md#floyd-warshall-algorithm)
+- [Belman-Ford algorithm](graphs.md#belman-ford-algorithm)
 
 !!! info
 
@@ -559,7 +559,7 @@ lmao sudoku
 
 ### Greedy
 
-Choose best looking path (from a [[Graphs#Heuristic functions|heuristic]]) and discard? others
+Choose best looking path (from a [heuristic](graphs.md#heuristic-functions)) and discard? others
 - Fast but not always correct
 
 ## Heuristics / evaluation functions
@@ -574,7 +574,7 @@ Choose best looking path (from a [[Graphs#Heuristic functions|heuristic]]) and d
 
 For example (TSP):
 - Swapping the position of two cities on a route (Mutations)
-- [[#Evolutions]]
+- [Evolutions](#evolutions)
 - Reversing the order of an entire section of a route
 
 #### Mutations
@@ -582,7 +582,7 @@ For example (TSP):
 - Random pairwise exchanges
 - "swap a set of elements to see if its any better"
 
-![[Pasted image 20220824093937.png|500]]
+<img src="images/Pasted image 20220824093937.png" alt="Pasted image 20220824093937" width="500">
 
 #### Evolutions
 
@@ -591,45 +591,45 @@ Algorithm will repeatedly evaluate all the tours in the “dish”
 - replace them with copies of the better tours 
 - each copy is slightly different than the tour it was copied from
 
-![[Pasted image 20220822104745.png|500]]
+<img src="images/Pasted image 20220822104745.png" alt="Pasted image 20220822104745" width="500">
 
 
 ### \[Continuous\] Hill climbing
 
 When mapping solutions, plot them on a 3d graph, where $z = f(x,y)$ and the peaks ($z$) are the favourable solutions
 
-![[Pasted image 20220824094518.png|500]]
+<img src="images/Pasted image 20220824094518.png" alt="Pasted image 20220824094518" width="500">
 
 "Constraints" whilst solving:
 - You can't see more than one step ahead
 - You can't remember where you've been
 
 Main points
-- You do not [[#Backtracking|backtrack]], you do not remember previous positions
+- You do not [backtrack](#backtracking), you do not remember previous positions
 - Each Axis/Dimension is a feature of a problem.
 	- One axis is the efficacy of the combination of variables solved with an evaluation function. 
 		- Such that x and y are the locations on a field and z is how good that spot is for a picnic. 
 		- The evaluation function does not need to be directly evaluating variables x and y only. It can use other resources
 
-When traversing the [[#State space]] (hills):
+When traversing the [State space](#state-space) (hills):
 - Compute local gradient
 	- Find maximal direction
 - Take a small step in that direction
 - No backtracking, we don't care where we've been
 
-![[Pasted image 20220824094712.png|400]]
+<img src="images/Pasted image 20220824094712.png" alt="Pasted image 20220824094712" width="400">
 
 I.e. we try to find the $x,y$ for the highest $z$
 
 #### State space
 
-![[Pasted image 20220824095053.png]]
+<img src="images/Pasted image 20220824095053.png" alt="Pasted image 20220824095053">
 
 When stuck at:
 
 - Local maxima:
 	- *Restart in random location*
-	- [[#Simulated annealing]]
+	- [Simulated annealing](#simulated-annealing)
 - Shoulders
 	- Your step size may need to be dynamically adjusted or it could keep searching till it finds a difference. This could be an algorithm in itself
 - Plateaux / Flat local maxima
@@ -643,7 +643,7 @@ When stuck at:
 	- Controlled by annealing schedule, Inspired by tempering of glass, metal
 - One can prove: If temperature decreases slowly enough, then simulated annealing search will find a global optimum with probability approaching one, which means you are certain of your solution. However, this usually takes impractically long.
 
-![[Hill_Climbing_with_Simulated_Annealing.gif]]
+<img src="images/Hill_Climbing_with_Simulated_Annealing.gif" alt="Hill_Climbing_with_Simulated_Annealing">
 <sup>**Gif^^**</sup>
 
 !!! info
@@ -656,11 +656,11 @@ When stuck at:
 
 Basically, "*Calling a function inside of itself*"
 
-![[Pasted image 20220324205607.png|#invert|400]]
+<img src="images/Pasted image 20220324205607.png" alt="Pasted image 20220324205607">
 
 Requirements:
  
-- Each recursive function **must** have a terminating condition ([[#Base case]]), or be explicitly finite, so it doesn't infinitely call itself.
+- Each recursive function **must** have a terminating condition ([Base case](#base-case)), or be explicitly finite, so it doesn't infinitely call itself.
 
 ### Base case
 
@@ -710,7 +710,7 @@ Where:
 
 !!! note
 
-	![[Pasted image 20240922201319.png]]
+	<img src="images/Pasted image 20240922201319.png" alt="Pasted image 20240922201319">
 	**Only use this formula to practice! this is the one you have on the exam**
 
 
@@ -722,8 +722,8 @@ Where:
 
 !!! note "Good explanation of trees"
 
-	![[Pasted image 20220803094552.png]]
-	![[Pasted image 20220803094614.png]]
+	<img src="images/Pasted image 20220803094552.png" alt="Pasted image 20220803094552">
+	<img src="images/Pasted image 20220803094614.png" alt="Pasted image 20220803094614">
 	https://www.cs.cornell.edu/courses/cs3110/2012sp/lectures/lec20-master/lec20.html
 
 	This method maps out the $f(n)$ work at each call as the node. The summation of the rows's work is on the right. If the summation is always a constant value $A$ for each level, the time complexity is $O(A\cdot\text{height})$, or in this example; a geometric series.
@@ -736,7 +736,7 @@ Where:
 
 	Also, another geometric time complexity is a decision tree, where it expands in $2^n$ time
 
-	![[Pasted image 20220803103031.png]]
+	<img src="images/Pasted image 20220803103031.png" alt="Pasted image 20220803103031">
 
 	Another example is $T(n) = T(n/3) + T(2n/3) + n$. I just need to note that:
 	- Asymptotic height of tree is longest term -> $T(2n/3)$
@@ -763,7 +763,7 @@ $${PR(A)={\frac {PR(B)}{2}}+{\frac {PR(C)}{1}}+{\frac {PR(D)}{3}}}$$
 
 ##### Damping factor
 
-The [[#Page Rank]] theory holds that an imaginary surfer who is randomly clicking on links will eventually stop clicking. The probability, at any step, that the person will continue is a damping factor $d$. Various studies have tested different damping factors, but it is generally assumed that the damping factor will be set around $0.85$. I.e 85% of people will click an outgoing link
+The [Page Rank](#page-rank) theory holds that an imaginary surfer who is randomly clicking on links will eventually stop clicking. The probability, at any step, that the person will continue is a damping factor $d$. Various studies have tested different damping factors, but it is generally assumed that the damping factor will be set around $0.85$. I.e 85% of people will click an outgoing link
 
 The damping factor is subtracted from 1 (and in some variations of the algorithm, the result is divided by the number of documents ($N$) in the collection) and this term is then added to the product of the damping factor and the sum of the incoming PageRank scores. That is,
 
@@ -789,7 +789,7 @@ This can be done through counter variables
 
 #### Proof by induction
 
-![[Pasted image 20250327174311.png]]
+<img src="images/Pasted image 20250327174311.png" alt="Pasted image 20250327174311">
 
 1. We can reach the first step on the ladder
 2. If we can reach a particular rung on the ladder, then we can reach the next rung on the ladder.
@@ -833,7 +833,7 @@ State the proposition, say "the proof is by contradiction", then contradict your
 
 ### Axioms
 
-![[Pasted image 20220905092544.png]]
+<img src="images/Pasted image 20220905092544.png" alt="Pasted image 20220905092544">
 
 - As classically conceived, an axiom is a premise so evident as to be accepted as true without controversy
 
@@ -870,9 +870,9 @@ $$c = \sqrt{a^2+b^2}$$
 	**However, Hilbert's Program (in general) is still in the study design**
 
 
-Sweaty soy-jack Hilbert said he could prove mathematics' natural consistency with a finite set of [[#Axioms]] and solve the foundational crisis of mathematics.
+Sweaty soy-jack Hilbert said he could prove mathematics' natural consistency with a finite set of [Axioms](#axioms) and solve the foundational crisis of mathematics.
 
-He was wrong, see [[#Gödel's Incompleteness Theorem]] (Not in 2023 course design)
+He was wrong, see [Gödel's Incompleteness Theorem](#gödels-incompleteness-theorem) (Not in 2023 course design)
 
 The main goal of Hilbert's program was to provide secure foundations for all mathematics. In particular this should include:
 
@@ -895,32 +895,32 @@ The **historical context** was:
 
 #### Lambda Calculus
 
-An equivalent of the [[Computer Science#Turing machine]] invented by Alonzo Church
+An equivalent of the [Turing machine](computer-science.md#turing-machine) invented by Alonzo Church
 
 #### Church-Turing Thesis
 
-- All [[#Uncomputability and undecidability|computable]] [[#Definition of an Algorithm|algorithms]] are computable given infinite time and space
-	- And will complete in a finite amount of time (this is a stupid contradiction and i hate it) **with respect to the [[#Definition of an Algorithm]]**
+- All [computable](#uncomputability-and-undecidability) [algorithms](#definition-of-an-algorithm) are computable given infinite time and space
+	- And will complete in a finite amount of time (this is a stupid contradiction and i hate it) **with respect to the [Definition of an Algorithm](#definition-of-an-algorithm)**
 - If one can show that a problem cannot be solved on a Turing machine; then it follows that it cannot be solved by any computer or by any human.
 
 **The limitation of the thesis**:
-- Computability is only considered on the [[Computer Science#Turing machine]] or with [[#Lambda Calculus]], which doesn't consider alternative models of computation.
+- Computability is only considered on the [Turing machine](computer-science.md#turing-machine) or with [Lambda Calculus](#lambda-calculus), which doesn't consider alternative models of computation.
 
 #### Halting problem
 
 Machine $H$ determines if the input $I$ (program and program input) will halt or not. 
 
-![[Pasted image 20220910162947.png|200]]
+<img src="images/Pasted image 20220910162947.png" alt="Pasted image 20220910162947" width="200">
 
 Another machine $H+$ will halt if $H$ outputs `no-halt` and will loop forever if $H$ outputs `halt`.
 
-![[Pasted image 20220910163039.png|500]]
+<img src="images/Pasted image 20220910163039.png" alt="Pasted image 20220910163039" width="500">
 
 When inputing $H+$ into $H+$, we get a paradox/contradiction. Basically, if it decides $H+$ will halt, it loops forever. And if $H+$ does not halt, it halts.
 
-Concluding that $H$ cannot exist, and mathematics is [[#Uncomputability and undecidability|undecidable]].
+Concluding that $H$ cannot exist, and mathematics is [undecidable](#uncomputability-and-undecidability).
 
-![[Pasted image 20220910163125.png]]
+<img src="images/Pasted image 20220910163125.png" alt="Pasted image 20220910163125">
 
 !!! info
 
@@ -928,7 +928,7 @@ Concluding that $H$ cannot exist, and mathematics is [[#Uncomputability and unde
 
 ### Summations
 
-![[Pasted image 20220607142453.png]]
+<img src="images/Pasted image 20220607142453.png" alt="Pasted image 20220607142453">
 
 #### Average
 
@@ -938,7 +938,7 @@ $$\mu = \frac{1}{N}\sum^{N}_{i=1}{x_i}$$
 
 #### Standard deviation
 
-Measure of how spread out numbers are from the [[#Average]] $= \sigma$.
+Measure of how spread out numbers are from the [Average](#average) $= \sigma$.
 
 
 $$\sigma = \sqrt{\frac{1}{N}\sum^N_{i=1}{(x_i-\mu)^2}}$$
@@ -947,7 +947,7 @@ $$\sigma = \sqrt{\frac{1}{N}\sum^N_{i=1}{(x_i-\mu)^2}}$$
 
 The sequence of numbers.
 
-![[Pasted image 20220616114029.png|#invert]]
+<img src="images/Pasted image 20220616114029.png" alt="Pasted image 20220616114029">
 
 !!! note
 
@@ -955,9 +955,9 @@ The sequence of numbers.
 
 #### Arithmetic sequence
 
-![[Pasted image 20220616113640.png|#invert]]
+<img src="images/Pasted image 20220616113640.png" alt="Pasted image 20220616113640">
 
-Not to be confused with the non-linear [[#Geometric sequence]]
+Not to be confused with the non-linear [Geometric sequence](#geometric-sequence)
 
 A linear mathematical sequence of numbers `3, 8, 13, 18, 23, 28, 33, 38, ...`
  defined as $x\{a_n\} = \{a_0,a_1,a_2,a_3 ... a_n\}$. Can be written as
@@ -984,7 +984,7 @@ $$\sum^{n}_{i=1}{i} = \frac{1}{2} \cdot(n+1)$$
 
 #### Geometric sequence
 
-![[Pasted image 20220616113631.png|#invert]]
+<img src="images/Pasted image 20220616113631.png" alt="Pasted image 20220616113631">
 
 A non linear sequence of numbers such as `1,2,4,8,16,31,64`
 
@@ -1015,16 +1015,16 @@ Suppose:
 
 then $f(n) = O(g(n))$ if there exist some constant $c$ such that $f(n) \leq cg(n)$ for $n \rightarrow \infty$
 
-![[Pasted image 20220620104046.png|300]]
+<img src="images/Pasted image 20220620104046.png" alt="Pasted image 20220620104046" width="300">
 
 This means $f$ must not grow faster than $g$ towards infinity. We are only interested in the largest terms without constant coefficients.
 
-![[Pasted image 20220620101041.png|600]]
+<img src="images/Pasted image 20220620101041.png" alt="Pasted image 20220620101041" width="600">
 <sup>[source](https://www.bigocheatsheet.com/)</sup>
 
 ##### Tractable problems
 
-![[Pasted image 20220820160701.png|300]]
+<img src="images/Pasted image 20220820160701.png" alt="Pasted image 20220820160701" width="300">
 
 Literally "a problem that can be handled"
 
@@ -1066,7 +1066,7 @@ See a conversation between myself and [Sebastian Sardina](https://www.rmit.edu.a
 >
 > For example, does the following algorithm have a space complexity of O(1) or O(n)?
 >
-> ![[Pasted image 20220804084415.png]]
+> <img src="images/Pasted image 20220804084415.png" alt="Pasted image 20220804084415">
 > 
 > Thank you very much
 
@@ -1090,7 +1090,7 @@ See a conversation between myself and [Sebastian Sardina](https://www.rmit.edu.a
 
 #### Combinatorial explosions
 
-[[#Intractable problems]] that explode in combinations.
+[Intractable problems](#intractable-problems) that explode in combinations.
 
 The Knapsack 0-1 problem (0-1 means in or out) has to consider all combinations of items, and whether they should be in or out.
 
@@ -1100,7 +1100,7 @@ $$\sum_{i=0}^n{n \choose i} = 2^n$$
 
 #### Problem classes
 
-![[Pasted image 20220817150259.png|#invert]]
+<img src="images/Pasted image 20220817150259.png" alt="Pasted image 20220817150259">
 
 !!! info
 
@@ -1109,7 +1109,7 @@ $$\sum_{i=0}^n{n \choose i} = 2^n$$
 
 ##### P problems
 
-Solved/proved in $\le$ polynomial time, and are [[#Tractable problems]]
+Solved/proved in $\le$ polynomial time, and are [Tractable problems](#tractable-problems)
 
 $$P \subseteq NP$$
 
@@ -1159,7 +1159,7 @@ Examples:
 ##### NP Hard problems
 
 - Hardest problems.
-- All [[#NP complete problems]] are in NP hard
+- All [NP complete problems](#np-complete-problems) are in NP hard
 - Solved in unreasonable/non-polynomial time
 - Verifiable larger than polynomial time.
 	- Usually all other answers need to be solved before an answer can be verified
@@ -1171,7 +1171,7 @@ Examples:
 
 #### Problem complexity 
 
-![[Pasted image 20220820150902.png|300]]
+<img src="images/Pasted image 20220820150902.png" alt="Pasted image 20220820150902" width="300">
 
 ##### Upper bound
 
@@ -1182,24 +1182,24 @@ Examples:
 
 ##### Open problems
 
-![[Pasted image 20220820150945.png|300]]
+<img src="images/Pasted image 20220820150945.png" alt="Pasted image 20220820150945" width="300">
 
 ##### Closed problems
 
-![[Pasted image 20220820151008.png|300]]
+<img src="images/Pasted image 20220820151008.png" alt="Pasted image 20220820151008" width="300">
 
 - Better algorithms are still possible
 	- Better algorithms will not provide an improvement detectable by “Big O”
 
 ### Bisection solve
 
-![[Pasted image 20220713093654.png|#invert|300]]
+<img src="images/Pasted image 20220713093654.png" alt="Pasted image 20220713093654">
 
 Given lower bound $a$ and upper bound $b$, calculate the mid (average) value $c$ and sub into $f(x)$. Then adjust the bounds $a, b$ to move closer to the value closer to $0$.
 
 
 
-![[Pasted image 20220713094600.png]]
+<img src="images/Pasted image 20220713094600.png" alt="Pasted image 20220713094600">
 
 ### Information games
 
@@ -1223,7 +1223,7 @@ $$\binom{n}{k}=\binom{n-1}{k-1}+\binom{n-1}{k}$$
 
 These are also the coefficients to $(x+1)^n$ where $n$ is the row in Pascal's triangle:
 
-![[Pasted image 20220907201418.png]]
+<img src="images/Pasted image 20220907201418.png" alt="Pasted image 20220907201418">
 
 ## Artificial Intelligence (AI)
 
@@ -1252,7 +1252,7 @@ AKA the imitation game - A. Turing.
 
 A game where a computer (A) and a person (B have to convince the interrogator (C) that they're human via text responses.
 
-![[Pasted image 20220912092432.png|300]]
+<img src="images/Pasted image 20220912092432.png" alt="Pasted image 20220912092432" width="300">
 
 This test asks:
 - Can machines think?
@@ -1261,9 +1261,9 @@ This test asks:
 - Is this redefining the notion of thinking?
 - Is it possible for a computer suitably programmed to imitate the language and behaviour of a human?
 - Is there a theoretical limit on what a computer can input or output in the way of language?
-- Is intelligence merely a set of instructions (A [[Computer Science#Turing machine|Turing machine]]), or a magical spark?
+- Is intelligence merely a set of instructions (A [Turing machine](computer-science.md#turing-machine)), or a magical spark?
 
-With respect to a [[Computer Science#Turing machine|Turing machine]], it seems possible for AI to pass this test. See [[#The Chinese Room Experiment]]. According to Turing, a Turing test is a sufficient indicator of intelligence. Therefore a computer that is suitably programmed is capable of passing the Turing test.
+With respect to a [Turing machine](computer-science.md#turing-machine), it seems possible for AI to pass this test. See [The Chinese Room Experiment](#the-chinese-room-experiment). According to Turing, a Turing test is a sufficient indicator of intelligence. Therefore a computer that is suitably programmed is capable of passing the Turing test.
 
 **Is passing a Behaviour/Language test evidence of Intelligence?**
 
@@ -1277,14 +1277,14 @@ A.K.A. "Artificial **narrow** intelligence"
 - Uses data and algorithms to complete narrow task
 	- Beating Chess
 	- Social media sorting
-- Can't beat [[#Turing Test AI]]
+- Can't beat [Turing Test AI](#turing-test-ai)
 
 ### Strong AI
 
 A.K.A. "Artificial **general** intelligence"
 
 - Can think as well as a human
-- Can pass [[#Turing Test AI]]
+- Can pass [Turing Test AI](#turing-test-ai)
 - Can do multiple thinking tasks
 - Can learn and upgrade itself without external assistance
 	- "Recursive self-improvement"
@@ -1292,7 +1292,7 @@ A.K.A. "Artificial **general** intelligence"
 
 ### The Chinese Room Experiment
 
-![[Pasted image 20220915144117.png]]
+<img src="images/Pasted image 20220915144117.png" alt="Pasted image 20220915144117">
 
 *Searle can be considered a computer*
 
@@ -1305,7 +1305,7 @@ A.K.A. "Artificial **general** intelligence"
 The experiment argues that:
 
 - If the computer is merely computing the answer, does it truely understand Chinese?
-	- Searle argues that the computer will not understand as it does not represent the values of [[#Intelligence]]. I.e. **Thinking involves more than information processing**. **Computers do not have understanding** 
+	- Searle argues that the computer will not understand as it does not represent the values of [Intelligence](#intelligence). I.e. **Thinking involves more than information processing**. **Computers do not have understanding** 
 - Information processing on its own is syntactic and not semantic.
 	- Searle's argument
 	- Syntax means the properties of a language as symbols and uninterpreted. 
@@ -1362,11 +1362,11 @@ To which Searle responded
 
 AKA Artificial Neural Network (ANN)
 
-A bunch of inputs that go into hidden layers of [[#Perceptron|perceptrons]] or [[#Artificial Neurons]] that evaluate into the output layer
+A bunch of inputs that go into hidden layers of [perceptrons](#perceptron) or [Artificial Neurons](#artificial-neurons) that evaluate into the output layer
 
-When half of the data is used to train the network, the other half is used to validate, test and [[#Backwards propagation|backwards propagate]]
+When half of the data is used to train the network, the other half is used to validate, test and [backwards propagate](#backwards-propagation)
 
-![[Pasted image 20220917163259.png]]
+<img src="images/Pasted image 20220917163259.png" alt="Pasted image 20220917163259">
 
 Example above is a **feedfoward neural network**
 
@@ -1382,7 +1382,7 @@ Outputs $[-1, 1]$
 
 Essentially, it takes several inputs and multiplies them by their bias to be matched against a threshold or bias. The result of the bias comparison is then the resultant binary output. Which is: True or false, Yes or No, `0`, `1` etc
 
-![[Pasted image 20220917153507.png]]
+<img src="images/Pasted image 20220917153507.png" alt="Pasted image 20220917153507">
 
 <br>
 
@@ -1411,7 +1411,7 @@ $$
 
 Example:
 
-![[Pasted image 20220917160429.png]]
+<img src="images/Pasted image 20220917160429.png" alt="Pasted image 20220917160429">
 
 **The inputs are usually 0 or 1 btw**
 
@@ -1425,7 +1425,7 @@ The $z$ dot product is $4$, which is $<b \text{ and < -5}$ which concludes an ou
 
 !!! info
 
-	There are lots of perceptrons that make up a [[#Neural Networks|neural network]], they work in hidden layers to build a full solution output or outputs. The percetron evaluates inputs mathematically
+	There are lots of perceptrons that make up a [neural network](#neural-networks), they work in hidden layers to build a full solution output or outputs. The percetron evaluates inputs mathematically
 
 	The perceptron weights can also be modified by an external program
 
@@ -1433,7 +1433,7 @@ The $z$ dot product is $4$, which is $<b \text{ and < -5}$ which concludes an ou
 
 Similar to a regular perceptron, but outputs in the range of $(0,1)$
 
-![[Pasted image 20220917163037.png|300]]
+<img src="images/Pasted image 20220917163037.png" alt="Pasted image 20220917163037" width="300">
 
 As you can see, they are also very sensitive to input 😢
 
@@ -1442,7 +1442,7 @@ As you can see, they are also very sensitive to input 😢
 
 Forward propagation is the initial phase of data processing in a neural network. Here, input data is fed into the network and passed through various layers. Each neuron in these layers processes the input and passes it to the next layer, ultimately leading to the output layer. This process is linear and straightforward, moving in one direction: from input to output.
 
-![[Pasted image 20240910154731.png]]
+<img src="images/Pasted image 20240910154731.png" alt="Pasted image 20240910154731">
 
 [source](https://stackademic.com/blog/the-difference-between-back-propagation-and-forward-propagation-in-deep-learning-2b2248e6d00c)
 
