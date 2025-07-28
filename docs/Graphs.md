@@ -823,7 +823,7 @@ Prim's algorithm for finding an [MST](graphs.md#minimum-spanning-tree) is **guar
 
 Finds minimum spanning forest by connecting the shortest edges in the graph.
 
-![Wiki example of kruskals|#invert](https://upload.wikimedia.org/wikipedia/commons/b/bb/KruskalDemo.gif)
+![Wiki example of kruskals|#invert](images/KruskalDemo.gif)
 
 ## Shortest Path algorithms
 
@@ -903,7 +903,7 @@ Step 2: [relax](#relaxation) edges repeatedly
 Step 3: check for negative-weight cycles
 Output shortest path as a distance and predecessor list (depending on setup)
 
-![GraphFromWikiBellmanFord](https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Bellman%E2%80%93Ford_algorithm_example.gif/440px-Bellman%E2%80%93Ford_algorithm_example.gif)
+![GraphFromWikiBellmanFord](images/Bellman–Ford_algorithm_example.gif)
 
 
 !!! note "Tool"
