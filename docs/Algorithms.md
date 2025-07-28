@@ -794,6 +794,13 @@ This can be done through counter variables
 
 Can we reach every step on the infinite ladder?
 
+A more mathematical explanation
+
+![Linz, Peter. Induction](images/l-peter-induction.png)
+
+> Linz, Peter. An Introduction to Formal Languages and Automata : ., Jones & Bartlett Learning, LLC, 1990.
+
+
 ---
 
 Mathematical induction is a rule of inference for a proposition $P(n)$ that tells us:
