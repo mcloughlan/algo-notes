@@ -19,7 +19,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 $$
 f(n) = \begin{cases}
-1 & \text{if } n \leq 1 \\
+1 & \text{if } n \leq 1 \newline
 f(n-1) + f(n-2) & \text{otherwise}
 \end{cases}
 $$

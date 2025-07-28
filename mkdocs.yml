@@ -4,3 +4,10 @@ repo_url: https://github.com/mcloughlan/algo-notes
 edit_uri: ""
 theme:
   name: material
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js
+  - js/math.js
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css
