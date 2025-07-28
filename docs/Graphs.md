@@ -88,7 +88,6 @@ A path can contain many edges, or a single. it depends on what nodes are being s
 		- Don't exist if a graph has more than two vertices of odd degree.
 		- Exists if all vertices of a graph have even degree.
 		- Exists if a connected graph has exactly two odd vertices. The starting point must be one of the odd vertices and the ending point will be the other of the odd vertices.
-		- See [here](https://lms.vsvonline.vic.edu.au/pluginfile.php/22968/mod_resource/content/10/3.4%20%20Graph%20Theory%20Intro.pdf#page=11)
 
 	- [Hamiltonian Paths](#hamiltonian-path)
 		- Don't have to traverse every [edge](#edges)
@@ -485,7 +484,7 @@ A tree where each non-leaf node splits off to two other child nodes. If there is
 
 ##### Random decision forests
 
-Or decision forests, have $n - s$ edges. For $n$ vertices and $s$ source nodes. See my discussion [here](https://math.stackexchange.com/questions/4405339/generalising-an-answer-to-number-of-edges-on-a-decision-tree)
+Or decision forests, have $n - s$ edges. For $n$ vertices and $s$ source nodes. See [my discussion](https://math.stackexchange.com/questions/4405339/generalising-an-answer-to-number-of-edges-on-a-decision-tree)
 
 #### Binary tree
 
@@ -655,18 +654,12 @@ SAC example:
 	- The diameter of a graph is the longest shortest path between any two nodes in a graph. Using BFS in a loop and finding the shortest path starting from every node in the graph, keep record of the longest shortest path found so far.
 - Cycle detection
 - [Bipartite graph](#bipartite-graphs) detection using BFS
-- [Web crawler](https://lms.vsvonline.vic.edu.au/pluginfile.php/141031/mod_resource/content/1/Applications%20of%20DFS%20and%20BFS.pdf#page=4)
-- [More](https://lms.vsvonline.vic.edu.au/pluginfile.php/141031/mod_resource/content/1/Applications%20of%20DFS%20and%20BFS.pdf#page=4)
 
 #### Waveform
 
 [BFS Breadth First Search](#bfs-breadth-first-search) can be considered a waveform due to its nature
 
 <img src="images/WAVEg.gif" alt="WAVEg" width="200">
-
-!!! note
-
-	[VSV](https://lms.vsvonline.vic.edu.au/pluginfile.php/77703/mod_resource/content/6/3.5A%20Breadth%20First%20Search%20-%20WaveForm.pdf)
 
 ### DFS Depth First Search
 
@@ -860,7 +853,7 @@ $$\displaystyle O(|V^2|)$$
 - Finds shortest path from starting node, to any other location, not just the desired location.
 - Works on weighted, weighted graphs and weighted digraphs. **Where no negative weight cycles exist**
 
-Online example [here](https://algorithms.discrete.ma.tum.de/graph-algorithms/spp-dijkstra/index_en.html)
+[Online dijkstra example](https://algorithms.discrete.ma.tum.de/graph-algorithms/spp-dijkstra/index_en.html)
 
 Pseudocode
 
@@ -1005,7 +998,7 @@ return D
 
 !!! info
 
-	Good explanation [here](https://www.youtube.com/watch?v=4OQeCuLYj-4&ab_channel=MichaelSambol)
+	[Good Floyd-Warshall explanation](https://www.youtube.com/watch?v=4OQeCuLYj-4&ab_channel=MichaelSambol)
 
 #### Floyd-Warshall  transitive closure algorithm
 

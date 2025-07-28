@@ -441,5 +441,3 @@ $$
 $$
 δ(q, B) = (q, 1, L)
 $$
-
-[Link to slideshow](https://lms.vsvonline.vic.edu.au/pluginfile.php/65047/mod_resource/content/6/JellyBean%20Turing%20Machine.pdf#page=36)
