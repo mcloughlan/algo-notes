@@ -1,7 +1,6 @@
 # Graphs
 
-```toc
-```
+
 
 ## Terminology
 
@@ -292,7 +291,7 @@ The graph shown above has many valid topological sorts, including:
 -   5, 7, 11, 2, 3, 8, 9, 10 (attempting top-to-bottom, left-to-right)
 -   3, 7, 8, 5, 11, 10, 2, 9 (arbitrary)
 
-This can be calculated through [[#Kahn’s Algorithm]]
+This can be calculated through [[#Kahn's Algorithm]]
 
 Also see, [[3.6C Decrease and conquer]] for my own implementation
 
@@ -300,7 +299,7 @@ Also see, [[3.6C Decrease and conquer]] for my own implementation
 https://en.wikipedia.org/wiki/Topological_sorting
 ```
 
-#### Kahn’s Algorithm
+#### Kahn's Algorithm
 
 A [[#Topological sort]] algorithm, first described by **Kahn** (1962), works by choosing vertices in the same order as the eventual topological sort. First, find a list of "start nodes" which have no incoming edges and insert them into a set $S$; at least one such node must exist in a non-empty acyclic graph. Then:
 
@@ -794,8 +793,9 @@ postorder(node):
 A [[#Greedy|greedy]] algorithm used to find the [[Graphs#Minimum Spanning Tree|minimum spanning tree]]
 
 
-> [!NOTE] Online tool
-> https://algorithms.discrete.ma.tum.de/mst/
+!!! NOTE "Online tool"
+
+	https://algorithms.discrete.ma.tum.de/mst/
 
 
 Algorithm
@@ -828,7 +828,7 @@ Or
 
 ![[Pasted image 20220308183646.png|#invert|300]]
 
-Prim’s algorithm for finding an [[Graphs#Minimum Spanning Tree|MST]] is **guaranteed** to produce a correct result
+Prim's algorithm for finding an [[Graphs#Minimum Spanning Tree|MST]] is **guaranteed** to produce a correct result
 
 ### Kruskal's algorithm
 
@@ -917,13 +917,14 @@ Output shortest path as a distance and predecessor list (depending on setup)
 ![GraphFromWikiBellmanFord](https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Bellman%E2%80%93Ford_algorithm_example.gif/440px-Bellman%E2%80%93Ford_algorithm_example.gif)
 
 
-> [!note] Tool
-> [Online runner](https://algorithms.discrete.ma.tum.de/graph-algorithms/spp-bellman-ford/index_en.html)
+!!! note "Tool"
+
+	[Online runner](https://algorithms.discrete.ma.tum.de/graph-algorithms/spp-bellman-ford/index_en.html)
 
 
-Unlike Dijkstra’s Algorithm the Bellman-Ford Algorithm does not use a [[Programming#Priority Queue|priority queue]] to process the edges.
+Unlike Dijkstra's Algorithm the Bellman-Ford Algorithm does not use a [[Programming#Priority Queue|priority queue]] to process the edges.
 
-In Step 2 ([[#Relaxation]]) the nested for loop process all edges in the graph for each vertex $(V-1)$. Bellman-Ford is not a Greedy Algorithm, it uses Brute Force to build the solution incrementally, possibly going over each vertex several times. If a vertex has a lot of incoming edges it is updating the vertex’s distance and predecessor many times.
+In Step 2 ([[#Relaxation]]) the nested for loop process all edges in the graph for each vertex $(V-1)$. Bellman-Ford is not a Greedy Algorithm, it uses Brute Force to build the solution incrementally, possibly going over each vertex several times. If a vertex has a lot of incoming edges it is updating the vertex's distance and predecessor many times.
 
 Pseudocode
 

@@ -3,20 +3,19 @@
 I went a bit nuts on these notes. This is just my way of ingesting and long term memorisation, rather than just revision.
 
 
-> [!important] FOR 2023 (onwards) STUDENTS
-> I removed the outdated content from before 2023, but there may be implicit references to it in other current content
+!!! important "FOR 2023 (onwards) STUDENTS"
+
+	I removed the outdated content from before 2023, but there may be implicit references to it in other current content
 
 
-> [!warning] Migration 
-> Some of the content in this Obsidian file has migrated like 3 major versions and might look funny or not work. GIFs and videos will just look like images as well.
-**
+!!! warning "Migration"
+
+	Some of the content in this Obsidian file has migrated like 3 major versions and might look funny or not work. GIFs and videos will just look like images as well.
 
 Note that this does not contain everything on the exam. Read over the current study design. That is what is on the exam. This is just what I wanted to write notes for, which is probably > 80% of exam material anyway. I'm not sure.
 
 ---
 
-```toc
-```
 
 ## Definition of an Algorithm
 
@@ -184,19 +183,19 @@ END IF
 When an if statement has cascading `ELSE IF` statements
 
 ```js
-IF the student’s mark was below 50
+IF the student's mark was below 50
 {
 	write "Fail"
 }
-ELSE IF the student’s mark was below 60
+ELSE IF the student's mark was below 60
 {
 	write "Pass"
 }
-ELSE IF the student’s mark was below 70
+ELSE IF the student's mark was below 70
 {
 	write "Credit"
 }
-ELSE IF the student’s mark was below 80
+ELSE IF the student's mark was below 80
 {
 	write "Distinction"
 }
@@ -353,8 +352,9 @@ There are problems documented everywhere in this page. I just needed a spot to p
 Also, I'm putting this here as well: 
 
 
-> [!NOTE] Game
-> https://algorithms.discrete.ma.tum.de/graph-games/tsp-game/index_en.html
+!!! note "Game"
+
+	https://algorithms.discrete.ma.tum.de/graph-games/tsp-game/index_en.html
 
 
 ```ad-yt
@@ -370,8 +370,9 @@ which is already in [[#Heuristics evaluation functions]]
 Big $O$ notation:
 
 
-> [!warning] 2023 changes
-> Don't worry about anything other than **worst case complexity**. Average and best have been removed
+!!! warning "2023 changes"
+
+	Don't worry about anything other than **worst case complexity**. Average and best have been removed
 
 
 | Algorithm                                      | Best Time         | Average Time      | Worst Time   | Worst Space |
@@ -866,9 +867,10 @@ $$c = \sqrt{a^2+b^2}$$
 #### Hilbert's program
 
 
-> [!Warning] 2023 changes
-> Much of this description references outdated content.
->  **However, Hilbert's Program (in general) is still in the study design**
+!!! Warning "2023 changes"
+
+	Much of this description references outdated content.
+	**However, Hilbert's Program (in general) is still in the study design**
 
 
 Sweaty soy-jack Hilbert said he could prove mathematics' natural consistency with a finite set of [[#Axioms]] and solve the foundational crisis of mathematics.
@@ -1043,7 +1045,7 @@ The term _[infeasible](https://en.wiktionary.org/wiki/infeasible "wikt:infeasib
 - $> O(k^n)$ where $k \in R$ 
 	- Including $n!$
 - Anything exponential or greater
-	- Factorial is asymptotically treated as exponential from [Stirling’s formula](http://www.sosmath.com/calculus/sequence/stirling/stirling.html)
+	- Factorial is asymptotically treated as exponential from [Stirling's formula](http://www.sosmath.com/calculus/sequence/stirling/stirling.html)
 		- ${\displaystyle n!\sim {\sqrt {2\pi n}}\left({\frac {n}{e}}\right)^{n},}$
 
 Examples:
@@ -1316,13 +1318,14 @@ The experiment argues that:
 #### Objections to Searle's argument
 
 
-> [!warning] Paraphrasing
-> These responses are paraphrased 
+!!! warning "Paraphrasing"
+
+	These responses are paraphrased 
 
 
 ##### The Systems Argument
 
-- We don’t say of a Chinese speaker that only part of them understands Chinese, rather the whole individual is considered as a system which understands Chinese.
+- We don't say of a Chinese speaker that only part of them understands Chinese, rather the whole individual is considered as a system which understands Chinese.
 - When Searle is in the room, he is only part of a system, the entire system which comprises the whole room does reproduce the behavior of a competent Chinese speaker, therefore it is the system which understands Chinese.
 
 To which Searle responded
