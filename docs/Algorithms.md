@@ -120,7 +120,7 @@ The use of functions.
 
 Why do each step in the algorithm:
 
-```js (pseudocode)
+```js
 FOR i IN X
 	y += i
 ```
@@ -666,7 +666,7 @@ Requirements:
 
 A case to terminate a recursive function:
 
-```js (pseudocode)
+```js
 function factorial(x)
     // Base case (x == 0) or x <= 0
     if x == 0:

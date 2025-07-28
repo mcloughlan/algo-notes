@@ -302,7 +302,7 @@ Also see, [[3.6C Decrease and conquer]] for my own implementation
 
 A [[#Topological sort]] algorithm, first described by **Kahn** (1962), works by choosing vertices in the same order as the eventual topological sort. First, find a list of "start nodes" which have no incoming edges and insert them into a set $S$; at least one such node must exist in a non-empty acyclic graph. Then:
 
-```js (pseudocode)
+```js
 L ← Empty list that will contain the sorted elements
 S ← Set of all nodes with no incoming edges
 
@@ -812,7 +812,7 @@ Example:
 
 Pseudocode:
 
-```js (pseudocode)
+```js
 Pick any vertex and add it to “vertices” list
 
 Loop until (“vertices” contains all the vertices in graph)
@@ -869,7 +869,7 @@ Online example [here](https://algorithms.discrete.ma.tum.de/graph-algorithms/spp
 
 Pseudocode
 
-```js (pseudocode)
+```js
 Algorithm Dijkstra(Graph, source):
 // initialise the algorithm
 for each vertex V in Graph G=(V,E) do
@@ -929,7 +929,7 @@ In Step 2 ([[#Relaxation]]) the nested for loop process all edges in the graph f
 
 Pseudocode
 
-```js (psuedocode)
+```js
 function BellmanFord(list vertices, list edges, vertex source)
 
     // This implementation takes in a graph, represented as
@@ -985,7 +985,7 @@ $$O (|V|^3)$$
 - Dynamic program
 - Generates the transitive closure of a graph, if a graph is constructed from the distance matrix output.
 
-```js (pseudocode)
+```js
 Algorithm Floyd-Warshall
 input: an edge-weighted graph G;
 output: the shortest path distances of all pairs of nodes in G
