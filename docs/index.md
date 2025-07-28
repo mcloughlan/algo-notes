@@ -1,4 +1,6 @@
-# Welcom to VCE Algorithmics notes
+# Welcome to VCE Algorithmics notes
+
+Each page can easily be printed with <kbd>ctrl</kbd> / <kbd>cmd</kbd> + <kbd>p</kbd>
 
 !!! danger
 

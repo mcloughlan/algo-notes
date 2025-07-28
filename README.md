@@ -1,5 +1,9 @@
 # VCE Algorithmics notes (2023-2027)
 
+Hosted at: [algo.mcloughlan.com](https://algo.mcloughlan.com)
+
+---
+
 >[!warning]
 > If you're one of my students who has found this early, I encourage you to continue making your own notes until term 4! 
 
