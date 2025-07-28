@@ -5,6 +5,8 @@ on:
       - master 
       - main
 permissions:
+  pages: write
+  id-token: write
   contents: write
 jobs:
   deploy:
