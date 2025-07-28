@@ -4,6 +4,8 @@ repo_url: https://github.com/mcloughlan/algo-notes
 edit_uri: ""
 theme:
   name: material
+  favicon: assets/favicon.png
+  logo: assets/logo.png
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js
