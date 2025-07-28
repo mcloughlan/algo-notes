@@ -1,0 +1,6 @@
+site_name: VCE Algorithmics Notes
+site_url: https://algo.mcloughlan.com # for SEO
+repo_url: https://github.com/mcloughlan/algo-notes
+edit_uri: ""
+theme:
+  name: material
