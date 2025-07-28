@@ -109,11 +109,6 @@ With:
 - Specifications – details of what criteria need to be met
 
 
-
-!!! note
-
-	https://lms.vsvonline.vic.edu.au/pluginfile.php/115276/mod_resource/content/6/3.10%20Communication%20of%20Design.pdf
-
 ## Modularity
 
 The use of functions.
@@ -352,7 +347,7 @@ Also, I'm putting this here as well:
 
 !!! note "Game"
 
-	https://algorithms.discrete.ma.tum.de/graph-games/tsp-game/index_en.html
+	[https://algorithms.discrete.ma.tum.de/graph-games/tsp-game/index_en.html](https://algorithms.discrete.ma.tum.de/graph-games/tsp-game/index_en.html)
 
 
 !!! info
@@ -379,11 +374,11 @@ Big $O$ notation:
 | [Selection sort](#selection-sort) (Not in 2021 study design) | $\Omega(n^2)$     | $\Theta(n^2)$     | $O(n^2)$     | $O(1)$      |
 | [Merge-sort](#merge-sort)                                |                   |                   |              |             |
 
-[^1]: When the pivot is the lowest item in the input each time. When sorting by ascending https://youtu.be/auclbmnm4iA?t=69
+[^1]: When the pivot is the lowest item in the input each time. When sorting by ascending [https://youtu.be/auclbmnm4iA?t=69](https://youtu.be/auclbmnm4iA?t=69)
 
 !!! note
 
-	https://www.bigocheatsheet.com/
+	[https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
 
 ### Selection sort
 
@@ -726,7 +721,8 @@ Where:
 
 	<img src="images/Pasted image 20220803094552.png" alt="Pasted image 20220803094552">
 	<img src="images/Pasted image 20220803094614.png" alt="Pasted image 20220803094614">
-	https://www.cs.cornell.edu/courses/cs3110/2012sp/lectures/lec20-master/lec20.html
+
+	[https://www.cs.cornell.edu/courses/cs3110/2012sp/lectures/lec20-master/lec20.html](https://www.cs.cornell.edu/courses/cs3110/2012sp/lectures/lec20-master/lec20.html)
 
 	This method maps out the $f(n)$ work at each call as the node. The summation of the rows's work is on the right. If the summation is always a constant value $A$ for each level, the time complexity is $O(A\cdot\text{height})$, or in this example; a geometric series.
 
@@ -761,7 +757,7 @@ $${PR(A)={\frac {PR(B)}{2}}+{\frac {PR(C)}{1}}+{\frac {PR(D)}{3}}}$$
 
 !!! info
 
-	https://youtu.be/qxEkY8OScYY
+	[https://youtu.be/qxEkY8OScYY](https://youtu.be/qxEkY8OScYY)
 
 ##### Damping factor
 
@@ -775,7 +771,7 @@ $L(A)$ is the number of outgoing edges
 
 !!! note
 
-	https://en.wikipedia.org/wiki/PageRank#Damping_factor
+	[https://en.wikipedia.org/wiki/PageRank#Damping_factor](https://en.wikipedia.org/wiki/PageRank#Damping_factor)
 
 ### Proof
 
@@ -830,7 +826,7 @@ State the proposition, say "the proof is by contradiction", then contradict your
 
 !!! info
 
-	https://youtube.com/shorts/ErnrcsM1CIk?feature=share
+	[https://youtube.com/shorts/ErnrcsM1CIk?feature=share](https://youtube.com/shorts/ErnrcsM1CIk?feature=share)
 
 
 ### Axioms
@@ -893,7 +889,7 @@ The **historical context** was:
 
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/HeQX2HjkcNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-	https://youtu.be/HeQX2HjkcNo
+	[https://youtu.be/HeQX2HjkcNo](https://youtu.be/HeQX2HjkcNo)
 
 #### Lambda Calculus
 
@@ -926,7 +922,7 @@ Concluding that $H$ cannot exist, and mathematics is [undecidable](#uncomputabil
 
 !!! info
 
-	Revision https://youtu.be/HeQX2HjkcNo?t=1506
+	Revision [https://youtu.be/HeQX2HjkcNo?t=1506](https://youtu.be/HeQX2HjkcNo?t=1506)
 
 ### Summations
 
@@ -953,7 +949,7 @@ The sequence of numbers.
 
 !!! note
 
-	https://calcworkshop.com/combinatorics/recursive-formula/
+	[https://calcworkshop.com/combinatorics/recursive-formula/](https://calcworkshop.com/combinatorics/recursive-formula/)
 
 #### Arithmetic sequence
 
@@ -1107,7 +1103,7 @@ $$\sum_{i=0}^n{n \choose i} = 2^n$$
 !!! info
 
 	Revision
-	https://youtu.be/EHp4FPyajKQ?t=659
+	[https://youtu.be/EHp4FPyajKQ?t=659](https://youtu.be/EHp4FPyajKQ?t=659)
 
 ##### P problems
 
@@ -1423,7 +1419,7 @@ The $z$ dot product is $4$, which is $<b \text{ and < -5}$ which concludes an ou
 
 !!! info
 
-	https://youtu.be/OFbnpY_k7js
+	[https://youtu.be/OFbnpY_k7js](https://youtu.be/OFbnpY_k7js)
 
 !!! info
 

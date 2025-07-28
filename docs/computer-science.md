@@ -357,7 +357,7 @@ Examples:
 
 !!! note
 
-	https://www.cpp.edu/~ftang/courses/CS240/lectures/analysis.htm#:~:text=Primitive%20operations%20are%20basic%20computations,independent%20from%20the%20programming%20language.
+	[https://www.cpp.edu/~ftang/courses/CS240/lectures/analysis](https://www.cpp.edu/~ftang/courses/CS240/lectures/analysis.htm#:~:text=Primitive%20operations%20are%20basic%20computations,independent%20from%20the%20programming%20language.)
 
 
 ## Turing machine

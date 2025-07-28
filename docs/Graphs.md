@@ -233,9 +233,6 @@ Best example in the world:
 
 <img src="images/Pasted image 20220317191124.png" alt="Pasted image 20220317191124">
 
-!!! note
-
-	https://lms.vsvonline.vic.edu.au/pluginfile.php/141817/mod_resource/content/4/3.7%20Similarity%20Measures%20of%20Distance.pdf
 
 ### Distances
 
@@ -294,7 +291,7 @@ This can be calculated through [Kahn's Algorithm](#kahns-algorithm)
 
 !!! note
 
-	https://en.wikipedia.org/wiki/Topological_sorting
+	[https://en.wikipedia.org/wiki/Topological_sorting](https://en.wikipedia.org/wiki/Topological_sorting)
 
 #### Kahn's Algorithm
 
@@ -498,7 +495,7 @@ A type of [Decision tree](#decision-tree), but with the absence of the decision 
 
 !!! note
 
-	https://en.wikipedia.org/wiki/Binary_tree
+	[https://en.wikipedia.org/wiki/Binary_tree](https://en.wikipedia.org/wiki/Binary_tree)
 
 #### Rooted tree
 
@@ -738,7 +735,7 @@ How to search trees:
 
 !!! note
 
-	https://en.wikipedia.org/wiki/Tree_traversal#Pre-order,_NLR
+	[https://en.wikipedia.org/wiki/Tree_traversal(https://en.wikipedia.org/wiki/Tree_traversal#Pre-order,_NLR)
 
 **Definition:**
 
@@ -794,7 +791,7 @@ A [greedy](algorithms.md#greedy) algorithm used to find the [minimum spanning tr
 
 !!! NOTE "Online tool"
 
-	https://algorithms.discrete.ma.tum.de/mst/
+	[https://algorithms.discrete.ma.tum.de/mst/](https://algorithms.discrete.ma.tum.de/mst/)
 
 
 Algorithm
@@ -964,7 +961,7 @@ function BellmanFord(list vertices, list edges, vertex source)
 
 !!! note
 
-	https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
+	[https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm)
 
 #### Relaxation
 
@@ -1008,7 +1005,7 @@ return D
 
 !!! info
 
-	Good explanation [here](<https://www.youtube.com/watch?v=4OQeCuLYj-4&ab_channel=MichaelSambol)>)
+	Good explanation [here](https://www.youtube.com/watch?v=4OQeCuLYj-4&ab_channel=MichaelSambol)
 
 #### Floyd-Warshall  transitive closure algorithm
 
