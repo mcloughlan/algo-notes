@@ -332,7 +332,7 @@ Assigned via:
 - $x = y$ (Unconventional and discouraged)
 - $x \leftarrow y$
 
-See [Variables](programming.md#variables)
+See [Variables](computer-science.md#variables)
 
 ---
 
@@ -493,7 +493,7 @@ Checking every possible combination to see if it is valid as you go along. But i
 
 	[Master theorem](#master-theorem)
 
-Decrease and Conquer algorithms make the problem smaller by reducing problem at each [iteration](programming.md#iteration). They can reduce the problem by
+Decrease and Conquer algorithms make the problem smaller by reducing problem at each iteration. They can reduce the problem by
 - Constant amount
 - Variable amount
 
@@ -563,6 +563,8 @@ Choose best looking path (from a [heuristic](graphs.md#heuristic-functions)) and
 - Fast but not always correct
 
 ## Heuristics / evaluation functions
+
+Also see [heuristic functions](graphs.md#heuristic-functions)
 
 !!! info
 
@@ -872,7 +874,7 @@ $$c = \sqrt{a^2+b^2}$$
 
 Sweaty soy-jack Hilbert said he could prove mathematics' natural consistency with a finite set of [Axioms](#axioms) and solve the foundational crisis of mathematics.
 
-He was wrong, see [Gödel's Incompleteness Theorem](#gödels-incompleteness-theorem) (Not in 2023 course design)
+He was wrong, see Gödel's Incompleteness Theorem (Not in 2023 course design)
 
 The main goal of Hilbert's program was to provide secure foundations for all mathematics. In particular this should include:
 

@@ -147,7 +147,7 @@ A graph $G^*$ which is the transitive closure of $G$ will have a directed edge t
 ### Directed Graph
 
 Also known as a digraph.
-A digraph is an ordered pair [G = (V, E)](#g-v-e) of [edges](#edges) $(x,y)$ of arrows "from $x$ to $y$".
+A digraph is an ordered pair [G = (V, E)](#graph) of [edges](#edges) $(x,y)$ of arrows "from $x$ to $y$".
 
 Where:
 - $x$:
@@ -292,8 +292,6 @@ The graph shown above has many valid topological sorts, including:
 
 This can be calculated through [Kahn's Algorithm](#kahns-algorithm)
 
-Also see, [3.6C Decrease and conquer](36c-decrease-and-conquer.md) for my own implementation
-
 !!! note
 
 	https://en.wikipedia.org/wiki/Topological_sorting
@@ -345,7 +343,7 @@ The examples below have a diameter of 2 (2 edges to traverse to get from a to b)
 
 ## Network graphs
 
-### $G=(V,E)$
+### Graph
 
 A graph $G=(V,E)$ is made up of a set of [vertices/nodes](#nodes) ($V$) and a set of lines called [edges](#edges) ($E$) that connect the vertices or nodes.
 
@@ -474,7 +472,7 @@ If a graph has $n$ vertices its spanning tree it will have $(n-1)$ edges.
 
 A minimum spanning tree is a [spanning tree](#spanning-tree) for a weighted graph whose edges add up to the smallest possible value.
 
-- Found via [Prim's algorithm](algorithms.md#prims-algorithm)
+- Found via [Prim's algorithm](graphs.md#prims-algorithm)
 
 A graph can have several minimum spanning trees. For example if we replace all the weights with $1$ in a graph with $n$ vertices. The resulting graph will have $n$ minimum spanning trees.
 
@@ -630,7 +628,7 @@ $$
 
 
 - **To see if a node is connected to another**
-- Uses a [queue](programming.md#queue) to keep track of nodes to visit soon
+- Uses a [queue](computer-science.md#queue) to keep track of nodes to visit soon
 - Uses an array/set `seen` to mark visited vertices
 - If the graph is connected, BFS will will visit all the nodes
 - A BFS tree will show the shortest path from `A` to `B` for any unweighted graph
@@ -791,7 +789,7 @@ postorder(node):
 
 ### Prim's Algorithm
 
-A [greedy](#greedy) algorithm used to find the [minimum spanning tree](graphs.md#minimum-spanning-tree)
+A [greedy](algorithms.md#greedy) algorithm used to find the [minimum spanning tree](graphs.md#minimum-spanning-tree)
 
 
 !!! NOTE "Online tool"
@@ -850,7 +848,7 @@ Scenarios:
 ### Dijkstra's algorithm
 
 Pronounced *Dikestra*.
-Finds the shortest **greedy** path via a **[priority queue](programming.md#priority-queue)**.
+Finds the shortest **greedy** path via a **[priority queue](computer-science.md#priority-queue)**.
 - Not [Dynamic Programming](algorithms.md#dynamic-programming)
 
 <img src="images/Dijkstra_Animation.gif" alt="Dijkstra_Animation">
@@ -923,7 +921,7 @@ Output shortest path as a distance and predecessor list (depending on setup)
 	[Online runner](https://algorithms.discrete.ma.tum.de/graph-algorithms/spp-bellman-ford/index_en.html)
 
 
-Unlike Dijkstra's Algorithm the Bellman-Ford Algorithm does not use a [priority queue](programming.md#priority-queue) to process the edges.
+Unlike Dijkstra's Algorithm the Bellman-Ford Algorithm does not use a [priority queue](computer-science.md#priority-queue) to process the edges.
 
 In Step 2 ([Relaxation](#relaxation)) the nested for loop process all edges in the graph for each vertex $(V-1)$. Bellman-Ford is not a Greedy Algorithm, it uses Brute Force to build the solution incrementally, possibly going over each vertex several times. If a vertex has a lot of incoming edges it is updating the vertex's distance and predecessor many times.
 
@@ -975,7 +973,7 @@ Relaxation is where estimates are gradually replaced by accurate values, eventua
 ### Floyd-Warshall algorithm
 
 Shortest path between all nodes in a graph. By calculating the transitive closure for all paths, and keeping track of the shortest in a $V*V$ matrix.
-- Example of [dynamic programmign](computer-science.md#dynamic-programming)
+- Example of [dynamic programming](algorithms.md#dynamic-programming)
 
 Time complexity of:
 $$O (|V|^3)$$
@@ -1020,8 +1018,8 @@ An altered version of the [Floyd-Warshall algorithm](#floyd-warshall-algorithm) 
 
 **Best-First Search** traverses graphs in a similar way to [DFS Depth First Search](#dfs-depth-first-search) and [BFS Breadth First Search](#bfs-breadth-first-search), with the main difference being that **instead of choosing the first matching successor, we choose the best-matching successor** that we think will take us to the goal vertex.
 
-- Uses a [priority queue](programming.md#priority-queue) to keep track and order the best options
-	- Each option's suitability is defined through a custom [Heuristic](#heuristic) function $f(n)$
+- Uses a [priority queue](computer-science.md#priority-queue) to keep track and order the best options
+	- Each option's suitability is defined through a custom [Heuristic](#heuristic-functions) function $f(n)$
 - Can backtrack on older decisions
 	- Which means this algorithm is **not** [greedy](algorithms.md#greedy).
 		- IFF the search does not discard old paths. i.e. can backtrack.
