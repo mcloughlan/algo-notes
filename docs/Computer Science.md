@@ -71,9 +71,9 @@ Examples:
 - Calling a method
 - Returning from a method
 
-```ad-source
-https://www.cpp.edu/~ftang/courses/CS240/lectures/analysis.htm#:~:text=Primitive%20operations%20are%20basic%20computations,independent%20from%20the%20programming%20language.
-```
+!!! note
+
+	https://www.cpp.edu/~ftang/courses/CS240/lectures/analysis.htm#:~:text=Primitive%20operations%20are%20basic%20computations,independent%20from%20the%20programming%20language.
 
 
 ## Turing machine
@@ -92,11 +92,11 @@ https://www.cpp.edu/~ftang/courses/CS240/lectures/analysis.htm#:~:text=Primitive
 
 ![[Pasted image 20220831104332.png|300]]
 
-```ad-yt
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dNRDvLACg5Q?start=116" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! info
 
-[Revision](https://youtu.be/dNRDvLACg5Q?t=116) 
-```
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/dNRDvLACg5Q?start=116" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	[Revision](https://youtu.be/dNRDvLACg5Q?t=116) 
 
 ### Deterministic Turing machine
 

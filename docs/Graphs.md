@@ -61,12 +61,11 @@ An **incidence** is a pair $(u,e)$ where $u$ is a [[#Nodes|vertex]], and $e$ is 
 
 If the vertex $u$ is connected to $e$; $e$ is an edge incident to $u$
 
-```ad-quote
-title: Wikipedia definition
-In [graph theory](https://en.wikipedia.org/wiki/Graph_theory "Graph theory"), a [vertex](https://en.wikipedia.org/wiki/Vertex_(graph_theory) "Vertex (graph theory)") is **incident** to an [edge](https://en.wikipedia.org/wiki/Glossary_of_graph_theory_terms#edge "Glossary of graph theory terms") if the vertex is one of the two vertices the edge connects.
+!!! quote "Wikipedia definition"
 
-An **incidence** is a pair $(u,e)$ where $u$ is a vertex and $e$ is an edge incident to $u$.
-```
+	In [graph theory](https://en.wikipedia.org/wiki/Graph_theory "Graph theory"), a [vertex](https://en.wikipedia.org/wiki/Vertex_(graph_theory) "Vertex (graph theory)") is **incident** to an [edge](https://en.wikipedia.org/wiki/Glossary_of_graph_theory_terms#edge "Glossary of graph theory terms") if the vertex is one of the two vertices the edge connects.
+
+	An **incidence** is a pair $(u,e)$ where $u$ is a vertex and $e$ is an edge incident to $u$.
 
 ### Loops
 
@@ -82,18 +81,18 @@ A path can contain many edges, or a single. it depends on what nodes are being s
 - Vertices cannot repeat
 - Edges cannot repeat
 
-```ad-note
-- [[#Euler Path|Euler paths]] and [[#Euler circuit|Euler circuits]]:
-	- Can pass through [[#Nodes|nodes]] more than once.
-	- Don't exist if a graph has more than two vertices of odd degree.
-	- Exists if all vertices of a graph have even degree.
-	- Exists if a connected graph has exactly two odd vertices. The starting point must be one of the odd vertices and the ending point will be the other of the odd vertices.
-	- See [here](https://lms.vsvonline.vic.edu.au/pluginfile.php/22968/mod_resource/content/10/3.4%20%20Graph%20Theory%20Intro.pdf#page=11)
+!!! note
 
-- [[#Hamiltonian Path|Hamiltonian Paths]]
-	- Don't have to traverse every [[#Edges|edge]]
-			
-```
+	- [[#Euler Path|Euler paths]] and [[#Euler circuit|Euler circuits]]:
+		- Can pass through [[#Nodes|nodes]] more than once.
+		- Don't exist if a graph has more than two vertices of odd degree.
+		- Exists if all vertices of a graph have even degree.
+		- Exists if a connected graph has exactly two odd vertices. The starting point must be one of the odd vertices and the ending point will be the other of the odd vertices.
+		- See [here](https://lms.vsvonline.vic.edu.au/pluginfile.php/22968/mod_resource/content/10/3.4%20%20Graph%20Theory%20Intro.pdf#page=11)
+
+	- [[#Hamiltonian Path|Hamiltonian Paths]]
+		- Don't have to traverse every [[#Edges|edge]]
+
 
 #### Euler Path
 
@@ -120,9 +119,9 @@ A [[#Paths|path]] that passes every [[#Nodes|vertex]] exactly once without retur
 
 #### Hamiltonian Circuit
 
-```ad-note
-This is used very often in this course. See [[Algorithms#Travelling salesmen problem]]
-```
+!!! note
+
+	This is used very often in this course. See [[Algorithms#Travelling salesmen problem]]
 
 A [[#Paths|path]] that passes every [[#Nodes|vertex]] exactly once and returns to the starting [[#Nodes|vertex]] is an Hamiltonian path.
 
@@ -226,17 +225,17 @@ Two main consideration about similarity:
 Similarity = 1 if $X = Y$ (Where $X$, $Y$ are two objects)
 Similarity = 0 if $X \neq Y$
 
-```ad-warning
-writing this in 2025. Never seen cosine simularity anywhere. dw about it
-```
+!!! warning
+
+	writing this in 2025. Never seen cosine simularity anywhere. dw about it
 
 Best example in the world:
 
 ![[Pasted image 20220317191124.png|love this example lol]]
 
-```ad-source
-https://lms.vsvonline.vic.edu.au/pluginfile.php/141817/mod_resource/content/4/3.7%20Similarity%20Measures%20of%20Distance.pdf
-```
+!!! note
+
+	https://lms.vsvonline.vic.edu.au/pluginfile.php/141817/mod_resource/content/4/3.7%20Similarity%20Measures%20of%20Distance.pdf
 
 ### Distances
 
@@ -295,9 +294,9 @@ This can be calculated through [[#Kahn's Algorithm]]
 
 Also see, [[3.6C Decrease and conquer]] for my own implementation
 
-```ad-source
-https://en.wikipedia.org/wiki/Topological_sorting
-```
+!!! note
+
+	https://en.wikipedia.org/wiki/Topological_sorting
 
 #### Kahn's Algorithm
 
@@ -322,9 +321,9 @@ else
 
 ### Graph Diameter
 
-```ad-note
-Note that the **diameter** is the max graph ecentricity. The radius of the graoh requires a center point to be defined
-```
+!!! note
+
+	Note that the **diameter** is the max graph ecentricity. The radius of the graoh requires a center point to be defined
 
 The longest shortest path between any two nodes counted by edge and weights.
 
@@ -353,17 +352,17 @@ A graph $G=(V,E)$ is made up of a set of [[#Nodes|vertices/nodes]] ($V$) and a s
 - $|V|$ is the number of vertices in the graph
 - $|E|$ is the number of edges in the graph.
 
-```ad-example
-Example:
-Using Graph Notation to define a Graph:
-- $V=\{A,B,C,D,E\}$
-- $E=\{A-B,A-C,A-D,A-E,B-C,B-D,B-E,C-D,C-E,D-E\}$
-- $G=(V,E)$
-- $|V|$ returns 5
-	- There are 5 nodes or vertices
-- $|E|$ returns 10
-	- there are 10 edges in this graph
-```
+!!! example
+
+	Example:
+	Using Graph Notation to define a Graph:
+	- $V=\{A,B,C,D,E\}$
+	- $E=\{A-B,A-C,A-D,A-E,B-C,B-D,B-E,C-D,C-E,D-E\}$
+	- $G=(V,E)$
+	- $|V|$ returns 5
+		- There are 5 nodes or vertices
+	- $|E|$ returns 10
+		- there are 10 edges in this graph
 
 ![[Pasted image 20220221093040.png|#invert|300 ]]
 
@@ -499,9 +498,9 @@ A type of [[#Decision tree]], but with the absence of the decision abstraction, 
 
 ![[Pasted image 20220516123124.png|#invert|200]]
 
-```ad-source
-https://en.wikipedia.org/wiki/Binary_tree
-```
+!!! note
+
+	https://en.wikipedia.org/wiki/Binary_tree
 
 #### Rooted tree
 
@@ -574,10 +573,10 @@ $$
 
 The direction can be read from **the left of the matrix** (left side of rows) **to the right** of the row to find the head.
 
-```ad-note
-- Undirected graphs are diagonaly symetrical, where directed are not 
-- All adjacency matricies are empty on the diagonal
-```
+!!! note
+
+	- Undirected graphs are diagonaly symetrical, where directed are not 
+	- All adjacency matricies are empty on the diagonal
 
 ![[Pasted image 20220222165941.png]]
 
@@ -624,10 +623,11 @@ $$
 
 ### BFS Breadth First Search
 
-```ad-quote
-title:
-The basic idea of breadth-first search is to fan out to as many vertices as possible before penetrating deep into a graph. ”A more cautious and balanced approach.”
-```
+!!! quote
+
+	"The basic idea of breadth-first search is to fan out to as many vertices as possible before penetrating deep into a graph. ”A more cautious and balanced approach.”"
+
+
 
 - **To see if a node is connected to another**
 - Uses a [[Programming#Queue|queue]] to keep track of nodes to visit soon
@@ -669,16 +669,17 @@ SAC example:
 
 ![[WAVEg.gif|200]]
 
-```ad-source
-[VSV](https://lms.vsvonline.vic.edu.au/pluginfile.php/77703/mod_resource/content/6/3.5A%20Breadth%20First%20Search%20-%20WaveForm.pdf)
-```
+!!! note
+
+	[VSV](https://lms.vsvonline.vic.edu.au/pluginfile.php/77703/mod_resource/content/6/3.5A%20Breadth%20First%20Search%20-%20WaveForm.pdf)
 
 ### DFS Depth First Search
 
-```ad-quote
-title:
-The basic idea of depth-first search is to penetrate as deeply as possible into a graph before fanning out to other vertices. ”You must be brave and go forward quickly.”
-```
+!!! quote
+
+	"The basic idea of depth-first search is to penetrate as deeply as possible into a graph before fanning out to other vertices. ”You must be brave and go forward quickly.”"
+
+
 
 - **To see if a node is connected to another**
 - Uses a `stack` for storing vertices
@@ -737,13 +738,13 @@ How to search trees:
 		- Recursively traverse the current node's left subtree. Visit the current node (in the figure: position green). Recursively traverse the current node's right subtree. 
 
 
-```ad-source
-https://en.wikipedia.org/wiki/Tree_traversal#Pre-order,_NLR
-```
+!!! note
 
-```ad-def
+	https://en.wikipedia.org/wiki/Tree_traversal#Pre-order,_NLR
+
+**Definition:**
+
 In computer science, tree traversal (also known as tree search and walking the tree) is a form of graph traversal and refers to the process of visiting (e.g. retrieving, updating, or deleting) each node in a tree data structure, exactly once.
-```
 
 ![[Pasted image 20220516122803.png]]
 
@@ -963,9 +964,9 @@ function BellmanFord(list vertices, list edges, vertex source)
     return distance, predecessor
 ```
 
-```ad-source
-https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
-```
+!!! note
+
+	https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
 
 #### Relaxation
 
@@ -1007,9 +1008,9 @@ end (* of foreach mid *)
 return D
 ```
 
-```ad-yt
-Good explanation [here](<https://www.youtube.com/watch?v=4OQeCuLYj-4&ab_channel=MichaelSambol)>)
-```
+!!! info
+
+	Good explanation [here](<https://www.youtube.com/watch?v=4OQeCuLYj-4&ab_channel=MichaelSambol)>)
 
 #### Floyd-Warshall  transitive closure algorithm
 

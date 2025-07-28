@@ -19,11 +19,9 @@ Note that this does not contain everything on the exam. Read over the current st
 
 ## Definition of an Algorithm
 
-```ad-quote
-title:
-An algorithm is an effective method expressed as a finite list of well-defined instructions for calculating a function. [Wikipedia](http://en.wikipedia.org/wiki/Algorithm)
-```
-An algorithm is an  effective method expressed as a finite list of well-defined instructions for calculating a function. [Wikipedia](http://en.wikipedia.org/wiki/Algorithm)
+!!! quote
+
+	"An algorithm is an effective method expressed as a finite list of well-defined instructions for calculating a function. [Wikipedia](http://en.wikipedia.org/wiki/Algorithm)"
 
 This means that there is a finite sequence of steps that can be followed mechanically to process specified inputs and correctly produce the expected output. 
 
@@ -112,9 +110,9 @@ With:
 
 
 
-```ad-source
-https://lms.vsvonline.vic.edu.au/pluginfile.php/115276/mod_resource/content/6/3.10%20Communication%20of%20Design.pdf
-```
+!!! note
+
+	https://lms.vsvonline.vic.edu.au/pluginfile.php/115276/mod_resource/content/6/3.10%20Communication%20of%20Design.pdf
 
 ## Modularity
 
@@ -276,9 +274,9 @@ Step 4: put your shoes on Step 5: go outside
 
 Loop for a fixed `n` amount of times. 
 
-```ad-note
-`n` can be assigned during algorithm, it does not need to be known before starting.
-```
+!!! note
+
+	`n` can be assigned during algorithm, it does not need to be known before starting.
 
 ```js
 get a bag DO 6 TIMES
@@ -357,11 +355,11 @@ Also, I'm putting this here as well:
 	https://algorithms.discrete.ma.tum.de/graph-games/tsp-game/index_en.html
 
 
-```ad-yt
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SC5CX8drAtU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! info
 
-[Traveling Salesman Problem Visualization](https://youtu.be/SC5CX8drAtU)
-```
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/SC5CX8drAtU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	[Traveling Salesman Problem Visualization](https://youtu.be/SC5CX8drAtU)
 
 which is already in [[#Heuristics evaluation functions]]
 
@@ -383,9 +381,9 @@ Big $O$ notation:
 
 [^1]: When the pivot is the lowest item in the input each time. When sorting by ascending https://youtu.be/auclbmnm4iA?t=69
 
-```ad-source
-https://www.bigocheatsheet.com/
-```
+!!! note
+
+	https://www.bigocheatsheet.com/
 
 ### Selection sort
 
@@ -473,11 +471,11 @@ $$O(\log_2 n) \implies O(\log n)$$
 
 ### Design patterns
 
-```ad-summary
-- Use [[#Divide and Conquer]] when you **==don't== have overlapping sub problems**
-- Use [[#Dynamic Programming]] when you **==do== have overlapping sub problems**
-- Use [[#Backtracking]] when you need to backtrack 😎
-```
+!!! info
+
+	- Use [[#Divide and Conquer]] when you **==don't== have overlapping sub problems**
+	- Use [[#Dynamic Programming]] when you **==do== have overlapping sub problems**
+	- Use [[#Backtracking]] when you need to backtrack 😎
 
 #### Brute Force
 
@@ -487,13 +485,13 @@ Checking every possible combination to see if it is valid as you go along. But i
 
 #### Decrease and Conquer
 
-```ad-warning
-**Decrease** and conquer decreases, and does not divide. Hence the time complexity reccurance of:
+!!! warning
 
-$$T(n) = T(n-b)$$ Not $$T(n) = T\left(\frac{n}{b}\right)$$
+	**Decrease** and conquer decreases, and does not divide. Hence the time complexity reccurance of:
 
-[[#Master theorem]]
-```
+	$$T(n) = T(n-b)$$ Not $$T(n) = T\left(\frac{n}{b}\right)$$
+
+	[[#Master theorem]]
 
 Decrease and Conquer algorithms make the problem smaller by reducing problem at each [[Programming#Iteration|iteration]]. They can reduce the problem by
 - Constant amount
@@ -518,13 +516,13 @@ Efficient when the problem can be systematically decreased to a solution
 
 ![[Pasted image 20220728144049.png]]
 
-```ad-warning
-**Divide** and conquer divides, and does not staticly decrease. Hence the time complexity reccurance of:
+!!! warning
 
-$$T(n) = T\left(\frac{n}{b}\right)$$ Not $$T(n) = T(n-b)$$
+	**Divide** and conquer divides, and does not staticly decrease. Hence the time complexity reccurance of:
 
-[[#Master theorem]]
-```
+	$$T(n) = T\left(\frac{n}{b}\right)$$ Not $$T(n) = T(n-b)$$
+
+	[[#Master theorem]]
 
 When the input size is divided into smaller parts
 
@@ -544,11 +542,11 @@ Examples:
 - [[Graphs#Floyd-Warshall algorithm]]
 - [[Graphs#Belman-Ford algorithm]]
 
-```ad-summary
-In general, DP solutions are used to maximise or minimise. Knapsack or coin change.
+!!! info
 
-They store previous answers to stop the repetition of overlapping sub-problems
-```
+	In general, DP solutions are used to maximise or minimise. Knapsack or coin change.
+
+	They store previous answers to stop the repetition of overlapping sub-problems
 ##### "overlapping sub-problems"
 
 Identical problems that are occurring multiples times during computation
@@ -566,11 +564,11 @@ Choose best looking path (from a [[Graphs#Heuristic functions|heuristic]]) and d
 
 ## Heuristics / evaluation functions
 
-```ad-yt
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SC5CX8drAtU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! info
 
-[Traveling Salesman Problem Visualization](https://youtu.be/SC5CX8drAtU)
-```
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/SC5CX8drAtU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	[Traveling Salesman Problem Visualization](https://youtu.be/SC5CX8drAtU)
 
 ### Randomisation
 
@@ -648,11 +646,11 @@ When stuck at:
 ![[Hill_Climbing_with_Simulated_Annealing.gif]]
 <sup>**Gif^^**</sup>
 
-```ad-yt
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iaq_Fpr4KZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! info
 
-[Simulated Annealing](https://youtu.be/iaq_Fpr4KZc)
-```
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/iaq_Fpr4KZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	[Simulated Annealing](https://youtu.be/iaq_Fpr4KZc)
 
 ## Recursion
 
@@ -683,9 +681,9 @@ function factorial(x)
 
 ### Recurrence relation
 
-```ad-quote
-In mathematics, a recurrence relation is an equation that expresses the $n$th term of a sequence as a function of the $k$ preceding terms, for some fixed $k$ (independent from $n$), which is called the order of the relation.
-```
+!!! quote
+
+	In mathematics, a recurrence relation is an equation that expresses the $n$th term of a sequence as a function of the $k$ preceding terms, for some fixed $k$ (independent from $n$), which is called the order of the relation.
 
 i.e, an equation that shows a pattern or relation.
 
@@ -710,43 +708,42 @@ Where:
 - $\textcolor{yellow}{b}$ is the number of dividing of input data that is done
 - $\textcolor{green}{f(n^k)}$ is the cost of the work done outside the recursive call
 
-```ad-important
-![[Pasted image 20240922201319.png]]
-**Only use this formula to practice! this is the one you have on the exam**
-```
+!!! note
 
-```ad-warning
-The Master theorem **cannot** be used on recursive algorithms where the **sub-problems overlap**, or decrease and conquor.
+	![[Pasted image 20240922201319.png]]
+	**Only use this formula to practice! this is the one you have on the exam**
 
-Only recursive divide and conquor when the above applies 
-```
 
-```ad-source
-title:Good explanation of trees
+!!! warning
 
-![[Pasted image 20220803094552.png]]
-![[Pasted image 20220803094614.png]]
-https://www.cs.cornell.edu/courses/cs3110/2012sp/lectures/lec20-master/lec20.html
+	The Master theorem **cannot** be used on recursive algorithms where the **sub-problems overlap**, or decrease and conquor.
 
-This method maps out the $f(n)$ work at each call as the node. The summation of the rows's work is on the right. If the summation is always a constant value $A$ for each level, the time complexity is $O(A\cdot\text{height})$, or in this example; a geometric series.
+	Only recursive divide and conquor when the above applies 
 
-That is, that you need to work it out without the height. In this series, we can see that the addition of: 
+!!! note "Good explanation of trees"
 
-$$n^2 + \frac{n^2}{2} + \frac{n^2}{4} ... \frac{n^2}{2^i} = \sum_{i=0}^{\log_{2}{n}}\frac{n^2}{2^i}$$
+	![[Pasted image 20220803094552.png]]
+	![[Pasted image 20220803094614.png]]
+	https://www.cs.cornell.edu/courses/cs3110/2012sp/lectures/lec20-master/lec20.html
 
-Which means, as $n$ approaches $\infty$, we are getting $2n^2 \implies O(n^2)$.
+	This method maps out the $f(n)$ work at each call as the node. The summation of the rows's work is on the right. If the summation is always a constant value $A$ for each level, the time complexity is $O(A\cdot\text{height})$, or in this example; a geometric series.
 
-Also, another geometric time complexity is a decision tree, where it expands in $2^n$ time
+	That is, that you need to work it out without the height. In this series, we can see that the addition of: 
 
-![[Pasted image 20220803103031.png]]
+	$$n^2 + \frac{n^2}{2} + \frac{n^2}{4} ... \frac{n^2}{2^i} = \sum_{i=0}^{\log_{2}{n}}\frac{n^2}{2^i}$$
 
-Another example is $T(n) = T(n/3) + T(2n/3) + n$. I just need to note that:
-- Asymptotic height of tree is longest term -> $T(2n/3)$
-	- This term expands the most before it gets to base case of $T(1) = 1$
-		- Base case is: $T(1) = T(1/3) + T(2/3) + 1$. But T() terms are zeroed out 
-- This means we have $\log_{\frac{3}{2}}{n}$ height
-	- And $\log_{\frac{3}{2}}{n}\cdot n \implies O(n \log n)$
-```
+	Which means, as $n$ approaches $\infty$, we are getting $2n^2 \implies O(n^2)$.
+
+	Also, another geometric time complexity is a decision tree, where it expands in $2^n$ time
+
+	![[Pasted image 20220803103031.png]]
+
+	Another example is $T(n) = T(n/3) + T(2n/3) + n$. I just need to note that:
+	- Asymptotic height of tree is longest term -> $T(2n/3)$
+		- This term expands the most before it gets to base case of $T(1) = 1$
+			- Base case is: $T(1) = T(1/3) + T(2/3) + 1$. But T() terms are zeroed out 
+	- This means we have $\log_{\frac{3}{2}}{n}$ height
+		- And $\log_{\frac{3}{2}}{n}\cdot n \implies O(n \log n)$
 
 
 
@@ -760,9 +757,9 @@ Where $B$ has 2 outgoing links, and $C$ has one.
 
 $${PR(A)={\frac {PR(B)}{2}}+{\frac {PR(C)}{1}}+{\frac {PR(D)}{3}}}$$
 
-```ad-yt
-https://youtu.be/qxEkY8OScYY
-```
+!!! info
+
+	https://youtu.be/qxEkY8OScYY
 
 ##### Damping factor
 
@@ -774,9 +771,9 @@ $$PR(A) = {1 - d \over N} + d \left( \frac{PR(B)}{L(B)}+ \frac{PR(C)}{L(C)}+ \fr
 
 $L(A)$ is the number of outgoing edges
 
-```ad-source
-https://en.wikipedia.org/wiki/PageRank#Damping_factor
-```
+!!! note
+
+	https://en.wikipedia.org/wiki/PageRank#Damping_factor
 
 ### Proof
 
@@ -784,9 +781,9 @@ https://en.wikipedia.org/wiki/PageRank#Damping_factor
 
 #### Empirical analysis
 
-```ad-def
+**Definition:**
+
 based on, concerned with, or verifiable by observation or experience rather than theory or pure logic.
-```
 
 This can be done through counter variables
 
@@ -829,9 +826,9 @@ Examples:
 
 State the proposition, say "the proof is by contradiction", then contradict your statement, and prove the statement to be impossible. Which contradicts your statement, and means your original proposition is true.
 
-```ad-yt
-https://youtube.com/shorts/ErnrcsM1CIk?feature=share
-```
+!!! info
+
+	https://youtube.com/shorts/ErnrcsM1CIk?feature=share
 
 
 ### Axioms
@@ -888,13 +885,13 @@ The main goal of Hilbert's program was to provide secure foundations for all mat
 The **historical context** was:
 
 
-```ad-yt
-Good explanation of the incompletness of mathematics:
+!!! info
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HeQX2HjkcNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	Good explanation of the incompletness of mathematics:
 
-https://youtu.be/HeQX2HjkcNo
-```
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/HeQX2HjkcNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	https://youtu.be/HeQX2HjkcNo
 
 #### Lambda Calculus
 
@@ -925,9 +922,9 @@ Concluding that $H$ cannot exist, and mathematics is [[#Uncomputability and unde
 
 ![[Pasted image 20220910163125.png]]
 
-```ad-yt
-Revision https://youtu.be/HeQX2HjkcNo?t=1506
-```
+!!! info
+
+	Revision https://youtu.be/HeQX2HjkcNo?t=1506
 
 ### Summations
 
@@ -952,9 +949,9 @@ The sequence of numbers.
 
 ![[Pasted image 20220616114029.png|#invert]]
 
-```ad-source
-https://calcworkshop.com/combinatorics/recursive-formula/
-```
+!!! note
+
+	https://calcworkshop.com/combinatorics/recursive-formula/
 
 #### Arithmetic sequence
 
@@ -993,16 +990,15 @@ A non linear sequence of numbers such as `1,2,4,8,16,31,64`
 
 #### Solving
 
-```ad-yt
-[Telescoping vs Iteration](https://youtu.be/lPCS2FFyqNA)
-```
+!!! info
+
+	[Telescoping vs Iteration](https://youtu.be/lPCS2FFyqNA)
 
 ### Mathematical Analysis
 
-```ad-summary
-title:
-Khan Academy revision: [here](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/e/quiz--comparing-function-growth) - `quiz--comparing-function-growth`
-```
+!!! info "Khan Academy revision: [here](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/e/quiz--comparing-function-growth) - `quiz--comparing-function-growth`"
+
+
 
 #### Time complexity
 ##### Big $O$  notation
@@ -1106,10 +1102,10 @@ $$\sum_{i=0}^n{n \choose i} = 2^n$$
 
 ![[Pasted image 20220817150259.png|#invert]]
 
-```ad-yt
-Revision
-https://youtu.be/EHp4FPyajKQ?t=659
-```
+!!! info
+
+	Revision
+	https://youtu.be/EHp4FPyajKQ?t=659
 
 ##### P problems
 
@@ -1423,15 +1419,15 @@ The $z$ dot product is $4$, which is $<b \text{ and < -5}$ which concludes an ou
 
 <br>
 
-```ad-yt
-https://youtu.be/OFbnpY_k7js
-```
+!!! info
 
-```ad-summary
-There are lots of perceptrons that make up a [[#Neural Networks|neural network]], they work in hidden layers to build a full solution output or outputs. The percetron evaluates inputs mathematically
+	https://youtu.be/OFbnpY_k7js
 
-The perceptron weights can also be modified by an external program
-```
+!!! info
+
+	There are lots of perceptrons that make up a [[#Neural Networks|neural network]], they work in hidden layers to build a full solution output or outputs. The percetron evaluates inputs mathematically
+
+	The perceptron weights can also be modified by an external program
 
 ##### Sigmoid perceptron
 
