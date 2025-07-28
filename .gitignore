@@ -10,8 +10,8 @@ logo.psd
 # -------- MANUAL END-------- 
 
 
-# Created by https://www.toptal.com/developers/gitignore/api/python,venv,macos,windows,linux,web
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,venv,macos,windows,linux,web
+# Created by https://www.toptal.com/developers/gitignore/api/python,venv,macos,windows,linux
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,venv,macos,windows,linux
 
 ### Linux ###
 *~
@@ -244,21 +244,6 @@ pyrightconfig.json
 [Ss]cripts
 pyvenv.cfg
 pip-selfcheck.json
-
-### Web ###
-*.asp
-*.cer
-*.csr
-*.css
-*.htm
-*.html
-*.js
-*.jsp
-*.php
-*.rss
-*.wasm
-*.wat
-*.xhtml
 
 ### Windows ###
 # Windows thumbnail cache files
