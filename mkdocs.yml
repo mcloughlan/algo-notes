@@ -40,6 +40,7 @@ use_directory_urls: false
 plugins:
   - search
   - git-revision-date-localized
+  - macros # For contribution icons
 extra:
   meta:
     description: "A complete set of VCE Algorithmics notes. Constantly revised since 2022"

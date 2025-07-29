@@ -1,5 +1,7 @@
 # Welcome to VCE Algorithmics notes
 
+## Introduction
+
 !!! danger
 
     This is a work in progress. Some information may be incorrect or outdated
@@ -19,7 +21,7 @@ Pull requests are welcome! Please see [the repository](https://github.com/mcloug
 For mobile viewers, please open the site menu in the top left to view pages and contents
 
 
-Quick Links:
+## Quick Links
 
 - [Algorithms](algorithms.md)
 - [Computer Science](computer-science.md)
@@ -28,3 +30,12 @@ Quick Links:
 !!! tip
 
     Each page can easily be printed with <kbd>ctrl</kbd> / <kbd>cmd</kbd> + <kbd>p</kbd>
+
+---
+
+## Contributors
+
+This could be you!
+
+{{ contributors() | safe }}
+    
