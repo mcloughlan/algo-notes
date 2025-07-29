@@ -1,3 +1,7 @@
+---
+icon: material/code-tags
+---
+
 # Algorithms 
 
 !!! danger

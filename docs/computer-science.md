@@ -1,3 +1,7 @@
+---
+icon: material/state-machine
+---
+
 # Computer science
 
 !!! danger
