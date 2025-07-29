@@ -1,5 +1,9 @@
 # Computer science
 
+!!! danger
+
+    This is a work in progress. Some information may be incorrect or outdated
+
 !!! note
 
 	Lots of this content is not applicable to the study design. Consider it extra-curricular or supplimental

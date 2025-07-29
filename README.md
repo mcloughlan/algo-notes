@@ -1,5 +1,7 @@
 # VCE Algorithmics notes (2023-2027)
 
+Made with [Material for MkDocs](https://github.com/squidfunk/mkdocs-material)
+
 Hosted at: [algo.mcloughlan.com](https://algo.mcloughlan.com)
 
 ---
@@ -10,3 +12,23 @@ Hosted at: [algo.mcloughlan.com](https://algo.mcloughlan.com)
 Started when I was in year 12 (2022) and progressively updated for The Centre Of Higher Education Studies (CHES). This whole project started in [Obsidian](https://obsidian.md/)
 
 Open for all VCE students, feel free to share
+
+## Contribution
+
+If anyone has any contribution to make at all, please feel free to open a pull request 
+
+### Running the site locally
+
+If you would like to run the site locally for any reason - particularly for development:
+
+1. Install Python requirements
+
+```cmd
+python -m pip install -r requirements.txt
+```
+
+2. Run `mkdocs`
+
+```
+mkdocs serve
+```

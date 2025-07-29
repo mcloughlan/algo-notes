@@ -1,18 +1,8 @@
 # Algorithms 
 
-I went a bit nuts on these notes. This is just my way of ingesting and long term memorisation, rather than just revision.
+!!! danger
 
-
-!!! important "FOR 2023 (onwards) STUDENTS"
-
-	I removed the outdated content from before 2023, but there may be implicit references to it in other current content
-
-
-!!! warning "Migration"
-
-	Some of the content in this Obsidian file has migrated like 3 major versions and might look funny or not work. GIFs and videos will just look like images as well.
-
-Note that this does not contain everything on the exam. Read over the current study design. That is what is on the exam. This is just what I wanted to write notes for, which is probably > 80% of exam material anyway. I'm not sure.
+    This is a work in progress. Some information may be incorrect or outdated
 
 ---
 
@@ -1001,7 +991,9 @@ A non linear sequence of numbers such as `1,2,4,8,16,31,64`
 
 ### Mathematical Analysis
 
-!!! info "Khan Academy revision: [here](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/e/quiz--comparing-function-growth) - `quiz--comparing-function-growth`"
+!!! info
+
+	[Khan Academy revision](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/e/quiz--comparing-function-growth) - `quiz--comparing-function-growth`
 
 
 
