@@ -2,7 +2,7 @@
 icon: material/state-machine
 ---
 
-# Computer science
+# Computer Science
 
 !!! danger
 

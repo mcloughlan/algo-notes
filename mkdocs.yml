@@ -41,6 +41,7 @@ plugins:
   - search
   - git-revision-date-localized
   - macros # For contribution icons
+  - social # For embeds
 extra:
   meta:
     description: "A complete set of VCE Algorithmics notes. Constantly revised since 2022"
