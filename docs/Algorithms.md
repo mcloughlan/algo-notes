@@ -1475,7 +1475,7 @@ Changing real items, into abstracted representations (E.g. Intersections -> node
 
 ### Coin Change algorithm
 
-```python
+```python title="DP Coin Change in python"
 def change(change, denominations):
     '''Outputs number of coins required to complete give the `change`'''
     # solution/dp array
