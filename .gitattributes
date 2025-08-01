@@ -1,3 +1,6 @@
+# Technically not documentation of the website. The website is documentation
+docs/** linguist-documentation=false 
+
 # This whole project is especially markdown based. It's worth showing that
 *.md linguist-detectable=true
 *.md linguist-documentation=false 

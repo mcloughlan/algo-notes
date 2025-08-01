@@ -1,7 +1,8 @@
 site_name: VCE Algorithmics Notes
 site_url: https://algo.mcloughlan.com # for SEO
 repo_url: https://github.com/mcloughlan/algo-notes
-edit_uri: ""
+site_description: "A complete set of VCE Algorithmics notes. Constantly revised since 2022"
+edit_uri: edit/main/docs/
 theme:
   name: material
   favicon: assets/favicon.png
@@ -43,6 +44,3 @@ plugins:
   - git-revision-date-localized
   - macros # For contribution icons
   - social # For embeds
-extra:
-  meta:
-    description: "A complete set of VCE Algorithmics notes. Constantly revised since 2022"
