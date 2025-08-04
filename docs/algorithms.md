@@ -169,7 +169,7 @@ END IF
 
 When an if statement has cascading `ELSE IF` statements
 
-```js
+```txt
 IF the student's mark was below 50
 {
 	write "Fail"
@@ -372,7 +372,7 @@ Big $O$ notation:
 
 !!! note
 
-	[https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
+	Table of useful time complexities: [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
 
 ### Selection sort
 
@@ -426,7 +426,8 @@ $$O(n)$$
 ### Merge-sort
 
 <img src="images/Merge-sort-example-300px.gif" alt="Merge-sort-example-300px">
-<sup>Gif of mergesort</sup>
+
+A commonly used [divide and conquer](#divide-and-conquer) sorting algorithm. In fact it's probably one of the best examples of divide and conquer there is. The fundamental procedure of merge sort is to split apart the input (dividing) and solve each of those parts individually (conquoring) and then building the solution back together. This is a key difference between divide and conquer and [decrease and conquer](#decrease-and-conquer) as the input is being *divided* into sub-problems that are **all** solved, instead of *decreasing* the problem by discarding parts that don't need to be solved.
 
 ## Searching
 
@@ -462,8 +463,9 @@ $$O(\log_2 n) \implies O(\log n)$$
 
 !!! info
 
-	- Use [Divide and Conquer](#divide-and-conquer) when you **==don't== have overlapping sub problems**
-	- Use [Dynamic Programming](#dynamic-programming) when you **==do== have overlapping sub problems**
+	- Use [Divide and Conquer](#divide-and-conquer) when you **don't have overlapping sub problems**
+	- Use [Decrease and Conquer](#decrease-and-conquer) when you can **discard/ignore parts of the input** entirely
+	- Use [Dynamic Programming](#dynamic-programming) when you **do have overlapping sub problems**
 	- Use [Backtracking](#backtracking) when you need to backtrack 😎
 
 #### Brute Force
@@ -474,15 +476,12 @@ Checking every possible combination to see if it is valid as you go along. But i
 
 #### Decrease and Conquer
 
-!!! warning
+!!! summary
 
-	**Decrease** and conquer decreases, and does not divide. Hence the time complexity reccurance of:
-
-	$$T(n) = T(n-b)$$ Not $$T(n) = T\left(\frac{n}{b}\right)$$
-
-	[Master theorem](#master-theorem)
+	Remember decrease and conquer as "**decreasing** the problem by discarding things I don't need, and conquoring the original problem with what I have left"
 
 Decrease and Conquer algorithms make the problem smaller by reducing problem at each iteration. They can reduce the problem by
+
 - Constant amount
 - Variable amount
 
@@ -491,11 +490,13 @@ Decrease and Conquer algorithms make the problem smaller by reducing problem at 
 Efficient when the problem can be systematically decreased to a solution
 
 **Steps for Decrease & Conquer:**
+
 - Reduce original problem to a smaller instance of the same problem
 - Solve the smaller instance
 - Extend the solution of the smaller instance to get the solution to the overall problem
 
 **Examples**:
+
 - [BFS Breadth First Search](graphs.md#bfs-breadth-first-search)
 - [DFS Depth First Search](graphs.md#dfs-depth-first-search)
 
@@ -505,15 +506,11 @@ Efficient when the problem can be systematically decreased to a solution
 
 <img src="images/Pasted image 20220728144049.png" alt="Pasted image 20220728144049">
 
-!!! warning
+When the input size is divided into smaller parts and each smaller part is solved in isolation to build to a final solution. 
 
-	**Divide** and conquer divides, and does not staticly decrease. Hence the time complexity reccurance of:
-
-	$$T(n) = T\left(\frac{n}{b}\right)$$ Not $$T(n) = T(n-b)$$
-
-	[Master theorem](#master-theorem)
-
-When the input size is divided into smaller parts
+!!! note
+	
+	A good explanation of how divide and conquer is different to [decrease and conquer](#decrease-and-conquer) is available in the [merge sort](#merge-sort) section
 
 #### Dynamic Programming
 
@@ -528,6 +525,7 @@ When the input size is divided into smaller parts
 
 
 Examples:
+
 - [Floyd-Warshall algorithm](graphs.md#floyd-warshall-algorithm)
 - [Belman-Ford algorithm](graphs.md#belman-ford-algorithm)
 
@@ -536,13 +534,16 @@ Examples:
 	In general, DP solutions are used to maximise or minimise. Knapsack or coin change.
 
 	They store previous answers to stop the repetition of overlapping sub-problems
+
 ##### "overlapping sub-problems"
 
 Identical problems that are occurring multiples times during computation
 
-#### Backtracking
+### Backtracking
 
->[!warning] Not sure if this is an actual design pattern
+!!! danger
+	
+	This is not a design pattern. It's more of an 'approach' to solve a problem
 
 lmao sudoku
 
