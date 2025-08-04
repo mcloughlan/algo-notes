@@ -1,8 +1,9 @@
-# VCE Algorithmics notes (2023-2027)
+<h1>
+  <span>VCE Algorithmics notes (2023-2027)</span>
+  <img src="docs/assets/logo.png" alt="Logo" style="height: 1em;" />
+</h1>
 
-Made with [Material for MkDocs](https://github.com/squidfunk/mkdocs-material)
-
-Hosted at: [algo.mcloughlan.com](https://algo.mcloughlan.com)
+Made with [Material for MkDocs](https://github.com/squidfunk/mkdocs-material) - hosted at: [algo.mcloughlan.com](https://algo.mcloughlan.com)
 
 ---
 
