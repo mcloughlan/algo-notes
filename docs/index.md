@@ -8,6 +8,8 @@
 
 Pull requests are welcome! Please see [the repository](https://github.com/mcloughlan/algo-notes)
 
+If you are studying some non-VCE type of 'algorithms and analysis' this site will still be helpful, but keep in mind that the bulk of this website is designed for VCE students.
+
 !!! warning New study design
 
 	I removed the outdated content from before 2023 (the old study design), but there may be implicit references to it in other current content

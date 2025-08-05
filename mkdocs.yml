@@ -26,9 +26,14 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js
   - js/math.js
-
 extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css
+nav:
+  - Home: index.md
+  - Algorithms: algorithms.md
+  - Graphs: graphs.md
+  - Computer Science: computer-science.md
+  - Extra Resources: extra-resources.md
 markdown_extensions:
   - admonition
   - pymdownx.details

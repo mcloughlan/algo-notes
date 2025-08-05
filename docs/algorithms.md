@@ -1055,7 +1055,7 @@ Examples:
 
 <sup>Not actually in the study design</sup>
 
-In terms of "Big O"/worst case space complexity, the space complexity is the auxiliary space occupied by the algorithm. Which does not include the input.
+In terms of "Big O"/worst case space complexity, the space complexity is the auxiliary space occupied by the algorithm. Which does not include the input or the output.
 
 See a conversation between myself and [Sebastian Sardina](https://www.rmit.edu.au/contact/staff-contacts/academic-staff/s/sardina-professor-sebastian):
 
@@ -1213,7 +1213,7 @@ Given lower bound $a$ and upper bound $b$, calculate the mid (average) value $c$
 
 Yeah this took you a while to realise. Pascals triangle is a seating plan for combinations.
 
-```python
+```python title="Pascal's triangle in Python"
 from math import comb
 
 for i in range(0, 11):
@@ -1229,8 +1229,7 @@ These are also the coefficients to $(x+1)^n$ where $n$ is the row in Pascal's tr
 
 ## Artificial Intelligence (AI)
 
-- "*The intelligence exhibited by machines or software*"
-- 
+> "*The intelligence exhibited by machines or software*"
 
 ### Intelligence
 
@@ -1337,8 +1336,7 @@ To which Searle responded
 
 To which Searle responded
 
-- You're stupid. ffs, this is literally just adding more inputs and outputs. It still doesn't understand
-	- He didn't swear, I paraphrased - From 2024 Freddy
+- You're stupid. This is literally just adding more inputs and outputs. It still doesn't understand
 
 ##### The Brain Simulator Argument
 
@@ -1391,14 +1389,16 @@ Essentially, it takes several inputs and multiplies them by their bias to be mat
 Which can be formulated with
 
 $$
-{\displaystyle f(\mathbf {x} )={\begin{cases}1&{\text{if }}\ \mathbf {w} \cdot \mathbf {x} +b>0,\\
+{\displaystyle f(\mathbf {x} )={\begin{cases}1&{\text{if }}\ \mathbf {w} \cdot \mathbf {x} +b>0,\newline
 0&{\text{otherwise}}\end{cases}}}
 $$
 
-$$\text{or}$$
+$$
+\text{or}
+$$
 
 $$
-{\displaystyle f(\mathbf {x} )={\begin{cases}1&{\text{if }}\ \mathbf {\displaystyle \sum _{i=1}^{m}w_{i}x_{i}}+b>0,\\
+{\displaystyle f(\mathbf {x} )={\begin{cases}1&{\text{if }}\ \mathbf {\displaystyle \sum_{i=1}^{m}w_{i}x_{i}}+b>0,\newline
 0&{\text{otherwise}}\end{cases}}}
 $$
 
