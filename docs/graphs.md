@@ -849,12 +849,12 @@ Finds the shortest **greedy** path via a **[priority queue](computer-science.md#
 
 <img src="images/Dijkstra_Animation.gif" alt="Dijkstra_Animation">
 
-Worst case performance **Fibonacci heap**:
-$$\displaystyle O(|E|+|V|\log |V|)$$
-
-Or for general wiki version:
+Worst case performance:
 
 $$\displaystyle O(|V^2|)$$
+
+Worst case performance if using a **Fibonacci heap** (non-trivial):
+$$\displaystyle O(|E|+|V|\log |V|)$$
 
 - Finds shortest path from starting node, to any other location, not just the desired location.
 - Works on weighted, weighted graphs and weighted digraphs. **Where no negative weight cycles exist**
