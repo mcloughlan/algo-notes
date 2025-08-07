@@ -9,6 +9,7 @@ theme:
   logo: assets/logo.png
   features:
     - content.action.edit
+    - content.code.annotate
   palette:
     - scheme: default
       primary: "blue"

@@ -845,12 +845,21 @@ Scenarios:
 
 Pronounced *Dikestra*.
 Finds the shortest **greedy** path via a **[priority queue](computer-science.md#priority-queue)**.
-- Not [Dynamic Programming](algorithms.md#dynamic-programming)
+
+- Although dijkstras does store information as it is building a solution, it is not [Dynamic Programming](algorithms.md#dynamic-programming) because it does not explicitly or fully solve any discrete sub-problems of the original input. This is debated, but for the sake of VCE just remember it as [greedy](algorithms.md#greedy)
 
 <img src="images/Dijkstra_Animation.gif" alt="Dijkstra_Animation">
 
-Worst case performance if using a [priority queue](computer-science.md#priority-queue):
-$$\displaystyle O(|E|+|V|\log |V|)$$
+Worst case performance if using a [priority queue](computer-science.md#priority-queue) (Fibonacci heap version):
+$$
+\displaystyle O(|E|+|V|\log |V|) \newline
+\text{or equivalently,} \newline
+\displaystyle O(|V|\log(|V|+|E|))
+$$
+
+This is because you're initialising each node into `unexplored`. Which is both $O(|V|)$ and setting the size of `unexplored` to $|V|$ which means the `while` loop will run at most $O(|V|)$ times. And the pop operation for a vertex with with minimum distance from the priority queue (Fibonacci heap) is $O(\log |V|)$. Which means you are running $O(|V| \log |V|)$ operations there.
+
+Then considering the inner loop of `for each neighbour N of V do`, you can't immediately think of it as having that automatic coeficcient of $|V|$ because it's in that while loop. Instead, think of it on a higher level and what it's doing overall. That loop is the mechanism for relaxing edges if you find a shorter path. And when you run the algorithm you will see that relaxation is done **once per edge**[^dijkstra-edge]. So that contributes the extra term of $O(|E|)$ for a final time complexity of $O(|V|\log(|V|+|E|)) \equiv O(|E|+|V|\log |V|)$
 
 Worst case performance when using an array:
 $$\displaystyle O(|V^2|)$$
@@ -874,11 +883,11 @@ End do
 dist[source] :=0 // Distance from source to source
 
 while unexplored is not empty do
-	V := vertex in unexplored with minimum dist[V] // Greedy Priority Queue
+	V := vertex in unexplored with minimum dist[V] // Greedy Priority Queue (1)
 	remove V from unexplored
 	for each neighbour N of V do
 		thisDist := dist[V] + weight(V, N)
-		if (thisDist < dist[N] ) then
+		if (thisDist < dist[N]) then
 			// A shorter path to N has been found
 			dist[N] := thisDist // Update shortest path
 			pred[N] := V // Update path predecessor
@@ -887,9 +896,13 @@ while unexplored is not empty do
 End do // shortest path information in dist[], pred[]
 ```
 
+1. With Fibonacci heap, this discrete operation is `O(log |V|)`
+
 **Limitations**
 
 - Can't use negative weights
+
+[^dijkstra-edge]: On an undirected graph, you can argue that it does some edges twice which would make it $2|E|$. But in that case you use the convention that an undirected graph has one edge in each direction, so $2|E|$ is now $|E|$. Either way, it's still asymptotically $|E|$
 
 #### Expanding a node
 
