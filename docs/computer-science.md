@@ -186,6 +186,16 @@ Queues are a list of values sorted by entry time. A FIFO (first in first out) sy
 
 A priority queue is like a [queue](#queue), only you can specify the priority for an element when you add it, and you can modify the priority of an element that's in the queue.
 
+You may see some sources that use a *fibbonacci heap* or a *binary heap*. These are actually just priority queues. The heap is just how the priority queue is stored and operated with on a lower level.
+
+!!! note "Explanation on heaps"
+
+	This is not in the study design. This is just if you're interested and want to see a very common use case for trees
+	
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/E2v9hBgG6gE?si=yqJ2RpLYKEDOxLeK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
 ###### Minimum priority queue
 
 When the highest priority item is measured by the lowest weight
