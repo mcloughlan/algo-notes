@@ -380,6 +380,15 @@ A simple graph may be either connected or disconnected. Unless stated otherwise,
 
 <img src="images/Pasted image 20220222144711.png" alt="Pasted image 20220222144711">
 
+For simple [**connected graphs**](#connected-graph) the amount of edges you can have are striclty bounded by:
+
+$$
+\overset{\text{(trees)}}{(|V|-1)}
+\le |E| \le
+\overset{\text{(complete graphs)}}{\left(\frac{|V|(|V|-1)}{2}\right)}
+$$
+
+
 #### Multigraph
 
 A graph that can have multiple edges between the same pair of nodes. In a road network this could, for example, be used to represent different routes with the same start and end point.
@@ -850,9 +859,14 @@ Finds the shortest **greedy** path via a **[priority queue](computer-science.md#
 
 <img src="images/Dijkstra_Animation.gif" alt="Dijkstra_Animation">
 
+
+!!! note
+
+	For your exam, you don't need to remember how a heap works or the intracacies of the time complexities below. Just remember that there's 2 time complexities and they differ based on implimentation. Maybe learn how to justify one of them in case you need to write a proof.
+
 Worst case performance if using a [priority queue](computer-science.md#priority-queue) (Fibonacci heap version):
 $$
-\displaystyle O(|E|+|V|\log |V|) \newline
+\boxed{\displaystyle O(|E|+|V|\log |V|)} \newline
 \text{or equivalently,} \newline
 \displaystyle O(|V|\log(|V|+|E|))
 $$
@@ -861,8 +875,40 @@ This is because you're initialising each node into `unexplored`. Which is both $
 
 Then considering the inner loop of `for each neighbour N of V do`, you can't immediately think of it as having that automatic coeficcient of $|V|$ because it's in that while loop. Instead, think of it on a higher level and what it's doing overall. That loop is the mechanism for relaxing edges if you find a shorter path. And when you run the algorithm you will see that relaxation is done **once per edge**[^dijkstra-edge]. So that contributes the extra term of $O(|E|)$ for a final time complexity of $O(|V|\log(|V|+|E|)) \equiv O(|E|+|V|\log |V|)$
 
-Worst case performance when using an array:
-$$\displaystyle O(|V^2|)$$
+<br>
+
+**Worst case performance when using an array:**
+
+$$
+\boxed{
+	\displaystyle O(|V|^2)
+}
+$$
+
+When using an array, Dijkstra's algorithm must loop over **all nodes** to pick the next closest node. This is clearly a lot slower than using a [priority queue](computer-science.md#priority-queue), where that operation can be done much faster (e.g. $ O(\log |V|) $).
+
+The initial naive time complexity is:
+
+$$
+O(|V|^2 + |E|)
+$$
+
+- The $ O(|V|^2) $ comes from scanning all $ |V| $ nodes every time we select the next node — this happens $ |V| $ times.
+- The $ O(|E|) $ comes from relaxing edges, which happens once per edge over the whole run.
+
+In asymptotic analysis, we drop lower-order terms. Since even in the worst case $ |E| \le |V|^2 $, we simplify:
+
+$$
+O(|V|^2 + |E|) = O(|V|^2)
+$$
+
+As a matter of fact, for [simple](#simple-graph) [connected](#connected-graph) graphs the boundary of $|E|$ proves[^edge-boundaries] that inequality.
+
+You don't need to remember all the maths — just remember that when using an **array**, Dijkstra runs in **$ O(|V|^2) $** time.
+
+[^edge-boundaries]: The minimum bound are [trees](#trees) and the maximum bound are [complete graphs](#complete-graphs) which are noted in the [simple graph section](#simple-graph)
+
+---
 
 - Finds shortest path from starting node, to any other location, not just the desired location.
 - Works on weighted, weighted graphs and weighted digraphs. **Where no negative weight cycles exist**
@@ -871,7 +917,7 @@ $$\displaystyle O(|V^2|)$$
 
 Pseudocode
 
-```js
+```js title="Dijkstras with a priority queue"
 Algorithm Dijkstra(Graph, source):
 // initialise the algorithm
 for each vertex V in Graph G=(V,E) do
@@ -880,7 +926,7 @@ for each vertex V in Graph G=(V,E) do
 	add V to unexplored // Unexplored nodes
 End do
 
-dist[source] :=0 // Distance from source to source
+dist[source] := 0 // Distance from source to source
 
 while unexplored is not empty do
 	V := vertex in unexplored with minimum dist[V] // Greedy Priority Queue (1)
@@ -896,7 +942,7 @@ while unexplored is not empty do
 End do // shortest path information in dist[], pred[]
 ```
 
-1. With Fibonacci heap, this discrete operation is `O(log |V|)`
+1. With Fibonacci heap, this discrete operation is `O(log |V|)`. But once again, not something you **need** to remember
 
 **Limitations**
 
