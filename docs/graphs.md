@@ -743,7 +743,7 @@ How to search trees:
 
 !!! note
 
-	[https://en.wikipedia.org/wiki/Tree_traversal(https://en.wikipedia.org/wiki/Tree_traversal#Pre-order,_NLR)
+	[https://en.wikipedia.org/wiki/Tree_traversal](https://en.wikipedia.org/wiki/Tree_traversal#Pre-order,_NLR)
 
 **Definition:**
 

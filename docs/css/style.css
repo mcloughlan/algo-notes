@@ -1,0 +1,66 @@
+/* =================================== */
+/* ===== heading hierarchy style ===== */
+/* =================================== */
+
+/* Base style and solid underline on all headings inside main content, excluding search page */
+body:not(.md-search) .md-content h1,
+body:not(.md-search) .md-content h2,
+body:not(.md-search) .md-content h3,
+body:not(.md-search) .md-content h4,
+body:not(.md-search) .md-content h5,
+body:not(.md-search) .md-content h6 {
+    position: relative;
+    padding-bottom: 0.5em;
+    /* space for underline */
+    margin-bottom: 1em;
+}
+
+/* Solid underline using ::after */
+body:not(.md-search) .md-content h1::after,
+body:not(.md-search) .md-content h2::after,
+body:not(.md-search) .md-content h3::after,
+body:not(.md-search) .md-content h4::after,
+body:not(.md-search) .md-content h5::after,
+body:not(.md-search) .md-content h6::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    background-color: #444;
+    /* solid color */
+}
+
+/* Thickness adjustments per heading level */
+body:not(.md-search) .md-content h1::after {
+    height: 2px;
+}
+
+body:not(.md-search) .md-content h2::after {
+    height: 1.8px;
+    background-color: #666;
+}
+
+body:not(.md-search) .md-content h3::after {
+    height: 1.4px;
+    background-color: #888;
+}
+
+body:not(.md-search) .md-content h4::after {
+    height: 1.2px;
+    background-color: #aaa;
+}
+
+body:not(.md-search) .md-content h5::after,
+body:not(.md-search) .md-content h6::after {
+    height: 1px;
+    background-color: #ccc;
+}
+
+/* font weight adjustment for lower headings */
+body:not(.md-search) .md-content h4,
+body:not(.md-search) .md-content h5,
+body:not(.md-search) .md-content h6 {
+    font-weight: 600;
+}

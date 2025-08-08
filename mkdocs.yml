@@ -29,6 +29,7 @@ extra_javascript:
   - js/math.js
 extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css
+  - css/style.css
 nav:
   - Home: index.md
   - Algorithms: algorithms.md
