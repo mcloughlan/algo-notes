@@ -1038,17 +1038,17 @@ Examples:
 
 ##### Intractable problems
 
-The term _[infeasible](https://en.wiktionary.org/wiki/infeasible "wikt:infeasible")_ (literally "cannot be done") is sometimes used interchangeably with _[intractable](https://en.wiktionary.org/wiki/intractable "wikt:intractable")_
+The term _[infeasible](https://en.wiktionary.org/wiki/infeasible "wikt:infeasible")_ (literally "cannot be done") is sometimes used interchangeably with _[intractable](https://en.wiktionary.org/wiki/intractable "wikt:intractable")_
 
-- $> O(k^n)$ where $k \in R$ 
+- Itractable problems are $> O(k^n)$ where $k \in R$ 
 	- Including $n!$
 - Anything exponential or greater
 	- Factorial is asymptotically treated as exponential from [Stirling's formula](http://www.sosmath.com/calculus/sequence/stirling/stirling.html)
 		- ${\displaystyle n!\sim {\sqrt {2\pi n}}\left({\frac {n}{e}}\right)^{n},}$
 
 Examples:
-- TSP (optimisation version)
-- Halting problem
+- [TSP](#travelling-salesmen-problem) (optimisation version)
+- [Halting problem](#halting-problem)
 
 
 #### Space complexity
