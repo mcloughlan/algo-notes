@@ -437,7 +437,7 @@ Most simple, checks elements left to right until the item is found.
 
 Average case:
 
-$$O\left(\frac{n}{2}\right)$$
+$$\Theta\left(\frac{n}{2}\right)$$
 
 ### Binary Search
  
