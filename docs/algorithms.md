@@ -466,7 +466,19 @@ $$O(\log_2 n) \implies O(\log n)$$
 	- Use [Divide and Conquer](#divide-and-conquer) when you **don't have overlapping sub problems**
 	- Use [Decrease and Conquer](#decrease-and-conquer) when you can **discard/ignore parts of the input** entirely
 	- Use [Dynamic Programming](#dynamic-programming) when you **do have overlapping sub problems**
-	- Use [Backtracking](#backtracking) when you need to backtrack 😎
+	- Use [Backtracking](#backtracking) when you can solve parts of the problem along the way and re-trace your steps when you make a mistake
+	- Use [Greedy](#greedy) when you see an optimisation that involves disregarding future consequences (which shoudn't normally exist in greedy implimentations)
+	- Use [Brute Force](#brute-force) when you can't do it any other way.
+
+	Both iterative and recursive algorithm design patterns in general are also part of the study design.
+
+	Both [backtracking](#backtracking) and [greedy](#greedy) algorithms types are debated to be design patterns or not. For the sake of VCE Algorithimics, the study design classes both backtracking and greedy classifications as design patterns in key knowledge and key skill markers:
+
+	> - Apply the divide and conquer, dynamic programming and backtracking design patterns to design algorithms and recognise their usage within given algorithms
+
+	> - Characteristics and suitability of the brute-force search and greedy algorithm design patterns
+
+	The study design also doesn't explicityly list '*Decrease and Conquer*' as a design pattern, but it does list both iterative and recursive patterns which can be applicable to decrease and conquer.
 
 #### Brute Force
 
@@ -539,15 +551,11 @@ Examples:
 
 Identical problems that are occurring multiples times during computation
 
-### Backtracking
+#### Backtracking
 
-!!! danger
-	
-	This is not a design pattern. It's more of an 'approach' to solve a problem
+lmao sudoku. please add notes
 
-lmao sudoku
-
-### Greedy
+#### Greedy
 
 Choose best looking path (from a [heuristic](graphs.md#heuristic-functions)) and discard? others
 - Fast but not always correct
