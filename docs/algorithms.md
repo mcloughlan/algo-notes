@@ -49,9 +49,6 @@ The solution is guaranteed to give the correct answer all of the time for the sp
 
 Actions are performed from top to bottom.
 
----
-
-
 ### Computability
 
 A problem is computable if it is able to be [modelled](#models-of-computation) on a Turing machine (or equivalent), and solved with unlimited resources in finite time.
@@ -94,13 +91,13 @@ How do we effectively communicate the design of our Algorithms to others for sol
 
 With:
 
-- Narratives – descriptions / essays
-- Process Flows – diagrams/graphs/flowcharts
-- Scenario analysis – giving possible interpretations / alternative developments
-- System maps – groups information together in hierarchies
-- Concept Maps – shows relationships between connected entity
-- Prototypes – make a smaller model of the overall problem
-- Specifications – details of what criteria need to be met
+- Narratives - descriptions / essays
+- Process Flows - diagrams/graphs/flowcharts
+- Scenario analysis - giving possible interpretations / alternative developments
+- System maps - groups information together in hierarchies
+- Concept Maps - shows relationships between connected entity
+- Prototypes - make a smaller model of the overall problem
+- Specifications - details of what criteria need to be met
 
 
 ## Modularity
@@ -120,7 +117,7 @@ When you can simplify it (with modules):
 y = sum(X)
 ```
 
-An examples of a function `pay_emplyee`
+Examples methods/functions of `pay_employee`
 
 <img src="images/Pasted image 20220426141508.png" alt="Pasted image 20220426141508">
 
@@ -150,12 +147,14 @@ If you don't pre-compute:
 
 ## Steps
 
+The names of these steps are not really important. It's more important to remember how they work
+
 ### Selection step *( if )*
 
 A selection step must have these 2 components:
 
 - A block of steps that may or may not be followed (such as make your lunch, and
-- A [condition](#conditions), i.e. a **statement that can either be true or false** (such as you have an Algorithms class today), which determines whether the block of steps should be followed. The block should be followed if the statement is true.
+- A [condition](#conditions), i.e. a **statement that can either be true or false** (such as "you have an Algorithms class today"), which determines whether the block of steps should be followed. The block should be followed if the statement is true.
 
 The syntax we will use looks like this: 
 
@@ -218,7 +217,7 @@ go outside
 
 ### BEGIN/END
 
-BEGIN and END markers are used to define the start and end of blocks
+BEGIN and END markers are ussually used to define the start and end of blocks in psuedocode
 
 ```js
 IF it is raining
@@ -246,7 +245,7 @@ go outside
 
 ### Numbered steps
 
-This method is old and outdated. It is not really used in any modern programming languages or algorithms. It doesn't even define blocks.
+This method is old and outdated. It is not really used in any modern programming languages or algorithms. It doesn't even define blocks. You might see something like this in assembly though
 
 ```js
 Step 1: IF it is not raining GOTO step 4
@@ -268,7 +267,8 @@ Loop for a fixed `n` amount of times.
 	`n` can be assigned during algorithm, it does not need to be known before starting.
 
 ```js
-get a bag DO 6 TIMES
+get a bag 
+DO 6 TIMES
 {
 	pick up a doughnut put it in the bag
 }
@@ -280,7 +280,7 @@ put the bag on the shelf
     
 ### Conditional iteration
 
-Loop while ([condition](#conditions)). The loop runs while a condition is met
+Loop while ([condition](#conditions)) is true. The loop runs while a condition is met and checks the condition before it runs the first time, and at the end of each iteration
 
 ```js
 WHILE (condition)
@@ -290,26 +290,25 @@ WHILE (condition)
 ```
 
 Conditional iteration includes the following:
+
 - `DO ... WHILE`
-	- "Testing at end"
-	- "Repeat until" (reverse bool)
-	- Do loop once, then continue while condition is met.
-- `WHILE`
-	- "Testing at end"
-	- Do loop while condition is true.
+	- Same as a while loop, but assume the condition is true for the first rum
+
+- `REPEAT UNTIL`
+	- Run while condition is false. Ussually skips inital condition check like a `DO WHILE` loop
 
 ### Collection iterations
 
 Iterate over collection such as a list with a buffer variable
 
 ```js
-FOR i IN arr(alphabet)
+FOR i IN list(alphabet)
 {
-	PRINT i
+	PRINT i // (1)
 }
-
->>> abcdef...
 ```
+
+1. Outputs something like `abcdef...`
 
 ---
 
@@ -318,25 +317,30 @@ FOR i IN arr(alphabet)
 Assigned via:
 
 - $x := y$
-- $x = y$ (Unconventional and discouraged)
 - $x \leftarrow y$
+- $x = y$ (Unconventional and discouraged for pseudocode)
 
-See [Variables](computer-science.md#variables)
+
+See [Computer Science > Variables](computer-science.md#variables)
 
 ---
 
 
 ## Famous problems
 
-There are problems documented everywhere in this page. I just needed a spot to put TSP
+There are problems documented everywhere in this site. This location will detail ones that are not assiciated with other sections
+
+!!! note
+
+	> TODO Please add links to other problems here
 
 ### Travelling salesmen problem
 
+*How does a salesman get to `n` houses along a route in a single round trip [Hamiltonian Circuit](graphs.md#hamiltonian-circuit) in the shortest distance possible*
+
 [There are $\frac{!(n-1)}{2}$ possible routes](https://youtu.be/GiDsjIBOVoA?t=194) for a [complete graph](graphs.md#complete-graphs) input. The division of two is to eliminate the other half of paths that go in the reverse order 
 
-> The number of different Hamiltonian cycles in a complete undirected graph on n vertices is $\frac{(n-1)!}{2}$ and in a complete directed graph on n vertices is $(n– 1)!$. These counts assume that cycles that are the same apart from their starting point are not counted separately. ([source](https://en.wikipedia.org/wiki/Hamiltonian_path#Properties))
-
-Also, I'm putting this here as well: 
+> The number of different Hamiltonian cycles in a complete undirected graph on n vertices is $\frac{(n-1)!}{2}$ and in a complete directed graph on n vertices is $(n- 1)!$. These counts assume that cycles that are the same apart from their starting point are not counted separately. ([source](https://en.wikipedia.org/wiki/Hamiltonian_path#Properties))
 
 
 !!! note "Game"
@@ -379,6 +383,7 @@ Big $O$ notation:
 Selection sort goes through the whole list, finding the smallest item and moving it to the front.
 
 Order:
+
 1. Sort through and find smallest item
 	- Move that item to the front
 2. Sort through the array from second element
@@ -386,14 +391,13 @@ Order:
 3. Add the element in front of the first smallest element
 4. Continue this on the next element for the rest of the list.
 
-Comparisons of:
-*Best and worst case*
+Comparisons of:[^selection-sort-time]
 
-$$O(n^2)$$
+$$O(n^2)$$ 
 
-Swaps of:
+Swaps are counted with: $O(n)$
 
-$$O(n)$$
+[^selection-sort-time]: Best and worst case have the same complexity
 
 ### Quick Sort
 
