@@ -4,10 +4,6 @@ icon: material/code-tags
 
 # Algorithms 
 
-!!! danger
-
-    This is a work in progress. Some information may be incorrect or outdated
-
 ---
 
 
@@ -340,7 +336,7 @@ There are problems documented everywhere in this site. This location will detail
 
 [There are $\frac{!(n-1)}{2}$ possible routes](https://youtu.be/GiDsjIBOVoA?t=194) for a [complete graph](graphs.md#complete-graphs) input. The division of two is to eliminate the other half of paths that go in the reverse order 
 
-> The number of different Hamiltonian cycles in a complete undirected graph on n vertices is $\frac{(n-1)!}{2}$ and in a complete directed graph on n vertices is $(n- 1)!$. These counts assume that cycles that are the same apart from their starting point are not counted separately. ([source](https://en.wikipedia.org/wiki/Hamiltonian_path#Properties))
+> The number of different Hamiltonian cycles in a complete undirected graph on n vertices is $\frac{(n-1)!}{2}$ and in a complete directed graph on n vertices is $(n- 1)!$. These counts assume that cycles that are the same apart from their starting point are not counted separately. ([source](https://en.wikipedia.org/wiki/Hamiltonian_path#Properties))
 
 
 !!! note "Game"
@@ -401,12 +397,13 @@ Swaps are counted with: $O(n)$
 
 ### Quick Sort
 
-Quick Sort uses a recursive divide and conquer method.
+Quick Sort uses a [recursive](#recursion) [divide and conquer](#divide-and-conquer) method.
 
 <img src="images/Sorting_quicksort_anim.gif" alt="Sorting_quicksort_anim">
 ![Quicksort stationary pivot](https://upload.wikimedia.org/wikipedia/commons/f/fe/Quicksort.gif)
 
 Order:
+
 1. Select random pivot (usually last)
 2. Check every other element in the array
 	1. All values less than pivot are on its left
@@ -415,7 +412,7 @@ Order:
 3. Do quick-sort on items left of original quick-sort
 4. Do quick-sort on items right of original quick-sort
 
-Worst case:
+Worst case (*consider how the pivot and/or the input would cause this*):
 
 $$O(n^2)$$
 
@@ -433,22 +430,27 @@ $$O(n)$$
 
 A commonly used [divide and conquer](#divide-and-conquer) sorting algorithm. In fact it's probably one of the best examples of divide and conquer there is. The fundamental procedure of merge sort is to split apart the input (dividing) and solve each of those parts individually (conquoring) and then building the solution back together. This is a key difference between divide and conquer and [decrease and conquer](#decrease-and-conquer) as the input is being *divided* into sub-problems that are **all** solved, instead of *decreasing* the problem by discarding parts that don't need to be solved.
 
+Merge sort runs in $O(n \, \log n)$ at worst case. Although this is considered as one of the fastest sorting algorithms, there are alternitives outside the study design that can run in $O(n+k)$ and $O(nk)$ (radix and counting sort) with fancy space tradeoffs. 
+
 ## Searching
 
 ### linear Search
 
 Most simple, checks elements left to right until the item is found.
 
-Average case:
+Worst case:
 
-$$\Theta\left(\frac{n}{2}\right)$$
+$$O(n)$$
+
+It's not in the study design, but an average case of $\Theta\left(\frac{n}{2}\right)$ and a best case of $\Omega(1)$ are quite intuitive
 
 ### Binary Search
  
-- Recursive divide and conquer.
-- **Must be sorted**
+- [Recursive](#recursion) [divide and conquer](#divide-and-conquer).
+- **Input must be sorted**
 
 Order:
+
 1. Select item from middle of array
 	1. If matches: halt
 	2. if item < what your looking for: search right side
@@ -458,7 +460,7 @@ Worst case:
 
 $$O(\log_2 n) \implies O(\log n)$$
 
-*Note that the number of searches in worst case is $\lfloor \log_2(n)\rfloor +1$*
+*Note that the number of searches in worst case is $\lfloor \log_2(n)\rfloor +1$*. This is still pretty good. If you had to binary search all the atoms in the uinverse you would only have to use 267 operations
 
 
 ## Types of algorithms
@@ -470,19 +472,19 @@ $$O(\log_2 n) \implies O(\log n)$$
 	- Use [Divide and Conquer](#divide-and-conquer) when you **don't have overlapping sub problems**
 	- Use [Decrease and Conquer](#decrease-and-conquer) when you can **discard/ignore parts of the input** entirely
 	- Use [Dynamic Programming](#dynamic-programming) when you **do have overlapping sub problems**
-	- Use [Backtracking](#backtracking) when you can solve parts of the problem along the way and re-trace your steps when you make a mistake
-	- Use [Greedy](#greedy) when you see an optimisation that involves disregarding future consequences (which shoudn't normally exist in greedy implimentations)
+	- Use [Backtracking](#backtracking) when you can solve parts of the problem along the way and **re-trace your steps** when you make a mistake
+	- Use [Greedy](#greedy) when you see an optimisation that involves **disregarding future consequences** (which shoudn't normally exist in greedy implimentations)
 	- Use [Brute Force](#brute-force) when you can't do it any other way.
 
-	Both iterative and recursive algorithm design patterns in general are also part of the study design.
+Both iterative and recursive algorithm design patterns in general are also part of the study design.
 
-	Both [backtracking](#backtracking) and [greedy](#greedy) algorithms types are debated to be design patterns or not. For the sake of VCE Algorithimics, the study design classes both backtracking and greedy classifications as design patterns in key knowledge and key skill markers:
+Both [backtracking](#backtracking) and [greedy](#greedy) algorithms types are debated to be design patterns or not. For the sake of VCE Algorithimics, the study design classes both backtracking and greedy classifications as design patterns in key knowledge and key skill markers:
 
-	> - Apply the divide and conquer, dynamic programming and backtracking design patterns to design algorithms and recognise their usage within given algorithms
+> - Apply the divide and conquer, dynamic programming and backtracking design patterns to design algorithms and recognise their usage within given algorithms
 
-	> - Characteristics and suitability of the brute-force search and greedy algorithm design patterns
+> - Characteristics and suitability of the brute-force search and greedy algorithm design patterns
 
-	The study design also doesn't explicityly list '*Decrease and Conquer*' as a design pattern, but it does list both iterative and recursive patterns which can be applicable to decrease and conquer.
+The study design also doesn't explicityly list '*Decrease and Conquer*' as a design pattern, but it does list both iterative and recursive patterns which can be applicable to decrease and conquer.
 
 #### Brute Force
 
@@ -547,7 +549,7 @@ Examples:
 
 !!! info
 
-	In general, DP solutions are used to maximise or minimise. Knapsack or coin change.
+	In general, DP solutions are used to maximise or minimise. Like Knapsack or [coin change](#coin-change-algorithm).
 
 	They store previous answers to stop the repetition of overlapping sub-problems
 
@@ -590,7 +592,7 @@ For example (TSP):
 
 #### Evolutions
 
-Algorithm will repeatedly evaluate all the tours in the “dish”
+Algorithm will repeatedly evaluate all the tours in the "dish"
 - throw out the longer tours
 - replace them with copies of the better tours 
 - each copy is slightly different than the tour it was copied from
@@ -648,7 +650,6 @@ When stuck at:
 - One can prove: If temperature decreases slowly enough, then simulated annealing search will find a global optimum with probability approaching one, which means you are certain of your solution. However, this usually takes impractically long.
 
 <img src="images/Hill_Climbing_with_Simulated_Annealing.gif" alt="Hill_Climbing_with_Simulated_Annealing">
-<sup>**Gif^^**</sup>
 
 !!! info
 
@@ -672,12 +673,13 @@ A case to terminate a recursive function:
 
 ```js
 function factorial(x)
-    // Base case (x == 0) or x <= 0
-    if x == 0:
+    if x == 0: // (1)
         return 1
     else:
         return x*factorial(x-1)
 ```
+
+1. The base case triggers when (x == 0) or (x <= 0)
 
 
 
@@ -703,13 +705,13 @@ $${n!=n(n-1)!\quad {\text{for}}\quad n>0,}$$
 
 <br>
 
-$$T(\textcolor{red}{n})=\textcolor{orange}{a}T\left(\frac{n}{\textcolor{yellow}{b}}\right)+\textcolor{green}{f(n^k)}$$
+$$T(\textcolor{red}{n})=\textcolor{orange}{a}T\left(\frac{n}{\textcolor{purple}{b}}\right)+\textcolor{green}{f(n^k)}$$
 
 Where:
 
 - $\textcolor{red}{n}$ is the original size of the problem
 - $\textcolor{orange}{a}$ is the number of subproblems in the recursion (how many times called in the function)
-- $\textcolor{yellow}{b}$ is the number of dividing of input data that is done
+- $\textcolor{purple}{b}$ is the number of dividing of input data that is done
 - $\textcolor{green}{f(n^k)}$ is the cost of the work done outside the recursive call
 
 !!! note
@@ -720,7 +722,7 @@ Where:
 
 !!! warning
 
-	The Master theorem **cannot** be used on recursive algorithms where the **sub-problems overlap**, or decrease and conquor.
+	The Master theorem **cannot** be used on recursive algorithms where the **sub-problems overlap**, or decrease and conquor.
 
 	Only recursive divide and conquor when the above applies 
 
@@ -764,7 +766,7 @@ $${PR(A)={\frac {PR(B)}{2}}+{\frac {PR(C)}{1}}+{\frac {PR(D)}{3}}}$$
 
 !!! info
 
-	[https://youtu.be/qxEkY8OScYY](https://youtu.be/qxEkY8OScYY)
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/qxEkY8OScYY?si=rg-kzamjXyxP05DI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ##### Damping factor
 
@@ -820,8 +822,6 @@ So, when proving by induction, do the following:
 - Then solve for case $n=k+1$ by substituting $n=k$ case (if possible). 
 
 ---
-
-From seminar
 
 Consider a **Loop invariant**. Which is some condition that is true before and after each loop. Then use that to build on a True solution / proof
 
@@ -888,7 +888,7 @@ He was wrong, see Gödel's Incompleteness Theorem (Not in 2023 course design)
 
 The main goal of Hilbert's program was to provide secure foundations for all mathematics. In particular this should include:
 
--   A formulation of all mathematics; in other words all mathematical statements should be written in a precise [formal language](https://en.wikipedia.org/wiki/Formal_language "Formal language"), and manipulated according to well defined rules.
+-   A formulation of all mathematics; in other words all mathematical statements should be written in a precise [formal language](https://en.wikipedia.org/wiki/Formal_language "Formal language"), and manipulated according to well defined rules.
 -   Completeness: a proof that all true mathematical statements can be proved in the formalism.
 -   Consistency: a proof that no contradiction can be obtained in the formalism of mathematics. This consistency proof should preferably use only "finitistic" reasoning about finite mathematical objects.
 -   Conservation: a proof that any result about "real objects" obtained using reasoning about "ideal objects" (such as uncountable sets) can be proved without using ideal objects.
@@ -919,6 +919,10 @@ An equivalent of the [Turing machine](computer-science.md#turing-machine) invent
 - Computability is only considered on the [Turing machine](computer-science.md#turing-machine) or with [Lambda Calculus](#lambda-calculus), which doesn't consider alternative models of computation.
 
 #### Halting problem
+
+!!! important
+
+	In the current 2024 study design 
 
 Machine $H$ determines if the input $I$ (program and program input) will halt or not. 
 
@@ -1002,9 +1006,7 @@ A non linear sequence of numbers such as `1,2,4,8,16,31,64`
 
 #### Solving
 
-!!! info
-
-	[Telescoping vs Iteration](https://youtu.be/lPCS2FFyqNA)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lPCS2FFyqNA?si=Dh_64OIolEAK8qBI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Mathematical Analysis
 
@@ -1046,7 +1048,7 @@ Literally "a problem that can be handled"
 	- Including $n \log n$
 
 Examples:
-- Merge-sort
+- [Merge-sort](#merge-sort)
 
 ##### Intractable problems
 
@@ -1223,7 +1225,6 @@ Given lower bound $a$ and upper bound $b$, calculate the mid (average) value $c$
 
 ### Binomials
 
-Yeah this took you a while to realise. Pascals triangle is a seating plan for combinations.
 
 ```python title="Pascal's triangle in Python"
 from math import comb
@@ -1268,6 +1269,7 @@ A game where a computer (A) and a person (B have to convince the interrogator (C
 <img src="images/Pasted image 20220912092432.png" alt="Pasted image 20220912092432" width="300">
 
 This test asks:
+
 - Can machines think?
 - Can a machine imitate the responses of a human?
 - Can a machine pass a Turing Test? 
@@ -1390,7 +1392,6 @@ Outputs $[-1, 1]$
 
 #### Perceptron
 
-- Kind of like the evaluation function for the Wordle Solver
 
 Essentially, it takes several inputs and multiplies them by their bias to be matched against a threshold or bias. The result of the bias comparison is then the resultant binary output. Which is: True or false, Yes or No, `0`, `1` etc
 
@@ -1478,6 +1479,7 @@ The inputs are only provided to the network, and it must learn on its own (self 
 ### Conditions
 
 A condition must have the following properties: 
+
 - It must be a logical statement, i.e. one that can either be true or false, and
 - It must be possible to know at the time the algorithm is being followed whether the statement is true or false.
 
@@ -1485,36 +1487,31 @@ A condition must have the following properties:
 
 Changing real items, into abstracted representations (E.g. Intersections -> nodes on a graph).
 
-#### Signifiers
-
-
-
-
 ### Coin Change algorithm
 
 ```python title="DP Coin Change in python"
 def change(change, denominations):
-    '''Outputs number of coins required to complete give the `change`'''
-    # solution/dp array
-    y = [1]
-    for runninc in range(2, change+1):
-        # Add minimum solution to y
-        y.append(runninc)
-        for coin in denominations:
-            # The new amount of change to work with
-            newdif = runninc-coin
-            if newdif > 0:
-                # There's still some change left
-                if y[newdif-1]+1 < runninc:
-                    # If the coins needed for the new change is better then the minimum
-                    # The +1 implies we have already used a `coin`
-                    y[runninc-1] = y[newdif-1]+1
-            elif newdif == 0:
-                # This has solved this iteration of change calculation
-                y[runninc-1] = 1
-    # Return last value
-    print(y)
-    return y[-1]
+    '''Outputs number of coins required to complete give the `change`'''
+    # solution/dp array
+    y = [1]
+    for runninc in range(2, change+1):
+        # Add minimum solution to y
+        y.append(runninc)
+        for coin in denominations:
+            # The new amount of change to work with
+            newdif = runninc-coin
+            if newdif > 0:
+                # There's still some change left
+                if y[newdif-1]+1 < runninc:
+                    # If the coins needed for the new change is better then the minimum
+                    # The +1 implies we have already used a `coin`
+                    y[runninc-1] = y[newdif-1]+1
+            elif newdif == 0:
+                # This has solved this iteration of change calculation
+                y[runninc-1] = 1
+    # Return last value
+    print(y)
+    return y[-1]
   
   
 # make sure this has a 1 coin denomination

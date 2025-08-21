@@ -110,7 +110,7 @@ A [path](#paths) that uses each [edge](#edges) once only without returning to st
 
 A [path](#paths) that uses each [edge](#edges) once only and returns to starting [vertex](#nodes) is an Euler circuit.
 
-If an undirected graph $G$ is connected and every vertex  (not isolated) in $G$ has an even degree, then $G$ has an Euler circuit.
+If an undirected graph $G$ is connected and every vertex  (not isolated) in $G$ has an even degree, then $G$ has an Euler circuit.
 
 - Uses each **edge** once
 - Does return to starting vertex
@@ -989,24 +989,24 @@ function BellmanFord(list vertices, list edges, vertex source)
     // and fills two arrays (distance and predecessor) holding
     // the shortest path from the source to each vertex
 
-    distance := list of size n
-    predecessor := list of size n
+    distance := list of size n
+    predecessor := list of size n
 
     // Step 1: initialize graph_
     for each vertex v in vertices do
 
-        distance[v] := inf // Initialize the distance to all vertices to ∞
-        predecessor[v] :=*null // And having a null predecessor
+        distance[v] := inf // Initialize the distance to all vertices to ∞
+        predecessor[v] :=*null // And having a null predecessor
     
-    distance[source] := 0 // The distance from the source to itself is, of course, zero
+    distance[source] := 0 // The distance from the source to itself is, of course, zero
 
     // Step 2: relax edges repeatedly
     
     repeat |V|−1 times:
          for each edge (u, v) with weight w in edges do
              if distance[u] + w < distance[v] then
-                 distance[v] := distance[u] + w
-                 predecessor[v] := u
+                 distance[v] := distance[u] + w
+                 predecessor[v] := u
 
     // Step 3: check for negative-weight cycles
     for each edge (u, v) with weight w in edges do

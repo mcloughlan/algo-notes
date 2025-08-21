@@ -408,7 +408,7 @@ A [Turing machine](#turing-machine) that follows fixed rules. **A natural or rea
 
 Can solve NP problems?
 
-A theoretical [Turing machine](#turing-machine) whose governing rules specify more than one possible action when in some given situations. That is, an NTM's next state is _not_ completely determined by its action and the current symbol it sees, unlike a [Deterministic Turing machine](#deterministic-turing-machine)
+A theoretical [Turing machine](#turing-machine) whose governing rules specify more than one possible action when in some given situations. That is, an NTM's next state is _not_ completely determined by its action and the current symbol it sees, unlike a [Deterministic Turing machine](#deterministic-turing-machine)
 
 ### Universal Turing Machine
 
