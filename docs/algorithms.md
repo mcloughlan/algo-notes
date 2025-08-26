@@ -4,9 +4,6 @@ icon: material/code-tags
 
 # Algorithms 
 
----
-
-
 ## Definition of an Algorithm
 
 !!! quote
