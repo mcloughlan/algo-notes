@@ -658,7 +658,7 @@ When stuck at:
 
 Basically, "*Calling a function inside of itself*"
 
-<img src="images/Pasted image 20220324205607.png" alt="Pasted image 20220324205607">
+![Recursive Serpinski triangle](images/Pasted image 20220324205607.png){width=200}
 
 Requirements:
  
@@ -740,7 +740,7 @@ Where:
 
 	Also, another geometric time complexity is a decision tree, where it expands in $2^n$ time
 
-	<img src="images/Pasted image 20220803103031.png" alt="Pasted image 20220803103031">
+	<img src="images/Pasted image 20220803103031.png" alt="Pasted image 20220803103031" width=300px>
 
 	Another example is $T(n) = T(n/3) + T(2n/3) + n$. I just need to note that:
 	- Asymptotic height of tree is longest term -> $T(2n/3)$
@@ -762,6 +762,12 @@ Where $B$ has 2 outgoing links, and $C$ has one.
 $${PR(A)={\frac {PR(B)}{2}}+{\frac {PR(C)}{1}}+{\frac {PR(D)}{3}}}$$
 
 !!! info
+
+	Cool historical and general technical explanation. Only a few minutes:
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/KZeIEiBrT_w?si=9LRXiCsQumdq3cWe&amp;start=1147" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+	Technical video:
 
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/qxEkY8OScYY?si=rg-kzamjXyxP05DI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -842,7 +848,7 @@ State the proposition, say "the proof is by contradiction", then contradict your
 
 ### Axioms
 
-<img src="images/Pasted image 20220905092544.png" alt="Pasted image 20220905092544">
+<img src="images/Pasted image 20220905092544.png" alt="Pasted image 20220905092544" width=300px>
 
 - As classically conceived, an axiom is a premise so evident as to be accepted as true without controversy
 
@@ -1202,11 +1208,11 @@ Examples:
 <img src="images/Pasted image 20220820151008.png" alt="Pasted image 20220820151008" width="300">
 
 - Better algorithms are still possible
-	- Better algorithms will not provide an improvement detectable by “Big O”
+	- Better algorithms will not provide an improvement detectable by "Big O"
 
 ### Bisection solve
 
-<img src="images/Pasted image 20220713093654.png" alt="Pasted image 20220713093654">
+<img src="images/Pasted image 20220713093654.png" alt="Pasted image 20220713093654" width=400px>
 
 Given lower bound $a$ and upper bound $b$, calculate the mid (average) value $c$ and sub into $f(x)$. Then adjust the bounds $a, b$ to move closer to the value closer to $0$.
 
@@ -1454,7 +1460,7 @@ As you can see, they are also very sensitive to input 😢
 
 Forward propagation is the initial phase of data processing in a neural network. Here, input data is fed into the network and passed through various layers. Each neuron in these layers processes the input and passes it to the next layer, ultimately leading to the output layer. This process is linear and straightforward, moving in one direction: from input to output.
 
-<img src="images/Pasted image 20240910154731.png" alt="Pasted image 20240910154731">
+<img src="images/Pasted image 20240910154731.png" alt="Pasted image 20240910154731" width=400px>
 
 [source](https://stackademic.com/blog/the-difference-between-back-propagation-and-forward-propagation-in-deep-learning-2b2248e6d00c)
 

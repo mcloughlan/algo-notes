@@ -52,11 +52,11 @@ The neighbourhood of a vertex $v$ is the set of vertices adjacent to $v$.
 
 #### Order
 
-Number of [vertices](#nodes) a graph has
+The number of [vertices](#nodes) in a graph.
 
 ### Edges
 
-Edges are the lines in-between [Nodes](#nodes) that display a connection between nodes.
+Edges are the lines in-between [nodes](#nodes) that display a connection between nodes.
 Edges represent connections, relations or any logical path.
 
 - We denote the edge set of a graph $G$ by $E(G)$
@@ -77,7 +77,7 @@ If the vertex $u$ is connected to $e$; $e$ is an edge incident to $u$
 
 A loop is an edge that has the same starting and ending [node](#nodes). See node 1 below:
 
-<img src="images/Pasted image 20220222181219.png" alt="Pasted image 20220222181219">
+<img src="images/Pasted image 20220222181219.png" alt="Pasted image 20220222181219" width=300px>
 
 ### Paths
 
@@ -89,26 +89,27 @@ A path can contain many edges, or a single. it depends on what nodes are being s
 
 !!! note
 
-	- [Euler paths](#euler-path) and [Euler circuits](#euler-circuit):
-		- Can pass through [nodes](#nodes) more than once.
-		- Don't exist if a graph has more than two vertices of odd degree.
-		- Exists if all vertices of a graph have even degree.
-		- Exists if a connected graph has exactly two odd vertices. The starting point must be one of the odd vertices and the ending point will be the other of the odd vertices.
-
-	- [Hamiltonian Paths](#hamiltonian-path)
-		- Don't have to traverse every [edge](#edges)
+	- Check out [Euler paths](#euler-path) and [Euler circuits](#euler-circuit):
+	- Check out [Hamiltonian Paths](#hamiltonian-path)
 
 
 #### Euler Path
 
 A [path](#paths) that uses each [edge](#edges) once only without returning to starting [vertex](#nodes) is an Euler path.
 
-- Uses each **edge** once
+![euler path](images/euler-path.png)
+
 - Doesn't return to starting vertex
+- Can pass through [nodes](#nodes) more than once.
+- Don't exist if a graph has more than two vertices of odd degree.
+- Exists if all vertices of a graph have even degree.
+- Exists if a connected graph has exactly two odd vertices. The starting point must be one of the odd vertices and the ending point will be the other of the odd vertices.
 
 #### Euler circuit
 
 A [path](#paths) that uses each [edge](#edges) once only and returns to starting [vertex](#nodes) is an Euler circuit.
+
+![euler circuit](images/euler-circuit.png)
 
 If an undirected graph $G$ is connected and every vertex  (not isolated) in $G$ has an even degree, then $G$ has an Euler circuit.
 
@@ -119,14 +120,23 @@ If an undirected graph $G$ is connected and every vertex  (not isolated) in $G$ 
 
 A [path](#paths) that passes every [vertex](#nodes) exactly once without returning to starting [vertex](#nodes) is an Hamiltonian path.
 
+![hamiltonian path](images/hamiltonian-path.png)
+
 - Uses every **node** once
 - Doesn't return to starting node
+- Don't have to traverse every [edge](#edges)
 
 #### Hamiltonian Circuit
 
 !!! note
 
 	This is used very often in this course. See [Travelling salesmen problem](algorithms.md#travelling-salesmen-problem)
+
+!!! important
+
+	A [cycle](#cycle) and a [circuit](#circuit) are different. But the properties of both Hamiltonian cycles and Hamiltonian circuits are the same. Hence they reffer to the same thing.
+
+![Hamiltonian circuit](images/hamiltonian-circuit.png){width=300px}
 
 A [path](#paths) that passes every [vertex](#nodes) exactly once and returns to the starting [vertex](#nodes) is an Hamiltonian path.
 
@@ -145,16 +155,28 @@ Is there a path from $A$ to $B$ ?
 
 The transitive closure of a graph is a graph which contains an edge between $A$ and $B$ whenever there is a directed path from $A$ to $B$. In other words, to generate the transitive closure every path in the graph is directly added as an additional edge.
 
-<img src="images/Pasted image 20220321094104.png" alt="Pasted image 20220321094104">
+<img src="images/Pasted image 20220321094104.png" alt="Pasted image 20220321094104" width=300px>
 
 A graph $G^*$ which is the transitive closure of $G$ will have a directed edge to every node it can traverse to.
+
+
+### Undirected Graphs
+
+![undirected graph](images/undirected-graph.png){width=200}
+
+Undirected graphs have [edges](#edges) that can be travelled along in any direction.
 
 ### Directed Graph
 
 Also known as a digraph.
-A digraph is an ordered pair [G = (V, E)](#graph) of [edges](#edges) $(x,y)$ of arrows "from $x$ to $y$".
+
+![directed graph](images/directed-graph.png){width=200}
+
+Bassically just the same as a regular [undirected graph](#undirected-graphs), but the edges have arrows (direction). 
+Formally, a digraph is an ordered pair [G = (V, E)](#graph) of [edges](#edges) $(x,y)$ of arrows "from $x$ to $y$".
 
 Where:
+
 - $x$:
 	- Is the tail
 	- Is the direct predecessor of $y$
@@ -168,11 +190,7 @@ If a [path](#paths) leads from $x$ to $y$, then $y$ is said to be a successor of
 
 A directed graph $G$ is strongly connected if there is a directed path from every vertex to every other vertex in $G$.
 
-<img src="images/Pasted image 20220222220031.png" alt="Pasted image 20220222220031">
-
-### Undirected Graphs
-
-Undirected graphs have [edges](#edges) that can be travelled along in any direction.
+<img src="images/Pasted image 20220222220031.png" alt="Pasted image 20220222220031" width=500px>
 
 ### Dag / DAGS
 
@@ -232,7 +250,7 @@ Similarity = 0 if $X \neq Y$
 
 !!! warning
 
-	writing this in 2025. Never seen cosine simularity anywhere. dw about it
+	I have never seen cosine simularity anywhere. Don't worry too much about it
 
 Best example in the world:
 
@@ -248,7 +266,7 @@ For unweighted graphs, each edge has a nominal distance of 1.
 
 #### Euclidian distance
 
-Is also known as simply distance
+The most commonly understood distance metric
 
 Euclidean Distance is the straight line distance between two entities. Which is worked out using **Pythagoras Theorem**
 
@@ -262,7 +280,8 @@ In a simple way of saying it is the total sum of the difference between the x-co
 
 The [heuristic function](#heuristic-functions) for distance calculation
 
-$$f(n) = |\text{cell}_{row} – \text{goal}_{row}| + |\text{cell}_{col} – \text{goal}_{col}|$$
+{# idk why but the latex didn't render for this. So just rasterized it instead #}
+![distance-heuristic](images/distance-heuristic.png)
 
 Which is the absolute cell distance in the $x$ direction plus the absolute cell distance in the $y$ direction. The absolute value is always positive.
 
@@ -279,9 +298,9 @@ Also known as a topological ordering
 
 In computer science a **topological sort** or **topological ordering** of a [Directed Graph](#directed-graph) is a linear ordering of its [vertices](#nodes) such that for every directed edge _uv_ from vertex _u_ to vertex _v_, _u_ comes before _v_ in the ordering.
 
-A topological ordering is possible iff the graph has no directed cycles, that is, if it is a directed acyclic graph ([Dag DAGS](#dag-dags)).
+A topological ordering is possible iff the graph has no directed cycles, that is, if it is a directed acyclic graph ([Dag - DAGS](#dag-dags)).
 
-<img src="images/Pasted image 20220310113016.png" alt="Pasted image 20220310113016">
+<img src="images/Pasted image 20220310113016.png" alt="Pasted image 20220310113016" width=400px>
 
 The graph shown above has many valid topological sorts, including:
 
@@ -302,7 +321,7 @@ This can be calculated through [Kahn's Algorithm](#kahns-algorithm)
 
 A [Topological sort](#topological-sort) algorithm, first described by **Kahn** (1962), works by choosing vertices in the same order as the eventual topological sort. First, find a list of "start nodes" which have no incoming edges and insert them into a set $S$; at least one such node must exist in a non-empty acyclic graph. Then:
 
-```js
+```js title="Kahn's Algorithm in psuedocode"
 L ← Empty list that will contain the sorted elements
 S ← Set of all nodes with no incoming edges
 
@@ -319,11 +338,13 @@ else
     return L (a topologically sorted order)
 ```
 
-### Graph Diameter
+### Graph Diameter and radius
 
 !!! note
 
-	Note that the **diameter** is the max graph ecentricity. The radius of the graoh requires a center point to be defined
+	Note that the **diameter** is the max graph ecentricity. The radius of the graph requires a center point to be defined
+
+![graph radius and diameter example](images/radius-diamater-example1.png)
 
 The longest shortest path between any two nodes counted by edge and weights.
 
@@ -337,11 +358,12 @@ The examples below have a diameter of 2 (2 edges to traverse to get from a to b)
 
 <img src="images/Pasted image 20220303114136.png" alt="Pasted image 20220303114136">
 
-<img src="images/Pasted image 20220919214414.png" alt="Pasted image 20220919214414">
+Example:
+
+<img src="images/Pasted image 20220919214414.png" alt="Pasted image 20220919214414" width=400px>
 
 *Note that the radius and diameter is counted by the number of edges
 
----
 
 ## Network graphs
 
@@ -374,13 +396,13 @@ We can then obtain $H$ from $G$ by deleting edges and or vertices from  $G$.
 
 #### Simple graph
 
-A simple graph, also called a strict graph is **an unweighted, undirected graph containing no graph loops or multiple edges**.
+A simple graph, also called a strict graph is **an unweighted, [undirected graph](#undirected-graphs) containing no graph [loops](#loops) or multiple edges**.
 
-A simple graph may be either connected or disconnected. Unless stated otherwise, the unqualified term "graph" usually refers to a simple graph.
+A simple graph may be either connected or [disconnected](#disconnected-graph). Unless stated otherwise, the unqualified term "graph" usually refers to a simple graph.
 
 <img src="images/Pasted image 20220222144711.png" alt="Pasted image 20220222144711">
 
-For simple [**connected graphs**](#connected-graph) the amount of edges you can have are striclty bounded by:
+For simple [**connected graphs**](#connected-graph) the amount of edges you can have are striclty bounded. The number of edges will always be between the arrangement of a [tree](#trees) or a [complete graph](#complete-graphs):
 
 $$
 \overset{\text{(trees)}}{(|V|-1)}
@@ -391,20 +413,24 @@ $$
 
 #### Multigraph
 
+![multigraph](images/multigraph.png){width=300px}
+
 A graph that can have multiple edges between the same pair of nodes. In a road network this could, for example, be used to represent different routes with the same start and end point.
 
 #### Connected Graph
+
+![connected vs disconnected graphs](images/connected-vs-disconnected-graphs.png){width=500px}
 
 A graph where all [nodes](#nodes) are connected
 
 ##### Ring Graph
 
-Also known as a Cycle Graph
+Also known as a [Cycle](#cycle) Graph
 A graph that forms a ring
 
-- All nodes have a degree of 2
+- All nodes have a [degree](#degree) of 2
 
-<img src="images/Pasted image 20220222220633.png" alt="Pasted image 20220222220633">
+<img src="images/Pasted image 20220222220633.png" alt="Pasted image 20220222220633" width=300px>
 
 #### Disconnected Graph
 
