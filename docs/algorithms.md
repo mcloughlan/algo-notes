@@ -80,7 +80,7 @@ The limits that make an algorithm uncomputable. Such as the [Uncomputability and
 
 ## Communication of design
 
-How do we effectively communicate the design of our Algorithms to others for solving a “real world” problem?
+How do we effectively communicate the design of our Algorithms to others for solving a "real world" problem?
 
 With:
 
@@ -1150,7 +1150,7 @@ NP is short for **non-deterministic** or **nondeterministic polynomial time**
 	- Some NP problems are P problems, and solved in polynomial time
 - Verifiable in polynomial time
 	- Don't need to find every other solution to determine if any solution is valid
-- Can be solved in polynomial time on a “non-deterministic” Turing Machine.
+- Can be solved in polynomial time on a "non-deterministic" Turing Machine.
 
 Examples:
 - Soduku solver
@@ -1165,7 +1165,7 @@ Examples:
 		- Then it would be solved in polynomial time
 - Verifiable in polynomial time
 	- Don't need to find every other solution to determine if any solution is valid
-- Can be solved in polynomial time on a “non-deterministic” Turing Machine.
+- Can be solved in polynomial time on a "non-deterministic" Turing Machine.
 
 All NP problems can be modelled with the SAT, If SAT is solvable in polynomial time, P = NP.
 
@@ -1182,7 +1182,7 @@ Examples:
 - Solved in unreasonable/non-polynomial time
 - Verifiable larger than polynomial time.
 	- Usually all other answers need to be solved before an answer can be verified
-- Can be solved in polynomial time on a “non-deterministic” Turing Machine.
+- Can be solved in polynomial time on a "non-deterministic" Turing Machine.
 
 Examples:
 - Halting problem
@@ -1246,6 +1246,23 @@ These are also the coefficients to $(x+1)^n$ where $n$ is the row in Pascal's tr
 ## Artificial Intelligence (AI)
 
 > "*The intelligence exhibited by machines or software*"
+
+### Machine Learning
+
+This is new to the study design, so my original notes didn't have much
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JMaVGUzg8uA?si=gBTXdx87epbKqDEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+#### Support Vector machines
+
+##### Kernel trick
+
+![kernel trick graph illustration applied to a circle classification problem](images/kernal-trick.png)
+
+In a case like above, you can create another dimension to seperate the data based on another function. The circle example can use the distance from the centre as the new Z axis value. 
+
+More explained in my [kernel trick Desmos example](https://www.desmos.com/3d/irma0jtyu5)
+
 
 ### Intelligence
 

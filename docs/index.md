@@ -2,8 +2,6 @@
 
 ## Introduction
 
-Pull requests are welcome! Please see [the repository](https://github.com/mcloughlan/algo-notes)
-
 If you are studying some non-VCE type of 'algorithms and analysis' this site will still be helpful, but keep in mind that the bulk of this website is designed for VCE students.
 
 !!! note
@@ -29,7 +27,11 @@ For mobile viewers, please open the site menu in the top left to view pages and 
 
 ---
 
-## Contributors
+## Contribution
+
+Pull requests are welcome! Please see [the GitHub repository](https://github.com/mcloughlan/algo-notes) if you would like to contribute. Alternatively, there is an edit button on each page which will redirect you to a pull request page.
+
+### Contributors
 
 This could be you!
 

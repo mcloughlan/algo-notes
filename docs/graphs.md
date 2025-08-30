@@ -386,7 +386,7 @@ A graph $G=(V,E)$ is made up of a set of [vertices/nodes](#nodes) ($V$) and a se
 	- $|E|$ returns 10
 		- there are 10 edges in this graph
 
-<img src="images/Pasted image 20220221093040.png" alt="Pasted image 20220221093040">
+<img src="images/Pasted image 20220221093040.png" alt="Pasted image 20220221093040" width=400px>
 
 #### Sub graph
 
@@ -434,9 +434,13 @@ A graph that forms a ring
 
 #### Disconnected Graph
 
+![connected vs disconnected graphs](images/connected-vs-disconnected-graphs.png){width=500px}
+
 A graph where not all [nodes](#nodes) are connected.
 
 ##### Bridge
+
+![bridge edges](images/bridge-edges.png){width=400px}
 
 A bridge is an [edge](#edges) that if deleted would cause the graph to become [disconnected](#disconnected-graph).
 
@@ -469,13 +473,13 @@ Graphs or networks that look different but represent the same information are sa
 
 Isomorphic Graphs have the same number of vertices, [edges](#edges) and [connections](#edges) between vertices, but may look completely different.
 
-<img src="images/Pasted image 20220308182739.png" alt="Pasted image 20220308182739">
+<img src="images/Pasted image 20220308182739.png" alt="Pasted image 20220308182739" width=400px>
 
 ### Bipartite Graphs
 
 A graph $G$ is bipartite if its vertices can be partitioned into two sets $X$ and $Y$ , called partite sets, such that every edge in $E(G)$ is between a vertex in $X$ and a vertex in $Y$ .
 
-<img src="images/Pasted image 20220222214749.png" alt="Pasted image 20220222214749">
+<img src="images/Pasted image 20220222214749.png" alt="Pasted image 20220222214749" width=300px>
 
 As shown above, bipartite graphs have a [chromatic number](#chromatic-number) of 2
 
@@ -485,9 +489,11 @@ As shown above, bipartite graphs have a [chromatic number](#chromatic-number) of
 - Trees are [simple](#simple-graph)
 - Trees contain no [circuits](#circuit)
 
-<img src="images/Pasted image 20220222183107.png" alt="Pasted image 20220222183107">
+![tree examples](images/tree-examples.png)
 
-For any tree $T = (V, E)$ with $|V|$ = $n$, $|E| = n − 1$.
+
+For any tree $T = (V, E)$ with $|V|$ = $n$, $|E| = n − 1$. 
+As an extension, can you figure out how many edges there are in a [forest](#forest)?
 
 #### Formal definition of a tree
 
@@ -525,13 +531,13 @@ A tree where each non-leaf node splits off to two other child nodes. If there is
 
 ##### Random decision forests
 
-Or decision forests, have $n - s$ edges. For $n$ vertices and $s$ source nodes. See [my discussion](https://math.stackexchange.com/questions/4405339/generalising-an-answer-to-number-of-edges-on-a-decision-tree)
+Or decision forests, have $n - s$ edges. For $n$ vertices and $s$ source nodes. See [my discussion](https://math.stackexchange.com/questions/4405339/generalising-an-answer-to-number-of-edges-on-a-decision-tree). Also the same amount of edges in a regular forest.
 
 #### Binary tree
 
 A type of [Decision tree](#decision-tree), but with the absence of the decision abstraction, and it's literally just 0,1 or 2 children per parent for the entire graph
 
-<img src="images/Pasted image 20220516123124.png" alt="Pasted image 20220516123124">
+<img src="images/Pasted image 20220516123124.png" alt="Pasted image 20220516123124" width=400px>
 
 !!! note
 
@@ -549,15 +555,11 @@ A graph with no [cycles](#cycle). More specifically, a disconnected graph, where
 
 <img src="images/Pasted image 20220313115311.png" alt="Pasted image 20220313115311">
 
-For any tree $T = (V, E)$ with $|V|$ = $n$, $|E| = n − 1$.
-
----
-
 ### State Diagrams
 
 A [Directed Graph](#directed-graph) showing connections between states of objects or abstract instances
 
-<img src="images/Pasted image 20220317182422.png" alt="Pasted image 20220317182422">
+<img src="images/Pasted image 20220317182422.png" alt="Pasted image 20220317182422" width=400px>
 
 ## Colouring
 
@@ -660,7 +662,7 @@ $$
 
 !!! quote
 
-	"The basic idea of breadth-first search is to fan out to as many vertices as possible before penetrating deep into a graph. ”A more cautious and balanced approach.”"
+	"The basic idea of breadth-first search is to fan out to as many vertices as possible before penetrating deep into a graph. "A more cautious and balanced approach."
 
 
 
@@ -706,7 +708,7 @@ SAC example:
 
 !!! quote
 
-	"The basic idea of depth-first search is to penetrate as deeply as possible into a graph before fanning out to other vertices. ”You must be brave and go forward quickly.”"
+	"The basic idea of depth-first search is to penetrate as deeply as possible into a graph before fanning out to other vertices. "You must be brave and go forward quickly."
 
 
 
@@ -842,13 +844,13 @@ Example:
 Pseudocode:
 
 ```js
-Pick any vertex and add it to “vertices” list
+Pick any vertex and add it to "vertices" list
 
-Loop until (“vertices” contains all the vertices in graph)
-	Select shortest, unmarked edge coming from “vertices” list
+Loop until ("vertices" contains all the vertices in graph)
+	Select shortest, unmarked edge coming from "vertices" list
 	If (shortest edge does NOT create a cycle) then
-		Add that edge to your “edges”
-		Add the adjoining vertex to the “vertices” list 
+		Add that edge to your "edges"
+		Add the adjoining vertex to the "vertices" list 
 	Endif
 	Mark that edge as having been considered
 EndLoop
