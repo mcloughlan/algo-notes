@@ -572,7 +572,7 @@ Also known as Chromatic Colouring
 
 <img src="images/Pasted image 20220302121245.png" alt="Pasted image 20220302121245" width="200">
 
-The [chromatic number](#chromatic-number) of this graph is 3. As there are 3 colours.
+The [chromatic number](#chromatic-number) of this graph is 3. As there are 3 unique colours.
 
 #### Chromatic Number
 
@@ -590,24 +590,37 @@ An adjacency matrix shows weightings of edges on an undirected graph. Where an a
 
 An example of an undirected connected graph with nodes $A$,$B$, and an edge between them
 
+![undirected graph with nodes A and B connected](images/adjmatrix1.png){width=200px}
+
 $$
+\begin{array}{c|cc}
+   & A & B \newline
+\hline
+A & 0 & 1 \newline
+B & 1 & 0
+\end{array}
+\hspace{0.6cm}
+\text{or equivalently}
+\hspace{0.6cm}
 \begin{bmatrix}
-0 & 1
-\\
+0 & 1 \newline
 1 & 0
 \end{bmatrix}
 $$
 
-A directed graph where $A$ points to $B$:
+
+A directed graph where $A \to B$:
+
+![direct graph with A connected to B](images/adjmatrix2.png){width=200px}
 
 $$
-\begin{bmatrix}
-0 & 1
-\\
-0 & 0
-\end{bmatrix}
+\begin{array}{c|cc}
+   & A & B \newline
+\hline
+A & 0 & 1 \newline
+B & 0 & 0
+\end{array}
 $$
-
 The direction can be read from **the left of the matrix** (left side of rows) **to the right** of the row to find the head.
 
 !!! note
