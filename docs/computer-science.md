@@ -4,13 +4,9 @@ icon: material/state-machine
 
 # Computer Science
 
-!!! danger
-
-    This is a work in progress. Some information may be incorrect or outdated
-
 !!! note
 
-	Lots of this content is not applicable to the study design. Consider it extra-curricular or supplimental
+	Some of this content is not applicable to the study design. Consider it extra-curricular or supplimental
 
 ## Variables
 
@@ -39,7 +35,7 @@ A single action
 PRINT "abc"
 ```
 
-#### Fundamental data types:
+#### Fundamental operations:
 
 | Operation                          | Symbol              |
 | ---------------------------------- | ------------------- |
@@ -47,10 +43,10 @@ PRINT "abc"
 | Subtraction                        | -                   |
 | Multiplication                     | \*                  |
 | Division                           | /                   |
-| Whole number division (`int(x/y)`) | //                  |
-| Remainder after division (#Modulo)  | %                   |
+| Whole number division (`floor(x/y)`) | //                  |
+| Remainder after division ([Modulo](#modulo))  | %                   |
 | Powers                             | \*\*                |
-| Assign values                      | =, $\leftarrow$, := |
+| Assignment                      | =, $\leftarrow$, := |
 
 #### Data type comparison operations
 
@@ -60,7 +56,7 @@ PRINT "abc"
 | Less than or equal to $\leqslant$    | <=     |
 | Greater than $>$                     | >      |
 | Greater than or equal to $\geqslant$ | >=     |
-| Equal to $\equiv$                    | \==    |
+| Equal to $\equiv$                    | ==    |
 | Not equal to $\neq$                  | !=     |
 
 
@@ -120,7 +116,7 @@ Can be represented differently in different languages
 
 ### Data structures
 
-Also known as Abstract Data Types or ADTs
+Also known as Abstract Data Types or ADTs. Excluding the [array](#array)
 
 #### Array
 
@@ -137,13 +133,17 @@ An array that supports multiple types of variables and is able to undergo severa
 
 ##### Cons method
 
+!!! warning "Rare content"
+
+	Just noting that I have never seen this used before
+
 The List ADT standardly includes a special method called "cons", short for construct, with the following [signature specification](#type-signature):
 
 ```signature
 cons: item × List → List
 ```
 
-The behaviour of this operation is the inverse of the first and rest operations above. In other words, for any list l, if we "cons" the head of l with the rest of l, we get l. (Formally, for all non-empty lists l, cons(first(l), rest(l)) = l.)
+The behaviour of this operation is the inverse of the first and rest operations above. In other words, for any list l, if we "cons" the head of l with the rest of l, we get l. (Formally, for all non-empty lists l, `cons(first(l), rest(l)) = l`.)
 
 #### Associative array
 
@@ -155,19 +155,25 @@ associcativeArray[key]
 
 Associative array methods:
 
-- `.add()`
-- `.remove()`
-- `.change()`
+- `.add()` or `associcativeArray[key] = xyz`
+- `.remove()` or `del associcativeArray[key]`
+- `.change()` or  `associcativeArray[key] = xyz`
 
 #### Hash table
 
-A Hash Table is a type of [associative array](#associative-array) that uses a `(key,bucket)` layout. Where the bucket (or slot) is accessed via the key using hashes to instantly traverse to the end value. Which is usually preferred over other types of arrays.
+A Hash Table is an implimentation of an [associative array](#associative-array) that uses a `(key,bucket)` layout. Where the bucket (or slot) is accessed via the key using hashes to instantly traverse to the end value. Which is usually preferred over other types of arrays.
 
 ![Pasted image 20220209103939.png](images/Pasted image 20220209103939.png)
 
 ##### Perfect Hash function
 
 When the [hash table](#hash-table) has one hash per item in the array
+
+#### Set
+
+A set is simmilar to a [hash table](#hash-table), but there are no values. It's just keys. 
+
+Sets have no order and no duplicate items. They are like a pool of keys. They also have a constant lookup time $O(1)$. This means you could have a set of size 3 and size 1 million and checking if an item was in either set would take the same time for both of them. This is useful for things like checking the existance of things in a database.
 
 #### Queue
 

@@ -4,10 +4,6 @@ icon: material/graph
 
 # Graphs
 
-!!! danger
-
-    This is a work in progress. Some information may be incorrect or outdated
-
 ## Terminology
 
 ### Nodes
@@ -625,8 +621,13 @@ The direction can be read from **the left of the matrix** (left side of rows) **
 
 !!! note
 
-	- Undirected graphs are diagonaly symetrical, where directed are not 
-	- All adjacency matricies are empty on the diagonal
+	- Undirected graphs are diagonaly symetrical with respect to the rows and collums of an adjacency matrix. Directed graphs are not 
+	- For graphs with no [loops](#loops) (e.g. [simple graphs](#simple-graph)) All adjacency matricies are empty on the diagonal. 
+	An example of a graph with loops:
+	
+	$
+	\displaystyle {\begin{pmatrix}2&1&0&0&1&0\newline1&0&1&0&1&0\newline0&1&0&1&0&0\newline0&0&1&0&1&1\newline1&1&0&1&0&0\newline0&0&0&1&0&0\end{pmatrix}}
+	$. ![looped graph with adjacency matrix](images/looped-adj.png){width=200px}
 
 <img src="images/Pasted image 20220222165941.png" alt="Pasted image 20220222165941">
 
@@ -661,11 +662,11 @@ The shortest distances from $A$ to $B$ for each pair of nodes in a graph. Used i
 A list of adjacent nodes:
 
 $$
-\begin{aligned}
-A = \{B,C\} \\
-B = \{A\} \\
-C = \{A\}
-\end{aligned}
+\begin{align}
+A &= \{B,C\} \newline
+B &= \{A\} \newline
+C &= \{A\}
+\end{align}
 $$
 
 
@@ -677,17 +678,18 @@ $$
 
 	"The basic idea of breadth-first search is to fan out to as many vertices as possible before penetrating deep into a graph. "A more cautious and balanced approach."
 
-
+Main points:
 
 - **To see if a node is connected to another**
 - Uses a [queue](computer-science.md#queue) to keep track of nodes to visit soon
-- Uses an array/set `seen` to mark visited vertices
+- Uses an array/[set](computer-science.md#set) called `seen` to mark visited vertices
 - If the graph is connected, BFS will will visit all the nodes
 - A BFS tree will show the shortest path from `A` to `B` for any unweighted graph
 
 **Algorithm**:
 
 1. Add initial node to `queue` and mark in `seen`
+	1. Then add it's neighbours to the queue
 2. Remove the next element from the `queue` and call it `current`.
 3. Get all neighbours of the current node **which are not yet marked in `seen`.**
 	1. Store all these neighbours into the `queue` and mark them all in `seen`.
@@ -704,16 +706,14 @@ SAC example:
 **Uses of BFS**
 
 - Check connectivity
-- Bucket fill tool in 
+- Bucket-fill tool from Microsoft paint
 - Finding shortest path (when modified. pure BFS will not do this)
 - [Diameter](#graph-diameter) of a graph
 	- The diameter of a graph is the longest shortest path between any two nodes in a graph. Using BFS in a loop and finding the shortest path starting from every node in the graph, keep record of the longest shortest path found so far.
-- Cycle detection
+- [Cycle](#cycle) detection
 - [Bipartite graph](#bipartite-graphs) detection using BFS
 
-#### Waveform
-
-[BFS Breadth First Search](#bfs-breadth-first-search) can be considered a waveform due to its nature
+[BFS Breadth First Search](#bfs-breadth-first-search) can also be considered a waveform due to its nature
 
 <img src="images/WAVEg.gif" alt="WAVEg" width="200">
 
@@ -723,22 +723,22 @@ SAC example:
 
 	"The basic idea of depth-first search is to penetrate as deeply as possible into a graph before fanning out to other vertices. "You must be brave and go forward quickly."
 
-
+Main points:
 
 - **To see if a node is connected to another**
-- Uses a `stack` for storing vertices
+- Uses a [`stack`](computer-science.md#stack) for storing vertices
 - We do not check whether node was seen when storing neighbours in the `stack` - instead we perform this checking when retrieving the node from it.
 - Builds a [spanning tree](#spanning-tree) if the graph is [connected](#connected-graph)
 	- Creates longer branches than BFS
-- Unsuitable for searching shortest paths for unweighted graphs.
 
 **Algorithm**:
 
 1. We add the initial node to `stack`.
-2. Remove the next element from the `stack` and call it `current`.
-3. If the `current` node was `seen` then skip it (going to step 6).
+	1. And then push it's neighbours onto the stack
+2. Pop an element from the `stack` and call it `current`.
+3. If the `current` node is `seen` then skip it (going to step 6).
 4. Otherwise mark the current node as `seen`
-5. Get all neighbours of the `current` node and add all them to `stack`.
+5. Get all neighbours of the `current` node and push them onto the `stack`.
 6. Repeat from the step 2 until the `stack` becomes empty.
 
 Gif example of DFS:
@@ -751,24 +751,16 @@ Practice example:
 
 **Uses for DFS**
 
-- Detecting cycles in a graph
-- Topological sorting
+- Detecting [cycles](#cycle) in a graph
+- [Topological sorting](#topological-sort)
 - Path Finding between initial state and target state in a graph
-- Finding strongly connected components
+- Finding [strongly connected](#strongly-connected-digraph) components
 - Checking if a graph is [bipartite](#bipartite-graphs)
-
-### Exhaustive search
-
- Also known as a [brute force](algorithms.md#brute-force) algorithm
-
-[Hamiltonian Circuit](#hamiltonian-circuit) example
- 1. Find all Hamiltonian circuits
- 2. Find length of of each circuit
- 3. Select the circuit with minimal total weight
 
 ### Tree traversal
 
 How to search trees:
+
 - Any tree, but normally a [Binary tree](#binary-tree)
 - You can use
 	- [DFS Depth First Search](#dfs-depth-first-search)
@@ -844,11 +836,11 @@ A [greedy](algorithms.md#greedy) algorithm used to find the [minimum spanning tr
 
 
 Algorithm
-- Begin at any vertex (**Can be any**) 
-- Select the cheapest edge emanating from the vertex
-- Look at edges coming from the vertices selected so far. Select the cheapest edge. If the edge forms a circuit discard it and select the next cheapest.
+
+- Begin at **any** vertex 
+- Select the cheapest edge emanating from any vertex you've visited so far. If the edge forms a cycle discard it and select the next cheapest.
+	- Draw an edge to that node and consider it visited
 - Repeat until all vertices have been selected. 
-- Double check by repeating process with a different starting vertex.
 
 Example:
 
@@ -873,11 +865,15 @@ Or
 
 <img src="images/Pasted image 20220308183646.png" alt="Pasted image 20220308183646">
 
-Prim's algorithm for finding an [MST](graphs.md#minimum-spanning-tree) is **guaranteed** to produce a correct result
+Prim's algorithm for finding an [MST](graphs.md#minimum-spanning-tree) is **proved** to produce a correct result
 
 ### Kruskal's algorithm
 
-Finds minimum spanning forest by connecting the shortest edges in the graph.
+!!! note 
+
+	Just for fun. Not in the study design
+
+Finds minimum spanning forest by connecting the shortest edges in the graph. Works like prims, but orders the list of edges from shortest to longest and builds a tree that way
 
 ![Wiki example of kruskals|#invert](images/KruskalDemo.gif)
 
@@ -885,15 +881,9 @@ Finds minimum spanning forest by connecting the shortest edges in the graph.
 
 Quickest way to get from $A$ to $B$. Usually by shortest weight.
 
-Scenarios:
-- Worst case graph:
-	- A [complete graph](#complete-graphs). As it has the most edges.
-- Worst case brute force
-	- A [complete graph](#complete-graphs) will have the most permutations of paths. It will have: $\sum_{k=0}^{(n-2)} {n\choose k} \cdot k!$
-
 ### Dijkstra's algorithm
 
-Pronounced *Dikestra*.
+Pronounced *Dike-stra*.
 Finds the shortest **greedy** path via a **[priority queue](computer-science.md#priority-queue)**.
 
 - Although dijkstras does store information as it is building a solution, it is not [Dynamic Programming](algorithms.md#dynamic-programming) because it does not explicitly or fully solve any discrete sub-problems of the original input. This is debated, but for the sake of VCE just remember it as [greedy](algorithms.md#greedy)
@@ -1003,10 +993,12 @@ See [wiki example](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm#:~:text=
 
 ### Belman-Ford algorithm
 
-Step 1: initialise graph
-Step 2: [relax](#relaxation) edges repeatedly
-Step 3: check for negative-weight cycles
-Output shortest path as a distance and predecessor list (depending on setup)
+Steps:
+
+1. Initialise graph
+2. [Relax](#relaxation) edges repeatedly
+3. Check for negative-weight cycles
+4. Output shortest path as a distance and predecessor list (depending on setup)
 
 ![GraphFromWikiBellmanFord](images/Bellman–Ford_algorithm_example.gif)
 
@@ -1016,9 +1008,9 @@ Output shortest path as a distance and predecessor list (depending on setup)
 	[Online runner](https://algorithms.discrete.ma.tum.de/graph-algorithms/spp-bellman-ford/index_en.html)
 
 
-Unlike Dijkstra's Algorithm the Bellman-Ford Algorithm does not use a [priority queue](computer-science.md#priority-queue) to process the edges.
+Unlike Dijkstra's Algorithm, the Bellman-Ford Algorithm does not use a [priority queue](computer-science.md#priority-queue) to process the edges.
 
-In Step 2 ([Relaxation](#relaxation)) the nested for loop process all edges in the graph for each vertex $(V-1)$. Bellman-Ford is not a Greedy Algorithm, it uses Brute Force to build the solution incrementally, possibly going over each vertex several times. If a vertex has a lot of incoming edges it is updating the vertex's distance and predecessor many times.
+In Step 2 ([Relaxation](#relaxation)) the nested for-loop processes all edges in the graph for each vertex $(V-1)$. Bellman-Ford is not a Greedy Algorithm, it uses Brute Force to build the solution incrementally, possibly going over each vertex several times. If a vertex has a lot of incoming edges it is updating the vertex's distance and predecessor many times.
 
 Pseudocode
 
@@ -1075,8 +1067,8 @@ $$O (|V|^3)$$
 
 - Assumes there are no negative cycles, so this needs to be checked after
 - Returns a [Distance Matrix](#distance-matrix) of shortest path weights.
-- Dynamic program
-- Generates the transitive closure of a graph, if a graph is constructed from the distance matrix output.
+- Uses [dynamic programming](algorithms.md#dynamic-programming)
+- Generates the [transitive closure](#transitive-closure) of a graph, if a graph is constructed from the distance matrix output.
 
 ```js
 Algorithm Floyd-Warshall
